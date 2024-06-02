@@ -1,0 +1,263 @@
+{
+    "comment": "Part of this code was taken from https://github.com/syscrusher/golang.tmbundle/blob/master/Syntaxes/Go.tmLanguage for GoLang markup.",
+    "scopeName": "source.mx3",
+    "patterns": [{ "include": "#expression" }],
+    "repository": {
+        "expression": {
+            "patterns": [
+                { "include": "#keyword-go" },
+                { "include": "#method_function-mumax3" },
+                { "include": "#return_function-mumax3" },
+                { "include": "#core_function-mumax3" },
+                { "include": "#variable-mumax3" },
+                { "include": "#paren-expression" },
+                { "include": "#sections-mumax3" },
+                { "include": "#comments-go" },
+                { "include": "#strings-go" }
+            ]
+        },
+        "keyword-go": {
+            "patterns": [
+                {
+                    "match": "\\b(s(elect|witch)|c(ontinue|ase)|type|i(nterface|f|mport)|def(er|ault)|package|else|var|f(or|unc|allthrough)|r(eturn|ange)|go(to)?|break)\\b",
+                    "name": "keyword.control.go"
+                },
+                {
+                    "match": "(\\b|(?<=\\]))(int(16|8|32|64)?|uint(16|8|32|64|ptr)?|rune|float(32|64)|complex(64|128)|b(yte|ool)|string|error|struct)\\b",
+                    "name": "storage.type.go"
+                },
+                {
+                    "match": "\\b(c(onst|han)|map)\\b",
+                    "name": "storage.modifier.go"
+                },
+                {
+                    "match": "\\b(nil|true|false|iota)\\b",
+                    "name": "constant.language.go"
+                },
+                {
+                    "comment": "\\b((0(x|X)[0-9a-fA-F]*)|((\\d+\\.?\\d*)|(\\.\\d+))((e|E)(\\+|-)?\\d+)?)\\b",
+                    "name": "constant.numeric.go"
+                },
+                {
+                    "match": "\\<\\-",
+                    "name": "keyword.operator.channel.go"
+                }
+            ]
+        },
+        "method_function-mumax3": {
+            "comment": "Methods of builtin variables.",
+            "match": "(?i)(\\.\\b(Add|Average|After|AppendFormat|Before|Buffer|Clock|Comp|CPUAccess|Date|Day|DevPtr|Disable|Equal|EvalTo|Format|Free|Get|GetCell|GetRegion|GobEncode|Gpu|GPUAccess|Host|HostArray|HostCopy|HostList|Hour|Hours|In|Index|Intersect|Inverse|IsNil|ISOWeek|IsUniform|IsZero|LoadFile|Local|Location|Marshal(Binary|JSON|Text)|MemType|Microseconds|Milliseconds|Minute|Minutes|Month|MSlice|Nanosecond|Nanoseconds|Quantity|Region|RemoveExtraTerms|Repeat|Rot(X|Y|Z)|Round|Scalars|Scale|Second|Seconds|Set|SetArray|SetCell|SetInShape|SetRegion|SetRegionFn|SetRegionFuncGo|SetRegionValueGo|SetScalar|SetVector|Size|Tensors|Transl|Truncate|UTC|Unix|UnixNano|Vectors|Weekday|X|Xor|Y|Year|YearDay|Z|Zone)\\b)",
+            "name": "keyword.other.unit"
+        },
+        "return_function-mumax3": {
+            "captures": {
+                "1": {"name": "support.function.any-method.go"}
+            },
+            "comment": "Functions which return something.",
+            "match": "(?i)(\\b(Cell|Circle|Cone|Cuboid|Cylinder|Ellips(e|oid)|GrainRoughness|ImageShape|Layer(|s)|Rect|Square|Universe|(X|Y|Z)Range|Antivortex|(Bloch|Neel)Skyrmion|Conical|Helical|RandomMag(|Seed)|TwoDomain|Uniform|Vortex(|Wall)|sprint(|f)|Crop(|Layer|Region|X|Y|Z)|Add|Const(|Vector)|Cross|Div|Dot|Len|Madd|Masked|Mul(|MV)|Shifted|abs|(a|)(cos|sin|tan)(|h)|atan2|cbrt|ceil|erf(|c)|exp(|2|m1)|Expect(|V)|floor|gamma|heaviside|hypot|ilogb|Index2Coord|is(Inf|NaN)|(j|y)(0|1|n)|ldexp|log(|10|1p|2|b)|max|min|mod|New((Scalar|Vector)Mask|Slice)|norm|Normalized|now|pow(|10)|rand(|Exp|Int|Norm)|remainder|Sign|sinc|since|sqrt|trunc|Vector)\\b)",
+            "name": "meta.function-call.go"
+        },
+        "core_function-mumax3": {
+            "comment": "Functions which do not return anything, i.e. do stuff in-place or behind-the-scenes.",
+            "match": "(?i)(\\b(Set((Cell|Grid)Size|Geom|Mesh|PBC)|DefRegion(|Cell)|AutoS(ave|napshot)|Flush|Fprintln|Print|Save(|As)|Snapsho(t|tAs|tFormat)|Table(Add(|Var)|(|Auto)Save|Print)|Minimize|Relax|Run(|While)|Steps|SetSolver|Shift|ext_(center(Bubble|Wall)|(Inter|Scale)(Dind|Exchange)|make(|3d)grains|rmSurfaceCharge)|Add(Edens|Field)Term|RemoveCustom(Fields|Energies)|Exit|(rand|Therm)Seed)\\b)",
+            "name": "keyword.control"
+        },
+        "variable-mumax3": {
+            "name": "variable.language.mumax3",
+            "match": "(?i)\\b(Aex|alpha|anis(C1|C2|U)|B(1|2)|D(bulk|ind)|EpsilonPrime|FreeLayerThickness|(frozen|NoDemag)spins|Kc(1|2|3)|Ku(1|2)|Lambda|Msat|Pol|Temp|xi|EdgeSmooth|regions|m(|_full)|J|B_(anis|custom|demag|eff|ext|exch|mel|therm)|(Dind|Exch)Coupling|dt|E(|dens)_(anis|custom|demag|exch|mel|therm|total|Zeeman)|F_mel|geom|(LL|ST|)torque|Max(Angle|Torque)|NEval|spinAngle|DUMP|(Filename|Output)Format|OVF(1|2)_(BINARY|TEXT)|FixDt|Headroom|(Last|Max|Peak)Err|(Max|Min)Dt|MinimizerS(amples|top)|NEval|RelaxTorqueThreshold|step|t|Disable(SlonczewskiTorque|ZhangLiTorque)|FixedLayer(|Position)|FIXEDLAYER_(BOTTOM|TOP)|MFM(|Dipole|Lift)|Shift(Geom|M|MagD|MagL|MagR|MagU|Regions)|TotalShift|ext_(bubble(dist|Mz|pos|speed)|corepos|dw((|x)pos|speed|tilt)|phi|theta|topologicalcharge|topologicalcharge(density|densitylattice|lattice))|(B|E|Edens)_custom|DemagAccuracy|DoPrecess|EnableDemag|e(xx|xy|xz|yy|yz|zz)|false|GammaLL|inf|Mu0|OpenBC|pi|true)\\b"
+        },
+        "paren-expression": {
+            "begin": "\\(",
+            "end": "\\)",
+            "beginCaptures": {
+                "0": { "name": "punctuation.paren.open" }
+            },
+            "endCaptures": {
+                "0": { "name": "punctuation.paren.close" }
+            },
+            "name": "expression.group",
+            "patterns": [{ "include": "#expression" }]
+        },
+        "initializers-go": {
+            "patterns": [
+                {
+                    "captures": {
+                        "1": {
+                            "patterns": [
+                                {
+                                    "match": "[[:alpha:]_]\\w*",
+                                    "name": "variable.other.go"
+                                }
+                            ]
+                        },
+                        "2": {
+                            "name": "keyword.operator.go"
+                        },
+                        "3": {
+                            "patterns": [
+                                {"include": "#keywords"},
+                                {
+                                    "match": "[[:alpha:]_]\\w*\\b(?!\\.)",
+                                    "name": "support.type.go"
+                                }
+                            ]
+                        }
+                    },
+                    "comment": "This matches the 'x :=' style of variable declaration.",
+                    "match": "((?:[[:alpha:]_]\\w*)(?:\\s*,\\s+[[:alpha:]_]\\w*)*)\\s*(:=)(?:\\s*([[:alpha:]_]\\w*)\\s*\\{)?",
+                    "name": "meta.initialization.short.go"
+                }
+            ]
+        },
+        "sections-mumax3": {
+            "patterns": [
+                {
+                    "begin": "(^[ \\t]+)?(?=////)",
+                    "beginCaptures": {
+                        "1": {"name": "punctuation.whitespace.section.mx3"}
+                    },
+                    "end": "(?!\\G)",
+                    "patterns": [
+                        {
+                            "begin": "////",
+                            "beginCaptures": {
+                                "0": {"name": "punctuation.definition.section.mx3"}
+                            },
+                            "end": "\\n",
+                            "name": "markup.bold.mx3"
+                        }
+                    ]
+                    
+                }
+            ]
+        },
+        "comments-go": {
+            "patterns": [
+                {
+                    "captures": {
+                        "1": {"name": "meta.toc-list.banner.block.go"}
+                    },
+                    "match": "^/\\* =(\\s*.*?)\\s*= \\*/$\\n?",
+                    "name": "comment.block.go"
+                },
+                {
+                    "begin": "/\\*",
+                    "captures": {
+                        "0": {"name": "punctuation.definition.comment.go"}
+                    },
+                    "end": "\\*/",
+                    "name": "comment.block.go"
+                },
+                {
+                    "match": "\\*/.*\n",
+                    "name": "invalid.illegal.stray-comment-end.go"
+                },
+                {
+                    "captures": {
+                        "1": {"name": "punctuation.definition.comment.go"},
+                        "2": {"name": "meta.toc-list.banner.line.go"}
+                    },
+                    "match": "^(//) =(\\s*.*?)\\s*=\\s*$\\n?",
+                    "name": "comment.line.double-slash.banner.go"
+                },
+                {
+                    "begin": "(^[ \\t]+)?(?=//)",
+                    "beginCaptures": {
+                        "1": {"name": "punctuation.whitespace.comment.leading.go"}
+                    },
+                    "end": "(?!\\G)",
+                    "patterns": [
+                        {
+                            "begin": "//",
+                            "beginCaptures": {
+                                "0": {"name": "punctuation.definition.comment.go"}
+                            },
+                            "end": "\\n",
+                            "name": "comment.line.double-slash.go",
+                            "patterns": [
+                                {
+                                    "match": "(?>\\\\\\s*\\n)",
+                                    "name": "punctuation.separator.continuation.go"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "strings-go": {
+            "patterns": [
+                {
+                    "begin": "\"",
+                    "beginCaptures": {
+                        "0": {"name": "punctuation.definition.string.begin.go"}
+                    },
+                    "end": "\"",
+                    "endCaptures": {
+                        "0": {"name": "punctuation.definition.string.end.go"}
+                    },
+                    "name": "string.quoted.double.go",
+                    "patterns": [
+                        {
+                            "include": "#string_placeholder"
+                        },
+                        {
+                            "include": "#string_escaped_char"
+                        }
+                    ]
+                },
+                {
+                    "begin": "'",
+                    "beginCaptures": {
+                        "0": {"name": "punctuation.definition.string.begin.go"}
+                    },
+                    "end": "'",
+                    "endCaptures": {
+                        "0": {"name": "punctuation.definition.string.end.go"}
+                    },
+                    "name": "string.quoted.single.go",
+                    "patterns": [
+                        {
+                            "include": "#string_escaped_char"
+                        }
+                    ]
+                },
+                {
+                    "begin": "`",
+                    "beginCaptures": {
+                        "0": {"name": "punctuation.definition.string.begin.go"}
+                    },
+                    "end": "`",
+                    "endCaptures": {
+                        "0": {"name": "punctuation.definition.string.end.go"}
+                    },
+                    "name": "string.other.raw.go"
+                }
+            ]
+        },
+        "string_escaped_char": {
+            "patterns": [
+                {
+                    "match": "\\\\(\\\\|[abfnrutv'\"]|x[0-9a-fA-F]{2}|u[0-9a-fA-F]{4}|U[0-9a-fA-F]{8}|[0-7]{3})",
+                    "name": "constant.character.escape.go"
+                },
+                {
+                    "match": "\\\\.",
+                    "name": "invalid.illegal.unknown-escape.go"
+                }
+            ]
+        },
+        "string_placeholder": {
+            "patterns": [
+                {
+                    "match": "(?x)%(\\d+\\$)?[#0\\- +']*[,;:_]?((-?\\d+)|\\*(-?\\d+\\$)?)?(\\.((-?\\d+)|\\*(-?\\d+\\$)?)?)?(\\[\\d+\\])?[diouxXDOUeEfFgGaAcCsSpnvtTbyYhHmMzZq%]",
+                    "name": "constant.other.placeholder.go"
+                },
+                {
+                    "match": "%",
+                    "name": "invalid.illegal.placeholder.go"
+                }
+            ]
+        }
+    }
+}

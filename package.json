@@ -1,0 +1,71 @@
+{
+	"name": "mumax3-highlighter",
+	"displayName": "MuMax3 highlighter",
+	"description": "Highlights MuMax3 input files",
+	"publisher": "JonathanMaes",
+	"version": "0.1.3",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"keywords": [
+		"mumax3",
+		"MuMax3",
+		"mx3",
+		"mumax",
+		"__ext_mx3"
+	],
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/JonathanMaes/mumax3-highlighter"
+	},
+	"activationEvents": [
+		"onCommand:mumax3-highlighter.runMumax",
+		"onLanguage:mx3"
+	],
+	"main": "./extension.js",
+	"icon": "images/icon.png",
+	"contributes": {
+		"commands": [
+			{
+				"command": "mumax3-highlighter.runMumax",
+				"title": "Run MuMax3 script (.mx3)"
+			}
+		],
+		"languages": [
+			{
+				"id": "mumax3",
+				"extensions": [".mx3"],
+				"aliases": ["MuMax3", "mx3"]
+			}
+		],
+		"grammars": [
+			{
+				"language": "mumax3",
+				"scopeName": "source.mx3",
+				"path": "./syntaxes/mumax3.tmGrammar.json"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.49.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^14.0.27",
+		"eslint": "^7.6.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	},
+	"__metadata": {
+		"installedTimestamp": 1707389915246
+	}
+}
