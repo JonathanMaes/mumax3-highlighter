@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.4 (2026-01-20)
+
+- Include new functions/variables from mumax3.11
+
 ## v0.1.3 (2024-06-02)
 
 - Created GitHub repository
