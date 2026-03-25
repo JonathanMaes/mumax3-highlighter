@@ -23,7 +23,7 @@
 	},
 	"activationEvents": [
 		"onCommand:mumax3-highlighter.runMumax",
-		"onLanguage:mx3"
+		"onLanguage:mumax3"
 	],
 	"main": "./extension.js",
 	"icon": "images/icon.png",
