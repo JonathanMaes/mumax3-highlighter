@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.0 (2026-03-26)
+
+- Autocomplete and hover descriptions for functions, variables and methods. The information provided is based on the API on the live mumax³ website at the time this extension was compiled.
+
 ## v0.1.4 (2026-01-20)
 
 - Include new functions/variables from mumax3.11
