@@ -2,7 +2,7 @@ const vscode = require('vscode');
 
 function activate(context) {
 	// The runMumax command is referenced in the package.json file
-	let disposable = vscode.commands.registerCommand('mumax3-highlighter.runMumax', function () {
+	context.subscriptions.push(vscode.commands.registerCommand('mumax3-highlighter.runMumax', function () {
 		const editor = vscode.window.activeTextEditor;
         if (!editor) {
             vscode.window.showErrorMessage('No file is currently open.');
@@ -20,9 +20,7 @@ function activate(context) {
         // Show the terminal and send the command
         terminal.show();
         terminal.sendText(`mumax3 "${filename}"`);
-	});
-
-	context.subscriptions.push(disposable); // Add to context subscriptions to ensure proper cleanup
+	})); // Add to context subscriptions to ensure proper cleanup
 }
 
 function deactivate() {
