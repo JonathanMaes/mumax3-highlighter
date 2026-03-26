@@ -51,7 +51,6 @@ https.get(URL, res => {
             const METHODSTRSEP = "   "
             if (signature.includes(METHODSTRSTART)) {
                 const methodstrings = signature.split(METHODSTRSTART)[1].split(METHODSTRSEP).map(cleanSignature);
-                console.log(name, methodstrings);
                 
                 description += "\n\n### Methods\n"
                 for (let methodstr of methodstrings) {
