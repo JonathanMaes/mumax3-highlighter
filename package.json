@@ -52,7 +52,9 @@
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
+		"test": "node ./test/runTest.js",
+		"generate-api": "node scripts/generateApi.js",
+		"package": "npm run generate-api && vsce package"
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.49.0",
@@ -67,5 +69,8 @@
 	},
 	"__metadata": {
 		"installedTimestamp": 1707389915246
+	},
+	"dependencies": {
+		"cheerio": "^1.2.0"
 	}
 }

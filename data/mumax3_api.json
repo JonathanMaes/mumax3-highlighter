@@ -1,0 +1,4499 @@
+{
+    "functions": {
+        "abs": {
+            "signature": "abs(float64) float64",
+            "description": "Abs returns the absolute value of x.",
+            "methods": []
+        },
+        "acos": {
+            "signature": "acos(float64) float64",
+            "description": "Acos returns the arccosine, in radians, of x.",
+            "methods": []
+        },
+        "acosh": {
+            "signature": "acosh(float64) float64",
+            "description": "Acosh returns the inverse hyperbolic cosine of x.",
+            "methods": []
+        },
+        "Add": {
+            "signature": "Add(Quantity, Quantity) Quantity",
+            "description": "Add two quantities\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "AddEdensTerm": {
+            "signature": "AddEdensTerm(Quantity)",
+            "description": "Add an expression to Edens.",
+            "methods": []
+        },
+        "AddFieldTerm": {
+            "signature": "AddFieldTerm(Quantity)",
+            "description": "Add an expression to B_eff.",
+            "methods": []
+        },
+        "Antivortex": {
+            "signature": "Antivortex(int, int) Config",
+            "description": "Antivortex magnetization with given circulation and core polarization\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "asin": {
+            "signature": "asin(float64) float64",
+            "description": "Asin returns the arcsine, in radians, of x.",
+            "methods": []
+        },
+        "asinh": {
+            "signature": "asinh(float64) float64",
+            "description": "Asinh returns the inverse hyperbolic sine of x.",
+            "methods": []
+        },
+        "atan": {
+            "signature": "atan(float64) float64",
+            "description": "Atan returns the arctangent, in radians, of x.",
+            "methods": []
+        },
+        "atan2": {
+            "signature": "atan2(float64, float64) float64",
+            "description": "Atan2 returns the arc tangent of y/x, using the signs of the two to     determine the quadrant of the return value.",
+            "methods": []
+        },
+        "atanh": {
+            "signature": "atanh(float64) float64",
+            "description": "Atanh returns the inverse hyperbolic tangent of x.",
+            "methods": []
+        },
+        "AutoSave": {
+            "signature": "AutoSave(Quantity, float64)",
+            "description": "Auto save space-dependent quantity every period (s).",
+            "methods": []
+        },
+        "AutoSnapshot": {
+            "signature": "AutoSnapshot(Quantity, float64)",
+            "description": "Auto save image of quantity every period (s).",
+            "methods": []
+        },
+        "BlochSkyrmion": {
+            "signature": "BlochSkyrmion(int, int) Config",
+            "description": "Bloch skyrmion magnetization with given chirality and core polarization\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "cbrt": {
+            "signature": "cbrt(float64) float64",
+            "description": "Cbrt returns the cube root of x.",
+            "methods": []
+        },
+        "ceil": {
+            "signature": "ceil(float64) float64",
+            "description": "Ceil returns the least integer value greater than or equal to x.",
+            "methods": []
+        },
+        "Cell": {
+            "signature": "Cell(int, int, int) Shape",
+            "description": "Single cell with given integer index (i, j, k)\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Circle": {
+            "signature": "Circle(float64) Shape",
+            "description": "2D Circle with diameter in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "ClearPostSteps": {
+            "signature": "ClearPostSteps()",
+            "description": "Clear the postStep array, which contains functions that are executed after each solver step. This includes running averages, centering routines to track skyrmions and domain walls etc.",
+            "methods": []
+        },
+        "Cone": {
+            "signature": "Cone(float64, float64) Shape",
+            "description": "3D Cone with diameter and height in meter. The base is at z=0. If the height is positive, the tip points in the +z direction.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Conical": {
+            "signature": "Conical(data.Vector, data.Vector, float64) Config",
+            "description": "Conical state for given wave vector, cone direction, and cone angle\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "Const": {
+            "signature": "Const(float64) Quantity",
+            "description": "Constant, uniform number\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "ConstVector": {
+            "signature": "ConstVector(float64, float64, float64) Quantity",
+            "description": "Constant, uniform vector\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "cos": {
+            "signature": "cos(float64) float64",
+            "description": "Cos returns the cosine of the radian argument x.",
+            "methods": []
+        },
+        "cosh": {
+            "signature": "cosh(float64) float64",
+            "description": "Cosh returns the hyperbolic cosine of x.",
+            "methods": []
+        },
+        "Crop": {
+            "signature": "Crop(Quantity, int, int, int, int, int, int) *cropped",
+            "description": "Crops a quantity to cell ranges [x1,x2[, [y1,y2[, [z1,z2[\n\n### Methods\n`Average()` and `EvalTo(Slice)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)"
+            ]
+        },
+        "CropLayer": {
+            "signature": "CropLayer(Quantity, int) *cropped",
+            "description": "Crops a quantity to a single layer\n\n### Methods\n`Average()` and `EvalTo(Slice)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)"
+            ]
+        },
+        "CropRegion": {
+            "signature": "CropRegion(Quantity, int) *cropped",
+            "description": "Crops a quantity to a region\n\n### Methods\n`Average()` and `EvalTo(Slice)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)"
+            ]
+        },
+        "CropX": {
+            "signature": "CropX(Quantity, int, int) *cropped",
+            "description": "Crops a quantity to cell ranges [x1,x2[\n\n### Methods\n`Average()` and `EvalTo(Slice)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)"
+            ]
+        },
+        "CropY": {
+            "signature": "CropY(Quantity, int, int) *cropped",
+            "description": "Crops a quantity to cell ranges [y1,y2[\n\n### Methods\n`Average()` and `EvalTo(Slice)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)"
+            ]
+        },
+        "CropZ": {
+            "signature": "CropZ(Quantity, int, int) *cropped",
+            "description": "Crops a quantity to cell ranges [z1,z2[\n\n### Methods\n`Average()` and `EvalTo(Slice)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)"
+            ]
+        },
+        "Cross": {
+            "signature": "Cross(Quantity, Quantity) Quantity",
+            "description": "Cross product of two vector quantities\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "Cuboid": {
+            "signature": "Cuboid(float64, float64, float64) Shape",
+            "description": "Cuboid with sides in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Cylinder": {
+            "signature": "Cylinder(float64, float64) Shape",
+            "description": "3D Cylinder with diameter and height in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "DefRegion": {
+            "signature": "DefRegion(int, Shape)",
+            "description": "Define a material region with given index (0-255) and shape",
+            "methods": []
+        },
+        "DefRegionCell": {
+            "signature": "DefRegionCell(int, int, int, int)",
+            "description": "Set a material region (first argument) in one cell by the index of the cell (last three arguments)",
+            "methods": []
+        },
+        "Div": {
+            "signature": "Div(Quantity, Quantity) Quantity",
+            "description": "Point-wise division of two quantities\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "Dot": {
+            "signature": "Dot(Quantity, Quantity) Quantity",
+            "description": "Dot product of two vector quantities\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "Ellipse": {
+            "signature": "Ellipse(float64, float64) Shape",
+            "description": "2D Ellipse with axes in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Ellipsoid": {
+            "signature": "Ellipsoid(float64, float64, float64) Shape",
+            "description": "3D Ellipsoid with axes in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "erf": {
+            "signature": "erf(float64) float64",
+            "description": "Erf returns the error function of x.",
+            "methods": []
+        },
+        "erfc": {
+            "signature": "erfc(float64) float64",
+            "description": "Erfc returns the complementary error function of x.",
+            "methods": []
+        },
+        "Exit": {
+            "signature": "Exit()",
+            "description": "Exit from the program",
+            "methods": []
+        },
+        "exp": {
+            "signature": "exp(float64) float64",
+            "description": "Exp returns e**x, the base-e exponential of x.",
+            "methods": []
+        },
+        "exp2": {
+            "signature": "exp2(float64) float64",
+            "description": "Exp2 returns 2**x, the base-2 exponential of x.",
+            "methods": []
+        },
+        "Expect": {
+            "signature": "Expect(string, float64, float64, float64)",
+            "description": "Used for automated tests: checks if a value is close enough to the expected value",
+            "methods": []
+        },
+        "ExpectV": {
+            "signature": "ExpectV(string, data.Vector, data.Vector, float64)",
+            "description": "Used for automated tests: checks if a vector is close enough to the expected value",
+            "methods": []
+        },
+        "expm1": {
+            "signature": "expm1(float64) float64",
+            "description": "Expm1 returns e**x - 1, the base-e exponential of x minus 1. It is more     accurate than Exp(x) - 1 when x is near zero.",
+            "methods": []
+        },
+        "ext_centerBubble": {
+            "signature": "ext_centerBubble()",
+            "description": "centerBubble shifts m after each step to keep the bubble position close to the center of the window",
+            "methods": []
+        },
+        "ext_centerWall": {
+            "signature": "ext_centerWall(int)",
+            "description": "centerWall(c) shifts m after each step to keep m_c close to zero",
+            "methods": []
+        },
+        "ext_centerWallInLayer": {
+            "signature": "ext_centerWallInLayer(int, int)",
+            "description": "centerWallInLayer(L, c) shifts m after each step to keep m_c in layer L close to zero",
+            "methods": []
+        },
+        "ext_centerWallInRegion": {
+            "signature": "ext_centerWallInRegion(int, int)",
+            "description": "centerWallInRegion(R, c) shifts m after each step to keep m_c in region R close to zero",
+            "methods": []
+        },
+        "ext_EnableUnsafe": {
+            "signature": "ext_EnableUnsafe()",
+            "description": "Deprecated. Only here to ensure maximal backwards compatibility with mumax3.9c.",
+            "methods": []
+        },
+        "ext_InitGeomFromOVF": {
+            "signature": "ext_InitGeomFromOVF(string)",
+            "description": "Initialize geometry, cell count and cell size given a pattern from OVF",
+            "methods": []
+        },
+        "ext_InterDind": {
+            "signature": "ext_InterDind(int, int, float64)",
+            "description": "Sets Dind coupling between two regions.",
+            "methods": []
+        },
+        "ext_InterExchange": {
+            "signature": "ext_InterExchange(int, int, float64)",
+            "description": "Sets exchange coupling between two regions.",
+            "methods": []
+        },
+        "ext_make3dgrains": {
+            "signature": "ext_make3dgrains(float64, int, int, Shape, int)",
+            "description": "3D Voronoi tesselation over shape (grain size, starting region number, num regions, shape, seed)",
+            "methods": []
+        },
+        "ext_makegrains": {
+            "signature": "ext_makegrains(float64, int, int)",
+            "description": "Voronoi tesselation (grain size, num regions, seed)",
+            "methods": []
+        },
+        "ext_rmSurfaceCharge": {
+            "signature": "ext_rmSurfaceCharge(int, float64, float64)",
+            "description": "Compensate magnetic charges on the left and right sides of an in-plane magnetized wire. Arguments: region, mx on left and right side, resp.",
+            "methods": []
+        },
+        "ext_ScaleDind": {
+            "signature": "ext_ScaleDind(int, int, float64)",
+            "description": "Re-scales Dind coupling between two regions.",
+            "methods": []
+        },
+        "ext_ScaleExchange": {
+            "signature": "ext_ScaleExchange(int, int, float64)",
+            "description": "Re-scales exchange coupling between two regions.",
+            "methods": []
+        },
+        "floor": {
+            "signature": "floor(float64) float64",
+            "description": "Floor returns the greatest integer value less than or equal to x.",
+            "methods": []
+        },
+        "Flush": {
+            "signature": "Flush()",
+            "description": "Flush all pending output to disk.",
+            "methods": []
+        },
+        "Fprintln": {
+            "signature": "Fprintln(string, ...interface, {})",
+            "description": "Print to file",
+            "methods": []
+        },
+        "FunctionFromDatafile": {
+            "signature": "FunctionFromDatafile(string, int, int, string) func(float64), float64",
+            "description": "Creates an interpolation function using data from two columns in a csv file. Arguments: filename, xColumnIdx, yColumnIdx, method (\"linear\", \"nearest\" or \"step\").",
+            "methods": []
+        },
+        "gamma": {
+            "signature": "gamma(float64) float64",
+            "description": "Gamma returns the Gamma function of x.",
+            "methods": []
+        },
+        "GrainRoughness": {
+            "signature": "GrainRoughness(float64, float64, float64, int) Shape",
+            "description": "Grainy surface with different heights per grain with a typical grain size (first argument), minimal height (second argument), and maximal height (third argument). The last argument is a seed for the random number generator.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "heaviside": {
+            "signature": "heaviside(float64) float64",
+            "description": "Returns 1 if x>0, 0 if x<0, and 0.5 if x==0",
+            "methods": []
+        },
+        "Helical": {
+            "signature": "Helical(data.Vector) Config",
+            "description": "Helical state for given wave vector\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "HopfionCompactSupport": {
+            "signature": "HopfionCompactSupport(float64, float64) Config",
+            "description": "Hopfion texture from skyrmion, with compact support (smooth and magnetization exactly along z-axis outside of finite region)\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "hypot": {
+            "signature": "hypot(float64, float64) float64",
+            "description": "Hypot returns Sqrt(p*p + q*q), taking care to avoid unnecessary overflow and     underflow.",
+            "methods": []
+        },
+        "ilogb": {
+            "signature": "ilogb(float64) int",
+            "description": "Ilogb returns the binary exponent of x as an integer.",
+            "methods": []
+        },
+        "ImageShape": {
+            "signature": "ImageShape(string) Shape",
+            "description": "Use black/white image as shape\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Index2Coord": {
+            "signature": "Index2Coord(int, int, int) data.Vector",
+            "description": "Convert cell index to x,y,z coordinate in meter\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "isInf": {
+            "signature": "isInf(float64, int) bool",
+            "description": "IsInf reports whether f is an infinity, according to sign. If sign > 0,     IsInf reports whether f is positive infinity. If sign < 0, IsInf reports     whether f is negative infinity. If sign == 0, IsInf reports whether f is     either infinity.",
+            "methods": []
+        },
+        "isNaN": {
+            "signature": "isNaN(float64) bool",
+            "description": "IsNaN reports whether f is an IEEE 754 “not-a-number” value.",
+            "methods": []
+        },
+        "j0": {
+            "signature": "j0(float64) float64",
+            "description": "J0 returns the order-zero Bessel function of the first kind.",
+            "methods": []
+        },
+        "j1": {
+            "signature": "j1(float64) float64",
+            "description": "J1 returns the order-one Bessel function of the first kind.",
+            "methods": []
+        },
+        "jn": {
+            "signature": "jn(int, float64) float64",
+            "description": "Jn returns the order-n Bessel function of the first kind.",
+            "methods": []
+        },
+        "Layer": {
+            "signature": "Layer(int) Shape",
+            "description": "Single layer (along z), by integer index starting from 0\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Layers": {
+            "signature": "Layers(int, int) Shape",
+            "description": "Part of space between cell layer1 (inclusive) and layer2 (exclusive), in integer indices\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "ldexp": {
+            "signature": "ldexp(float64, int) float64",
+            "description": "Ldexp is the inverse of Frexp. It returns frac × 2**exp.",
+            "methods": []
+        },
+        "LoadFile": {
+            "signature": "LoadFile(string) Slice",
+            "description": "Load a data file (ovf or dump)\n\n### Methods\n`CPUAccess()`, `Comp(int)`, `DevPtr(int)`, `Disable()`, `Free()`, `GPUAccess()`, `Get(int, int, int, int)`, `Host()`, `HostCopy()`, `Index(int, int, int)`, `IsNil()`, `Len()`, `MemType()`, `Scalars()`, `Set(int, int, int, int, float64)`, `SetScalar(int, int, int, float64)`, `SetVector(int, int, int, data.Vector)`, `Size()`, `Tensors()` and `Vectors()`.",
+            "methods": [
+                "CPUAccess()",
+                "Comp(int)",
+                "DevPtr(int)",
+                "Disable()",
+                "Free()",
+                "GPUAccess()",
+                "Get(int, int, int, int)",
+                "Host()",
+                "HostCopy()",
+                "Index(int, int, int)",
+                "IsNil()",
+                "Len()",
+                "MemType()",
+                "Scalars()",
+                "Set(int, int, int, int, float64)",
+                "SetScalar(int, int, int, float64)",
+                "SetVector(int, int, int, data.Vector)",
+                "Size()",
+                "Tensors()",
+                "Vectors()"
+            ]
+        },
+        "log": {
+            "signature": "log(float64) float64",
+            "description": "Log returns the natural logarithm of x.",
+            "methods": []
+        },
+        "log10": {
+            "signature": "log10(float64) float64",
+            "description": "Log10 returns the decimal logarithm of x. The special cases are the same as     for Log.",
+            "methods": []
+        },
+        "log1p": {
+            "signature": "log1p(float64) float64",
+            "description": "Log1p returns the natural logarithm of 1 plus its argument x. It is more     accurate than Log(1 + x) when x is near zero.",
+            "methods": []
+        },
+        "log2": {
+            "signature": "log2(float64) float64",
+            "description": "Log2 returns the binary logarithm of x. The special cases are the same as     for Log.",
+            "methods": []
+        },
+        "logb": {
+            "signature": "logb(float64) float64",
+            "description": "Logb returns the binary exponent of x.",
+            "methods": []
+        },
+        "Madd": {
+            "signature": "Madd(Quantity, Quantity, float64, float64) *mAddition",
+            "description": "Weighted addition: Madd(Q1,Q2,c1,c2) = c1*Q1 + c2*Q2\n\n### Methods\n`EvalTo(Slice)`.",
+            "methods": [
+                "EvalTo(Slice)"
+            ]
+        },
+        "Masked": {
+            "signature": "Masked(Quantity, Shape) Quantity",
+            "description": "Mask quantity with shape\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "max": {
+            "signature": "max(float64, float64) float64",
+            "description": "Max returns the larger of x or y.",
+            "methods": []
+        },
+        "min": {
+            "signature": "min(float64, float64) float64",
+            "description": "Min returns the smaller of x or y.",
+            "methods": []
+        },
+        "Minimize": {
+            "signature": "Minimize()",
+            "description": "Use steepest conjugate gradient method to minimize the total energy",
+            "methods": []
+        },
+        "mod": {
+            "signature": "mod(float64, float64) float64",
+            "description": "Mod returns the floating-point remainder of x/y. The magnitude of the result     is less than y and its sign agrees with that of x.",
+            "methods": []
+        },
+        "Mul": {
+            "signature": "Mul(Quantity, Quantity) Quantity",
+            "description": "Point-wise product of two quantities\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "MulMV": {
+            "signature": "MulMV(Quantity, Quantity, Quantity, Quantity) Quantity",
+            "description": "Matrix-Vector product: MulMV(AX, AY, AZ, m) = (AX·m, AY·m, AZ·m). The arguments Ax, Ay, Az and m are quantities with 3 componets.\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "NeelSkyrmion": {
+            "signature": "NeelSkyrmion(int, int) Config",
+            "description": "Néél skyrmion magnetization with given charge and core polarization\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "NewScalarMask": {
+            "signature": "NewScalarMask(int, int, int) Slice",
+            "description": "Makes a 3D array of scalars\n\n### Methods\n`CPUAccess()`, `Comp(int)`, `DevPtr(int)`, `Disable()`, `Free()`, `GPUAccess()`, `Get(int, int, int, int)`, `Host()`, `HostCopy()`, `Index(int, int, int)`, `IsNil()`, `Len()`, `MemType()`, `Scalars()`, `Set(int, int, int, int, float64)`, `SetScalar(int, int, int, float64)`, `SetVector(int, int, int, data.Vector)`, `Size()`, `Tensors()` and `Vectors()`.",
+            "methods": [
+                "CPUAccess()",
+                "Comp(int)",
+                "DevPtr(int)",
+                "Disable()",
+                "Free()",
+                "GPUAccess()",
+                "Get(int, int, int, int)",
+                "Host()",
+                "HostCopy()",
+                "Index(int, int, int)",
+                "IsNil()",
+                "Len()",
+                "MemType()",
+                "Scalars()",
+                "Set(int, int, int, int, float64)",
+                "SetScalar(int, int, int, float64)",
+                "SetVector(int, int, int, data.Vector)",
+                "Size()",
+                "Tensors()",
+                "Vectors()"
+            ]
+        },
+        "NewSlice": {
+            "signature": "NewSlice(int, int, int, int) Slice",
+            "description": "Makes a 4D array with a specified number of components (first argument) and a specified size nx,ny,nz (remaining arguments)\n\n### Methods\n`CPUAccess()`, `Comp(int)`, `DevPtr(int)`, `Disable()`, `Free()`, `GPUAccess()`, `Get(int, int, int, int)`, `Host()`, `HostCopy()`, `Index(int, int, int)`, `IsNil()`, `Len()`, `MemType()`, `Scalars()`, `Set(int, int, int, int, float64)`, `SetScalar(int, int, int, float64)`, `SetVector(int, int, int, data.Vector)`, `Size()`, `Tensors()` and `Vectors()`.",
+            "methods": [
+                "CPUAccess()",
+                "Comp(int)",
+                "DevPtr(int)",
+                "Disable()",
+                "Free()",
+                "GPUAccess()",
+                "Get(int, int, int, int)",
+                "Host()",
+                "HostCopy()",
+                "Index(int, int, int)",
+                "IsNil()",
+                "Len()",
+                "MemType()",
+                "Scalars()",
+                "Set(int, int, int, int, float64)",
+                "SetScalar(int, int, int, float64)",
+                "SetVector(int, int, int, data.Vector)",
+                "Size()",
+                "Tensors()",
+                "Vectors()"
+            ]
+        },
+        "NewVectorMask": {
+            "signature": "NewVectorMask(int, int, int) Slice",
+            "description": "Makes a 3D array of vectors\n\n### Methods\n`CPUAccess()`, `Comp(int)`, `DevPtr(int)`, `Disable()`, `Free()`, `GPUAccess()`, `Get(int, int, int, int)`, `Host()`, `HostCopy()`, `Index(int, int, int)`, `IsNil()`, `Len()`, `MemType()`, `Scalars()`, `Set(int, int, int, int, float64)`, `SetScalar(int, int, int, float64)`, `SetVector(int, int, int, data.Vector)`, `Size()`, `Tensors()` and `Vectors()`.",
+            "methods": [
+                "CPUAccess()",
+                "Comp(int)",
+                "DevPtr(int)",
+                "Disable()",
+                "Free()",
+                "GPUAccess()",
+                "Get(int, int, int, int)",
+                "Host()",
+                "HostCopy()",
+                "Index(int, int, int)",
+                "IsNil()",
+                "Len()",
+                "MemType()",
+                "Scalars()",
+                "Set(int, int, int, int, float64)",
+                "SetScalar(int, int, int, float64)",
+                "SetVector(int, int, int, data.Vector)",
+                "Size()",
+                "Tensors()",
+                "Vectors()"
+            ]
+        },
+        "norm": {
+            "signature": "norm(float64) float64",
+            "description": "Standard normal distribution",
+            "methods": []
+        },
+        "Normalized": {
+            "signature": "Normalized(Quantity) Quantity",
+            "description": "Normalize quantity\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "now": {
+            "signature": "now() time.Time",
+            "description": "Returns the current time\n\n### Methods\n`Add(time.Duration)`, `AddDate(int, int, int)`, `After(time.Time)`, `AppendFormat([]uint8, string)`, `Before(time.Time)`, `Clock()`, `Compare(time.Time)`, `Date()`, `Day()`, `Equal(time.Time)`, `Format(string)`, `GoString()`, `GobEncode()`, `Hour()`, `ISOWeek()`, `In(*time.Location)`, `IsDST()`, `IsZero()`, `Local()`, `Location()`, `MarshalBinary()`, `MarshalJSON()`, `MarshalText()`, `Minute()`, `Month()`, `Nanosecond()`, `Round(time.Duration)`, `Second()`, `Sub(time.Time)`, `Truncate(time.Duration)`, `UTC()`, `Unix()`, `UnixMicro()`, `UnixMilli()`, `UnixNano()`, `Weekday()`, `Year()`, `YearDay()`, `Zone()` and `ZoneBounds()`.",
+            "methods": [
+                "Add(time.Duration)",
+                "AddDate(int, int, int)",
+                "After(time.Time)",
+                "AppendFormat([]uint8, string)",
+                "Before(time.Time)",
+                "Clock()",
+                "Compare(time.Time)",
+                "Date()",
+                "Day()",
+                "Equal(time.Time)",
+                "Format(string)",
+                "GoString()",
+                "GobEncode()",
+                "Hour()",
+                "ISOWeek()",
+                "In(*time.Location)",
+                "IsDST()",
+                "IsZero()",
+                "Local()",
+                "Location()",
+                "MarshalBinary()",
+                "MarshalJSON()",
+                "MarshalText()",
+                "Minute()",
+                "Month()",
+                "Nanosecond()",
+                "Round(time.Duration)",
+                "Second()",
+                "Sub(time.Time)",
+                "Truncate(time.Duration)",
+                "UTC()",
+                "Unix()",
+                "UnixMicro()",
+                "UnixMilli()",
+                "UnixNano()",
+                "Weekday()",
+                "Year()",
+                "YearDay()",
+                "Zone()",
+                "ZoneBounds()"
+            ]
+        },
+        "pow": {
+            "signature": "pow(float64, float64) float64",
+            "description": "Pow returns x**y, the base-x exponential of y.",
+            "methods": []
+        },
+        "pow10": {
+            "signature": "pow10(int) float64",
+            "description": "Pow10 returns 10**n, the base-10 exponential of n.",
+            "methods": []
+        },
+        "Print": {
+            "signature": "Print(...interface, {})",
+            "description": "Print to standard output",
+            "methods": []
+        },
+        "rand": {
+            "signature": "rand() float64",
+            "description": "Random number between 0 and 1",
+            "methods": []
+        },
+        "randExp": {
+            "signature": "randExp() float64",
+            "description": "Exponentially distributed random number between 0 and +inf, mean=1",
+            "methods": []
+        },
+        "randInt": {
+            "signature": "randInt(int) int",
+            "description": "Random non-negative integer",
+            "methods": []
+        },
+        "randNorm": {
+            "signature": "randNorm() float64",
+            "description": "Standard normal random number",
+            "methods": []
+        },
+        "RandomMag": {
+            "signature": "RandomMag() Config",
+            "description": "Random magnetization\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "RandomMagSeed": {
+            "signature": "RandomMagSeed(int) Config",
+            "description": "Random magnetization with given seed\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "randSeed": {
+            "signature": "randSeed(int)",
+            "description": "Sets the random number seed for rand(), randExp(), randNorm() and randInt().",
+            "methods": []
+        },
+        "Rect": {
+            "signature": "Rect(float64, float64) Shape",
+            "description": "2D rectangle with size in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "RedefRegion": {
+            "signature": "RedefRegion(int, int)",
+            "description": "Reassign all cells with a given region (first argument) to a new region (second argument)",
+            "methods": []
+        },
+        "Relax": {
+            "signature": "Relax()",
+            "description": "Try to minimize the total energy",
+            "methods": []
+        },
+        "remainder": {
+            "signature": "remainder(float64, float64) float64",
+            "description": "Remainder returns the IEEE 754 floating-point remainder of x/y.",
+            "methods": []
+        },
+        "RemoveCustomEnergies": {
+            "signature": "RemoveCustomEnergies()",
+            "description": "Removes all custom energies",
+            "methods": []
+        },
+        "RemoveCustomFields": {
+            "signature": "RemoveCustomFields()",
+            "description": "Removes all custom fields again",
+            "methods": []
+        },
+        "Run": {
+            "signature": "Run(float64)",
+            "description": "Run the simulation for a time in seconds",
+            "methods": []
+        },
+        "RunningAverage": {
+            "signature": "RunningAverage(Quantity) Quantity",
+            "description": "Records the time-average of a quantity from the moment this function is called.Note: this may impact performance since the Quantity will be evaluated after every step.\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "RunWhile": {
+            "signature": "RunWhile(func() bool)",
+            "description": "Run while condition function is true",
+            "methods": []
+        },
+        "Save": {
+            "signature": "Save(Quantity)",
+            "description": "Save space-dependent quantity once, with auto filename",
+            "methods": []
+        },
+        "SaveAs": {
+            "signature": "SaveAs(Quantity, string)",
+            "description": "Save space-dependent quantity with custom filename",
+            "methods": []
+        },
+        "SetCellSize": {
+            "signature": "SetCellSize(float64, float64, float64)",
+            "description": "Sets the X,Y,Z cell size in meters",
+            "methods": []
+        },
+        "SetGeom": {
+            "signature": "SetGeom(Shape)",
+            "description": "Sets the geometry to a given shape",
+            "methods": []
+        },
+        "SetGridSize": {
+            "signature": "SetGridSize(int, int, int)",
+            "description": "Sets the number of cells for X,Y,Z",
+            "methods": []
+        },
+        "SetMesh": {
+            "signature": "SetMesh(int, int, int, float64, float64, float64, int, int, int)",
+            "description": "Sets GridSize, CellSize and PBC at the same time",
+            "methods": []
+        },
+        "SetPBC": {
+            "signature": "SetPBC(int, int, int)",
+            "description": "Sets the number of repetitions in X,Y,Z to create periodic boundary conditions. The number of repetitions determines the cutoff range for the demagnetization.",
+            "methods": []
+        },
+        "SetSolver": {
+            "signature": "SetSolver(int)",
+            "description": "Set solver type.1: Euler2: Heun3: Bogacki-Shampine4: Runge-Kutta (RK4)5: Dormand-Prince6: Fehlberg-1: Backward Euler",
+            "methods": []
+        },
+        "Shift": {
+            "signature": "Shift(int)",
+            "description": "Shifts the simulation by +1/-1 cells along X",
+            "methods": []
+        },
+        "Shifted": {
+            "signature": "Shifted(Quantity, int, int, int) Quantity",
+            "description": "Shifted quantity\n\n### Methods\n`EvalTo()`.",
+            "methods": []
+        },
+        "Sign": {
+            "signature": "Sign(float64) float64",
+            "description": "Signum function",
+            "methods": []
+        },
+        "sin": {
+            "signature": "sin(float64) float64",
+            "description": "Sin returns the sine of the radian argument x.",
+            "methods": []
+        },
+        "sinc": {
+            "signature": "sinc(float64) float64",
+            "description": "Sinc returns sin(x)/x. If x=0, then Sinc(x) returns 1.",
+            "methods": []
+        },
+        "since": {
+            "signature": "since(time.Time) time.Duration",
+            "description": "Returns the time elapsed since argument\n\n### Methods\n`Abs()`, `Hours()`, `Microseconds()`, `Milliseconds()`, `Minutes()`, `Nanoseconds()`, `Round(time.Duration)`, `Seconds()` and `Truncate(time.Duration)`.",
+            "methods": [
+                "Abs()",
+                "Hours()",
+                "Microseconds()",
+                "Milliseconds()",
+                "Minutes()",
+                "Nanoseconds()",
+                "Round(time.Duration)",
+                "Seconds()",
+                "Truncate(time.Duration)"
+            ]
+        },
+        "sinh": {
+            "signature": "sinh(float64) float64",
+            "description": "Sinh returns the hyperbolic sine of x.",
+            "methods": []
+        },
+        "Snapshot": {
+            "signature": "Snapshot(Quantity)",
+            "description": "Save image of quantity",
+            "methods": []
+        },
+        "SnapshotAs": {
+            "signature": "SnapshotAs(Quantity, string)",
+            "description": "Save image of quantity with custom filename",
+            "methods": []
+        },
+        "sprint": {
+            "signature": "sprint(...interface, {}) string",
+            "description": "Print all arguments to string with automatic formatting",
+            "methods": []
+        },
+        "sprintf": {
+            "signature": "sprintf(string, ...interface, {}) string",
+            "description": "Print to string with C-style formatting.",
+            "methods": []
+        },
+        "sqrt": {
+            "signature": "sqrt(float64) float64",
+            "description": "Sqrt returns the square root of x.",
+            "methods": []
+        },
+        "Square": {
+            "signature": "Square(float64) Shape",
+            "description": "2D square with size in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Steps": {
+            "signature": "Steps(int)",
+            "description": "Run the simulation for a number of time steps",
+            "methods": []
+        },
+        "Sum": {
+            "signature": "Sum(Quantity) float64",
+            "description": "Sum of Quantity over all cells in the grid. For a vector Quantity, all components are added together.",
+            "methods": []
+        },
+        "SumVector": {
+            "signature": "SumVector(Quantity) data.Vector",
+            "description": "Sum of vector Quantity over all cells in the grid.\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "Superball": {
+            "signature": "Superball(float64, float64) Shape",
+            "description": "3D Superball with diameter in meter and shape parameter p. Interpolates between a cube (p=+∞), sphere (p=1), octahedron (p=0.5) and empty space (p≤0).\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "TableAdd": {
+            "signature": "TableAdd(Quantity)",
+            "description": "Add quantity as a column to the data table.",
+            "methods": []
+        },
+        "TableAddVar": {
+            "signature": "TableAddVar(ScalarFunction, string, string)",
+            "description": "Add user-defined variable + name + unit to data table.",
+            "methods": []
+        },
+        "TableAutoSave": {
+            "signature": "TableAutoSave(float64)",
+            "description": "Auto-save the data table every period (s). Zero disables save.",
+            "methods": []
+        },
+        "TablePrint": {
+            "signature": "TablePrint(...interface, {})",
+            "description": "Print anyting in the data table",
+            "methods": []
+        },
+        "TableSave": {
+            "signature": "TableSave()",
+            "description": "Save the data table right now (appends one line).",
+            "methods": []
+        },
+        "tan": {
+            "signature": "tan(float64) float64",
+            "description": "Tan returns the tangent of the radian argument x.",
+            "methods": []
+        },
+        "tanh": {
+            "signature": "tanh(float64) float64",
+            "description": "Tanh returns the hyperbolic tangent of x.",
+            "methods": []
+        },
+        "ThermSeed": {
+            "signature": "ThermSeed(int)",
+            "description": "Set a random seed for thermal noise",
+            "methods": []
+        },
+        "Triangle": {
+            "signature": "Triangle(float64, float64, float64, float64, float64, float64) Shape",
+            "description": "2D triangle with vertices (x0, y0), (x1, y1) and (x2, y2)\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "trunc": {
+            "signature": "trunc(float64) float64",
+            "description": "Trunc returns the integer value of x.",
+            "methods": []
+        },
+        "TwoDomain": {
+            "signature": "TwoDomain(float64, float64, float64, float64, float64, float64, float64, float64, float64) Config",
+            "description": "Twodomain magnetization with with given magnetization in left domain, wall, and right domain\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "Uniform": {
+            "signature": "Uniform(float64, float64, float64) Config",
+            "description": "Uniform magnetization in given direction\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "Universe": {
+            "signature": "Universe() Shape",
+            "description": "Entire space\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Vector": {
+            "signature": "Vector(float64, float64, float64) data.Vector",
+            "description": "Constructs a vector with given components\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "Vortex": {
+            "signature": "Vortex(int, int) Config",
+            "description": "Vortex magnetization with given circulation and core polarization\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "VortexWall": {
+            "signature": "VortexWall(float64, float64, int, int) Config",
+            "description": "Vortex wall magnetization with given mx in left and right domain and core circulation and polarization\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "XRange": {
+            "signature": "XRange(float64, float64) Shape",
+            "description": "Part of space between x1 (inclusive) and x2 (exclusive), in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "y0": {
+            "signature": "y0(float64) float64",
+            "description": "Y0 returns the order-zero Bessel function of the second kind.",
+            "methods": []
+        },
+        "y1": {
+            "signature": "y1(float64) float64",
+            "description": "Y1 returns the order-one Bessel function of the second kind.",
+            "methods": []
+        },
+        "yn": {
+            "signature": "yn(int, float64) float64",
+            "description": "Yn returns the order-n Bessel function of the second kind.",
+            "methods": []
+        },
+        "YRange": {
+            "signature": "YRange(float64, float64) Shape",
+            "description": "Part of space between y1 (inclusive) and y2 (exclusive), in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "ZRange": {
+            "signature": "ZRange(float64, float64) Shape",
+            "description": "Part of space between z1 (inclusive) and z2 (exclusive), in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        }
+    },
+    "variables": {
+        "Aex": {
+            "signature": "Aex",
+            "description": "Exchange stiffness (J/m)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "alpha": {
+            "signature": "alpha",
+            "description": "Landau-Lifshitz damping constant\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "anisC1": {
+            "signature": "anisC1",
+            "description": "Cubic anisotropy direction #1\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `SetRegion(int, VectorFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "SetRegion(int, VectorFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "anisC2": {
+            "signature": "anisC2",
+            "description": "Cubic anisotropy direction #2\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `SetRegion(int, VectorFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "SetRegion(int, VectorFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "anisU": {
+            "signature": "anisU",
+            "description": "Uniaxial anisotropy direction\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `SetRegion(int, VectorFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "SetRegion(int, VectorFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "B1": {
+            "signature": "B1",
+            "description": "First magneto-elastic coupling constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "B2": {
+            "signature": "B2",
+            "description": "Second magneto-elastic coupling constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "B_anis": {
+            "signature": "B_anis",
+            "description": "Anisotropy field (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "B_custom": {
+            "signature": "B_custom",
+            "description": "User-defined field (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "B_demag": {
+            "signature": "B_demag",
+            "description": "Magnetostatic field (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "B_eff": {
+            "signature": "B_eff",
+            "description": "Effective field (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "B_exch": {
+            "signature": "B_exch",
+            "description": "Exchange field (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "B_ext": {
+            "signature": "B_ext",
+            "description": "Externally applied field (T)\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(data.Vector)`, `SetRegion(int, VectorFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(data.Vector)",
+                "SetRegion(int, VectorFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "B_mel": {
+            "signature": "B_mel",
+            "description": "Magneto-elastic filed (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "B_therm": {
+            "signature": "B_therm",
+            "description": "Thermal field (T)\n\n### Methods\n`AddTo(Slice)` and `EvalTo(Slice)`.",
+            "methods": [
+                "AddTo(Slice)",
+                "EvalTo(Slice)"
+            ]
+        },
+        "Dbulk": {
+            "signature": "Dbulk",
+            "description": "Bulk Dzyaloshinskii-Moriya strength (J/m2)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "DemagAccuracy": {
+            "signature": "DemagAccuracy",
+            "description": "Controls accuracy of demag kernel",
+            "methods": []
+        },
+        "Dind": {
+            "signature": "Dind",
+            "description": "Interfacial Dzyaloshinskii-Moriya strength (J/m2)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "DindCoupling": {
+            "signature": "DindCoupling",
+            "description": "Average DMI coupling with neighbors (arb.)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "DisableSlonczewskiTorque": {
+            "signature": "DisableSlonczewskiTorque",
+            "description": "Disables Slonczewski torque (default=false)",
+            "methods": []
+        },
+        "DisableZhangLiTorque": {
+            "signature": "DisableZhangLiTorque",
+            "description": "Disables Zhang-Li torque (default=false)",
+            "methods": []
+        },
+        "DoPrecess": {
+            "signature": "DoPrecess",
+            "description": "Enables LL precession (default=true)",
+            "methods": []
+        },
+        "dt": {
+            "signature": "dt",
+            "description": "Time Step (s)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "DUMP": {
+            "signature": "DUMP",
+            "description": "OutputFormat = DUMP sets text DUMP output",
+            "methods": []
+        },
+        "E_anis": {
+            "signature": "E_anis",
+            "description": "total anisotropy energy (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_custom": {
+            "signature": "E_custom",
+            "description": "total energy of user-defined field (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_demag": {
+            "signature": "E_demag",
+            "description": "Magnetostatic energy (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_exch": {
+            "signature": "E_exch",
+            "description": "Total exchange energy (including the DMI energy) (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_mel": {
+            "signature": "E_mel",
+            "description": "Magneto-elastic energy (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_therm": {
+            "signature": "E_therm",
+            "description": "Thermal energy (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_total": {
+            "signature": "E_total",
+            "description": "total energy (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "E_Zeeman": {
+            "signature": "E_Zeeman",
+            "description": "Zeeman energy (J)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "Edens_anis": {
+            "signature": "Edens_anis",
+            "description": "Anisotropy energy density (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_custom": {
+            "signature": "Edens_custom",
+            "description": "Energy density of user-defined field. (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_demag": {
+            "signature": "Edens_demag",
+            "description": "Magnetostatic energy density (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_exch": {
+            "signature": "Edens_exch",
+            "description": "Total exchange energy density (including the DMI energy density) (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_mel": {
+            "signature": "Edens_mel",
+            "description": "Magneto-elastic energy density (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_therm": {
+            "signature": "Edens_therm",
+            "description": "Thermal energy density (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_total": {
+            "signature": "Edens_total",
+            "description": "Total energy density (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "Edens_Zeeman": {
+            "signature": "Edens_Zeeman",
+            "description": "Zeeman energy density (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "EdgeCarryShift": {
+            "signature": "EdgeCarryShift",
+            "description": "Whether to use the current magnetization at the border for the cells inserted by Shift (default=false)",
+            "methods": []
+        },
+        "EdgeSmooth": {
+            "signature": "EdgeSmooth",
+            "description": "Geometry edge smoothing with edgeSmooth^3 samples per cell, 0=staircase, ~8=very smooth",
+            "methods": []
+        },
+        "EnableDemag": {
+            "signature": "EnableDemag",
+            "description": "Enables/disables demag (default=true)",
+            "methods": []
+        },
+        "EpsilonPrime": {
+            "signature": "EpsilonPrime",
+            "description": "Slonczewski secondairy STT term ε'\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "ExchCoupling": {
+            "signature": "ExchCoupling",
+            "description": "Average exchange coupling with neighbors (arb.)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_BackGroundTilt": {
+            "signature": "ext_BackGroundTilt",
+            "description": "Size of in-plane component of background magnetization. All values below this one are rounded down to perfectly out-of-plane to improve position calculation  (default = 0.25)",
+            "methods": []
+        },
+        "ext_bubbledist": {
+            "signature": "ext_bubbledist",
+            "description": "Bubble traveled distance (m)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_BubbleMz": {
+            "signature": "ext_BubbleMz",
+            "description": "Center magnetization 1.0 or -1.0  (default = 1.0)",
+            "methods": []
+        },
+        "ext_bubblepos": {
+            "signature": "ext_bubblepos",
+            "description": "Bubble core position (m)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_bubblespeed": {
+            "signature": "ext_bubblespeed",
+            "description": "Bubble velocity (m/s)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_corepos": {
+            "signature": "ext_corepos",
+            "description": "Vortex core position (x,y) + polarization (z) (m)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_dwpos": {
+            "signature": "ext_dwpos",
+            "description": "Position of the simulation window while following a domain wall (m)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_dwspeed": {
+            "signature": "ext_dwspeed",
+            "description": "Speed of the simulation window while following a domain wall (m/s)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_dwtilt": {
+            "signature": "ext_dwtilt",
+            "description": "PMA domain wall tilt (rad)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_dwxpos": {
+            "signature": "ext_dwxpos",
+            "description": "Position of the simulation window while following a domain wall (m)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_emergentmagneticfield_fivepointstencil": {
+            "signature": "ext_emergentmagneticfield_fivepointstencil",
+            "description": "Emergent magnetic field calculated using five-point stencil (1/m2)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "ext_emergentmagneticfield_solidangle": {
+            "signature": "ext_emergentmagneticfield_solidangle",
+            "description": "Emergent magnetic field computed using Berg-Lüscher lattice method (1/m2)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "ext_emergentmagneticfield_twopointstencil": {
+            "signature": "ext_emergentmagneticfield_twopointstencil",
+            "description": "Emergent magnetic field calculated using two-point stencil (1/m2)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "ext_enableCenterBubbleX": {
+            "signature": "ext_enableCenterBubbleX",
+            "description": "Enables centering along the X-axis during ext_centerBubble (default=true)",
+            "methods": []
+        },
+        "ext_enableCenterBubbleY": {
+            "signature": "ext_enableCenterBubbleY",
+            "description": "Enables centering along the Y-axis during ext_centerBubble (default=true)",
+            "methods": []
+        },
+        "ext_grainCutShape": {
+            "signature": "ext_grainCutShape",
+            "description": "Whether to add the complete (3D) voronoi grain, only if its centre lies within the shape (default=false)",
+            "methods": []
+        },
+        "ext_hopfindex_fivepointstencil": {
+            "signature": "ext_hopfindex_fivepointstencil",
+            "description": "Hopf index calculated using five-point stencil\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_hopfindex_solidangle": {
+            "signature": "ext_hopfindex_solidangle",
+            "description": "Hopf index calculated using Berg-Lüscher lattice method\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_hopfindex_solidanglefourier": {
+            "signature": "ext_hopfindex_solidanglefourier",
+            "description": "Hopf index calculated using Berg-Lüscher lattice method to calculate emergent field, with emergent field Fourier transformed\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_hopfindex_twopointstencil": {
+            "signature": "ext_hopfindex_twopointstencil",
+            "description": "Hopf index calculated using two-point stencil\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_hopfindexdensity_fivepointstencil": {
+            "signature": "ext_hopfindexdensity_fivepointstencil",
+            "description": "Hopf index density calculated using five-point stencil (1/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_hopfindexdensity_solidangle": {
+            "signature": "ext_hopfindexdensity_solidangle",
+            "description": "Hopf index density computed using Berg-Lüscher lattice method (1/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_hopfindexdensity_twopointstencil": {
+            "signature": "ext_hopfindexdensity_twopointstencil",
+            "description": "Hopf index density calculated using two-point stencil (1/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_phi": {
+            "signature": "ext_phi",
+            "description": "Azimuthal angle (rad)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_theta": {
+            "signature": "ext_theta",
+            "description": "Polar angle (rad)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_topologicalcharge": {
+            "signature": "ext_topologicalcharge",
+            "description": "2D topological charge\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "ext_topologicalchargedensity": {
+            "signature": "ext_topologicalchargedensity",
+            "description": "2D topological charge density m·(∂m/∂x ✕ ∂m/∂y) (1/m2)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_topologicalchargedensitylattice": {
+            "signature": "ext_topologicalchargedensitylattice",
+            "description": "2D topological charge density according to Berg and Lüscher (1/m2)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "ext_topologicalchargelattice": {
+            "signature": "ext_topologicalchargelattice",
+            "description": "2D topological charge according to Berg and Lüscher\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "exx": {
+            "signature": "exx",
+            "description": "exx component of the strain tensor\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(float64)`, `SetRegion(int, ScalarFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "exy": {
+            "signature": "exy",
+            "description": "exy component of the strain tensor\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(float64)`, `SetRegion(int, ScalarFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "exz": {
+            "signature": "exz",
+            "description": "exz component of the strain tensor\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(float64)`, `SetRegion(int, ScalarFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "eyy": {
+            "signature": "eyy",
+            "description": "eyy component of the strain tensor\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(float64)`, `SetRegion(int, ScalarFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "eyz": {
+            "signature": "eyz",
+            "description": "eyz component of the strain tensor\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(float64)`, `SetRegion(int, ScalarFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "ezz": {
+            "signature": "ezz",
+            "description": "ezz component of the strain tensor\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(float64)`, `SetRegion(int, ScalarFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "F_mel": {
+            "signature": "F_mel",
+            "description": "Magneto-elastic force density (N/m3)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "false": {
+            "signature": "false",
+            "description": "",
+            "methods": []
+        },
+        "FilenameFormat": {
+            "signature": "FilenameFormat",
+            "description": "printf formatting string for output filenames.",
+            "methods": []
+        },
+        "FixDt": {
+            "signature": "FixDt",
+            "description": "Set a fixed time step, 0 disables fixed step (which is the default)",
+            "methods": []
+        },
+        "FixedLayer": {
+            "signature": "FixedLayer",
+            "description": "Slonczewski fixed layer polarization\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(data.Vector)`, `SetRegion(int, VectorFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(data.Vector)",
+                "SetRegion(int, VectorFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "FIXEDLAYER_BOTTOM": {
+            "signature": "FIXEDLAYER_BOTTOM",
+            "description": "FixedLayerPosition = FIXEDLAYER_BOTTOM instructs mumax3 that fixed layer is underneath of the free layer",
+            "methods": []
+        },
+        "FIXEDLAYER_TOP": {
+            "signature": "FIXEDLAYER_TOP",
+            "description": "FixedLayerPosition = FIXEDLAYER_TOP instructs mumax3 that fixed layer is on top of the free layer",
+            "methods": []
+        },
+        "FixedLayerPosition": {
+            "signature": "FixedLayerPosition",
+            "description": "Position of the fixed layer: FIXEDLAYER_TOP, FIXEDLAYER_BOTTOM (default=FIXEDLAYER_TOP)",
+            "methods": []
+        },
+        "FreeLayerThickness": {
+            "signature": "FreeLayerThickness",
+            "description": "Slonczewski free layer thickness (if set to zero (default), then the thickness will be deduced from the mesh size) (m)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "frozenspins": {
+            "signature": "frozenspins",
+            "description": "Defines spins that should be fixed\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "GammaLL": {
+            "signature": "GammaLL",
+            "description": "Gyromagnetic ratio in rad/Ts",
+            "methods": []
+        },
+        "geom": {
+            "signature": "geom",
+            "description": "Cell fill fraction (0..1)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetCell(int, int, int)` and `Gpu()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetCell(int, int, int)",
+                "Gpu()"
+            ]
+        },
+        "Headroom": {
+            "signature": "Headroom",
+            "description": "Solver headroom (default = 0.8)",
+            "methods": []
+        },
+        "inf": {
+            "signature": "inf",
+            "description": "Inf returns positive infinity if sign >= 0, negative infinity if sign < 0.",
+            "methods": []
+        },
+        "J": {
+            "signature": "J",
+            "description": "Electrical current density (A/m2)\n\n### Methods\n`Add(Slice, ScalarFunction)`, `AddGo(Slice, func() float64)`, `AddTo(Slice)`, `Average()`, `Comp(int)`, `EvalTo(Slice)`, `IsUniform()`, `MSlice()`, `Region(int)`, `RemoveExtraTerms()`, `Set(data.Vector)`, `SetRegion(int, VectorFunction)` and `SetRegionFn(int, func() [3]float64)`.",
+            "methods": [
+                "Add(Slice, ScalarFunction)",
+                "AddGo(Slice, func() float64)",
+                "AddTo(Slice)",
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "RemoveExtraTerms()",
+                "Set(data.Vector)",
+                "SetRegion(int, VectorFunction)",
+                "SetRegionFn(int, func() [3]float64)"
+            ]
+        },
+        "Kc1": {
+            "signature": "Kc1",
+            "description": "1st order cubic anisotropy constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "Kc2": {
+            "signature": "Kc2",
+            "description": "2nd order cubic anisotropy constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "Kc3": {
+            "signature": "Kc3",
+            "description": "3rd order cubic anisotropy constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "Ku1": {
+            "signature": "Ku1",
+            "description": "1st order uniaxial anisotropy constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "Ku2": {
+            "signature": "Ku2",
+            "description": "2nd order uniaxial anisotropy constant (J/m3)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "Lambda": {
+            "signature": "Lambda",
+            "description": "Slonczewski Λ parameter\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "LastErr": {
+            "signature": "LastErr",
+            "description": "Error of last step\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "LLtorque": {
+            "signature": "LLtorque",
+            "description": "Landau-Lifshitz torque/γ0 (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "m": {
+            "signature": "m",
+            "description": "Reduced magnetization (unit length)\n\n### Methods\n`Average()`, `Buffer()`, `Comp(int)`, `EvalTo(Slice)`, `GetCell(int, int, int)`, `LoadFile(string)`, `Quantity()`, `Region(int)`, `Set(Config)`, `SetArray(Slice)`, `SetCell(int, int, int, data.Vector)`, `SetInShape(Shape, Config)` and `SetRegion(int, Config)`.",
+            "methods": [
+                "Average()",
+                "Buffer()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "GetCell(int, int, int)",
+                "LoadFile(string)",
+                "Quantity()",
+                "Region(int)",
+                "Set(Config)",
+                "SetArray(Slice)",
+                "SetCell(int, int, int, data.Vector)",
+                "SetInShape(Shape, Config)",
+                "SetRegion(int, Config)"
+            ]
+        },
+        "m_full": {
+            "signature": "m_full",
+            "description": "Unnormalized magnetization (A/m)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "MaxAngle": {
+            "signature": "MaxAngle",
+            "description": "maximum angle between neighboring spins (rad)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "MaxDt": {
+            "signature": "MaxDt",
+            "description": "Maximum time step the solver can take (s)",
+            "methods": []
+        },
+        "MaxErr": {
+            "signature": "MaxErr",
+            "description": "Maximum error per step the solver can tolerate (default = 1e-5)",
+            "methods": []
+        },
+        "maxTorque": {
+            "signature": "maxTorque",
+            "description": "Maximum torque/γ0, over all cells (T)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "MFM": {
+            "signature": "MFM",
+            "description": "MFM image (arb.)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "MFMDipole": {
+            "signature": "MFMDipole",
+            "description": "Height of vertically magnetized part of MFM tip",
+            "methods": []
+        },
+        "MFMLift": {
+            "signature": "MFMLift",
+            "description": "MFM lift height",
+            "methods": []
+        },
+        "MinDt": {
+            "signature": "MinDt",
+            "description": "Minimum time step the solver can take (s)",
+            "methods": []
+        },
+        "MinimizerSamples": {
+            "signature": "MinimizerSamples",
+            "description": "Number of max dM to collect for Minimize convergence check.",
+            "methods": []
+        },
+        "MinimizerStop": {
+            "signature": "MinimizerStop",
+            "description": "Stopping max dM for Minimize",
+            "methods": []
+        },
+        "Msat": {
+            "signature": "Msat",
+            "description": "Saturation magnetization (A/m)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "Mu0": {
+            "signature": "Mu0",
+            "description": "Vacuum permeability (Tm/A)",
+            "methods": []
+        },
+        "NEval": {
+            "signature": "NEval",
+            "description": "Total number of torque evaluations\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "NoDemagSpins": {
+            "signature": "NoDemagSpins",
+            "description": "Disable magnetostatic interaction per region (default=0, set to 1 to disable). E.g.: NoDemagSpins.SetRegion(5, 1) disables the magnetostatic interaction in region 5.\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "OpenBC": {
+            "signature": "OpenBC",
+            "description": "Use open boundary conditions (default=false)",
+            "methods": []
+        },
+        "OutputFormat": {
+            "signature": "OutputFormat",
+            "description": "Format for data files: OVF1_TEXT, OVF1_BINARY, OVF2_TEXT or OVF2_BINARY",
+            "methods": []
+        },
+        "OVF1_BINARY": {
+            "signature": "OVF1_BINARY",
+            "description": "OutputFormat = OVF1_BINARY sets binary OVF1 output",
+            "methods": []
+        },
+        "OVF1_TEXT": {
+            "signature": "OVF1_TEXT",
+            "description": "OutputFormat = OVF1_TEXT sets text OVF1 output",
+            "methods": []
+        },
+        "OVF2_BINARY": {
+            "signature": "OVF2_BINARY",
+            "description": "OutputFormat = OVF2_BINARY sets binary OVF2 output",
+            "methods": []
+        },
+        "OVF2_TEXT": {
+            "signature": "OVF2_TEXT",
+            "description": "OutputFormat = OVF2_TEXT sets text OVF2 output",
+            "methods": []
+        },
+        "PeakErr": {
+            "signature": "PeakErr",
+            "description": "Overall maxium error per step\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Get()`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Get()"
+            ]
+        },
+        "pi": {
+            "signature": "pi",
+            "description": "",
+            "methods": []
+        },
+        "Pol": {
+            "signature": "Pol",
+            "description": "Electrical current polarization\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "regions": {
+            "signature": "regions",
+            "description": "Outputs the region index for each cell\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetCell(int, int, int)`, `Gpu()`, `HostArray()`, `HostList()`, `LoadFile(string)` and `SetCell(int, int, int, int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetCell(int, int, int)",
+                "Gpu()",
+                "HostArray()",
+                "HostList()",
+                "LoadFile(string)",
+                "SetCell(int, int, int, int)"
+            ]
+        },
+        "RelaxTorqueThreshold": {
+            "signature": "RelaxTorqueThreshold",
+            "description": "MaxTorque threshold for relax(). If set to -1 (default), relax() will stop when the average torque is steady or increasing.",
+            "methods": []
+        },
+        "ShiftGeom": {
+            "signature": "ShiftGeom",
+            "description": "Whether Shift() acts on geometry",
+            "methods": []
+        },
+        "ShiftM": {
+            "signature": "ShiftM",
+            "description": "Whether Shift() acts on magnetization",
+            "methods": []
+        },
+        "ShiftMagD": {
+            "signature": "ShiftMagD",
+            "description": "Upon shift, insert this magnetization from the bottom\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "ShiftMagL": {
+            "signature": "ShiftMagL",
+            "description": "Upon shift, insert this magnetization from the left\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "ShiftMagR": {
+            "signature": "ShiftMagR",
+            "description": "Upon shift, insert this magnetization from the right\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "ShiftMagU": {
+            "signature": "ShiftMagU",
+            "description": "Upon shift, insert this magnetization from the top\n\n### Methods\n`Add(data.Vector)`, `Cross(data.Vector)`, `Div(float64)`, `Dot(data.Vector)`, `Len()`, `MAdd(float64, data.Vector)`, `Mul(float64)`, `Sub(data.Vector)`, `X()`, `Y()` and `Z()`.",
+            "methods": [
+                "Add(data.Vector)",
+                "Cross(data.Vector)",
+                "Div(float64)",
+                "Dot(data.Vector)",
+                "Len()",
+                "MAdd(float64, data.Vector)",
+                "Mul(float64)",
+                "Sub(data.Vector)",
+                "X()",
+                "Y()",
+                "Z()"
+            ]
+        },
+        "ShiftRegions": {
+            "signature": "ShiftRegions",
+            "description": "Whether Shift() acts on regions",
+            "methods": []
+        },
+        "SnapshotFormat": {
+            "signature": "SnapshotFormat",
+            "description": "Image format for snapshots: jpg, png or gif.",
+            "methods": []
+        },
+        "spinAngle": {
+            "signature": "spinAngle",
+            "description": "Angle between neighboring spins (rad)\n\n### Methods\n`Average()`, `EvalTo(Slice)` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "Region(int)"
+            ]
+        },
+        "step": {
+            "signature": "step",
+            "description": "Total number of time steps taken",
+            "methods": []
+        },
+        "STTorque": {
+            "signature": "STTorque",
+            "description": "Spin-transfer torque/γ0 (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "t": {
+            "signature": "t",
+            "description": "Total simulated time (s)",
+            "methods": []
+        },
+        "Temp": {
+            "signature": "Temp",
+            "description": "Temperature (K)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        },
+        "torque": {
+            "signature": "torque",
+            "description": "Total torque/γ0 (T)\n\n### Methods\n`Average()`, `Comp(int)`, `EvalTo(Slice)`, `HostCopy()` and `Region(int)`.",
+            "methods": [
+                "Average()",
+                "Comp(int)",
+                "EvalTo(Slice)",
+                "HostCopy()",
+                "Region(int)"
+            ]
+        },
+        "TotalShift": {
+            "signature": "TotalShift",
+            "description": "Amount by which the simulation has been shifted along the x-axis (m).",
+            "methods": []
+        },
+        "true": {
+            "signature": "true",
+            "description": "",
+            "methods": []
+        },
+        "xi": {
+            "signature": "xi",
+            "description": "Non-adiabaticity of spin-transfer-torque\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
+            "methods": [
+                "Average()",
+                "EvalTo(Slice)",
+                "GetRegion(int)",
+                "IsUniform()",
+                "MSlice()",
+                "Region(int)",
+                "Set(float64)",
+                "SetRegion(int, ScalarFunction)",
+                "SetRegionFuncGo(int, func() float64)",
+                "SetRegionValueGo(int, float64)"
+            ]
+        }
+    },
+    "methods": {
+        "Add": {
+            "signature": "Add(float64, Config)",
+            "description": "A method of `Antivortex`, `B_ext`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `FixedLayer`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Index2Coord`, `J`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `Square`, `SumVector`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vector`, `Vortex`, `VortexWall`, `XRange`, `YRange`, `ZRange`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz` and `now`.",
+            "usedby": [
+                "Antivortex",
+                "B_ext",
+                "BlochSkyrmion",
+                "Cell",
+                "Circle",
+                "Cone",
+                "Conical",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "FixedLayer",
+                "GrainRoughness",
+                "Helical",
+                "HopfionCompactSupport",
+                "ImageShape",
+                "Index2Coord",
+                "J",
+                "Layer",
+                "Layers",
+                "NeelSkyrmion",
+                "RandomMag",
+                "RandomMagSeed",
+                "Rect",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "Square",
+                "SumVector",
+                "Superball",
+                "Triangle",
+                "TwoDomain",
+                "Uniform",
+                "Universe",
+                "Vector",
+                "Vortex",
+                "VortexWall",
+                "XRange",
+                "YRange",
+                "ZRange",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "now"
+            ]
+        },
+        "RotZ": {
+            "signature": "RotZ(float64)",
+            "description": "A method of `Antivortex`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `Square`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vortex`, `VortexWall`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Antivortex",
+                "BlochSkyrmion",
+                "Cell",
+                "Circle",
+                "Cone",
+                "Conical",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "Helical",
+                "HopfionCompactSupport",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "NeelSkyrmion",
+                "RandomMag",
+                "RandomMagSeed",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "TwoDomain",
+                "Uniform",
+                "Universe",
+                "Vortex",
+                "VortexWall",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Scale": {
+            "signature": "Scale(float64, float64, float64)",
+            "description": "A method of `Antivortex`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `Square`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vortex`, `VortexWall`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Antivortex",
+                "BlochSkyrmion",
+                "Cell",
+                "Circle",
+                "Cone",
+                "Conical",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "Helical",
+                "HopfionCompactSupport",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "NeelSkyrmion",
+                "RandomMag",
+                "RandomMagSeed",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "TwoDomain",
+                "Uniform",
+                "Universe",
+                "Vortex",
+                "VortexWall",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Transl": {
+            "signature": "Transl(float64, float64, float64)",
+            "description": "A method of `Antivortex`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `Square`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vortex`, `VortexWall`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Antivortex",
+                "BlochSkyrmion",
+                "Cell",
+                "Circle",
+                "Cone",
+                "Conical",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "Helical",
+                "HopfionCompactSupport",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "NeelSkyrmion",
+                "RandomMag",
+                "RandomMagSeed",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "TwoDomain",
+                "Uniform",
+                "Universe",
+                "Vortex",
+                "VortexWall",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Intersect": {
+            "signature": "Intersect(Shape)",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Inverse": {
+            "signature": "Inverse()",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Repeat": {
+            "signature": "Repeat(float64, float64, float64)",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "RotX": {
+            "signature": "RotX(float64)",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "RotY": {
+            "signature": "RotY(float64)",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Sub": {
+            "signature": "Sub(Shape)",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Index2Coord`, `Layer`, `Layers`, `Rect`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `Square`, `SumVector`, `Superball`, `Triangle`, `Universe`, `Vector`, `XRange`, `YRange`, `ZRange` and `now`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Index2Coord",
+                "Layer",
+                "Layers",
+                "Rect",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "Square",
+                "SumVector",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "Vector",
+                "XRange",
+                "YRange",
+                "ZRange",
+                "now"
+            ]
+        },
+        "Xor": {
+            "signature": "Xor(Shape)",
+            "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+            "usedby": [
+                "Cell",
+                "Circle",
+                "Cone",
+                "Cuboid",
+                "Cylinder",
+                "Ellipse",
+                "Ellipsoid",
+                "GrainRoughness",
+                "ImageShape",
+                "Layer",
+                "Layers",
+                "Rect",
+                "Square",
+                "Superball",
+                "Triangle",
+                "Universe",
+                "XRange",
+                "YRange",
+                "ZRange"
+            ]
+        },
+        "Average": {
+            "signature": "Average()",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `Crop`, `CropLayer`, `CropRegion`, `CropX`, `CropY`, `CropZ`, `Dbulk`, `Dind`, `DindCoupling`, `E_Zeeman`, `E_anis`, `E_custom`, `E_demag`, `E_exch`, `E_mel`, `E_therm`, `E_total`, `Edens_Zeeman`, `Edens_anis`, `Edens_custom`, `Edens_demag`, `Edens_exch`, `Edens_mel`, `Edens_therm`, `Edens_total`, `EpsilonPrime`, `ExchCoupling`, `F_mel`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `LLtorque`, `Lambda`, `LastErr`, `MFM`, `MaxAngle`, `Msat`, `NEval`, `NoDemagSpins`, `PeakErr`, `Pol`, `STTorque`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `dt`, `ext_bubbledist`, `ext_bubblepos`, `ext_bubblespeed`, `ext_corepos`, `ext_dwpos`, `ext_dwspeed`, `ext_dwtilt`, `ext_dwxpos`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `ext_hopfindex_fivepointstencil`, `ext_hopfindex_solidangle`, `ext_hopfindex_solidanglefourier`, `ext_hopfindex_twopointstencil`, `ext_hopfindexdensity_fivepointstencil`, `ext_hopfindexdensity_solidangle`, `ext_hopfindexdensity_twopointstencil`, `ext_phi`, `ext_theta`, `ext_topologicalcharge`, `ext_topologicalchargedensity`, `ext_topologicalchargedensitylattice`, `ext_topologicalchargelattice`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins`, `geom`, `m`, `m_full`, `maxTorque`, `regions`, `spinAngle`, `torque` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_anis",
+                "B_custom",
+                "B_demag",
+                "B_eff",
+                "B_exch",
+                "B_ext",
+                "B_mel",
+                "Crop",
+                "CropLayer",
+                "CropRegion",
+                "CropX",
+                "CropY",
+                "CropZ",
+                "Dbulk",
+                "Dind",
+                "DindCoupling",
+                "E_Zeeman",
+                "E_anis",
+                "E_custom",
+                "E_demag",
+                "E_exch",
+                "E_mel",
+                "E_therm",
+                "E_total",
+                "Edens_Zeeman",
+                "Edens_anis",
+                "Edens_custom",
+                "Edens_demag",
+                "Edens_exch",
+                "Edens_mel",
+                "Edens_therm",
+                "Edens_total",
+                "EpsilonPrime",
+                "ExchCoupling",
+                "F_mel",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "LLtorque",
+                "Lambda",
+                "LastErr",
+                "MFM",
+                "MaxAngle",
+                "Msat",
+                "NEval",
+                "NoDemagSpins",
+                "PeakErr",
+                "Pol",
+                "STTorque",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "dt",
+                "ext_bubbledist",
+                "ext_bubblepos",
+                "ext_bubblespeed",
+                "ext_corepos",
+                "ext_dwpos",
+                "ext_dwspeed",
+                "ext_dwtilt",
+                "ext_dwxpos",
+                "ext_emergentmagneticfield_fivepointstencil",
+                "ext_emergentmagneticfield_solidangle",
+                "ext_emergentmagneticfield_twopointstencil",
+                "ext_hopfindex_fivepointstencil",
+                "ext_hopfindex_solidangle",
+                "ext_hopfindex_solidanglefourier",
+                "ext_hopfindex_twopointstencil",
+                "ext_hopfindexdensity_fivepointstencil",
+                "ext_hopfindexdensity_solidangle",
+                "ext_hopfindexdensity_twopointstencil",
+                "ext_phi",
+                "ext_theta",
+                "ext_topologicalcharge",
+                "ext_topologicalchargedensity",
+                "ext_topologicalchargedensitylattice",
+                "ext_topologicalchargelattice",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "geom",
+                "m",
+                "m_full",
+                "maxTorque",
+                "regions",
+                "spinAngle",
+                "torque",
+                "xi"
+            ]
+        },
+        "EvalTo": {
+            "signature": "EvalTo(Slice)",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `B_therm`, `Crop`, `CropLayer`, `CropRegion`, `CropX`, `CropY`, `CropZ`, `Dbulk`, `Dind`, `DindCoupling`, `E_Zeeman`, `E_anis`, `E_custom`, `E_demag`, `E_exch`, `E_mel`, `E_therm`, `E_total`, `Edens_Zeeman`, `Edens_anis`, `Edens_custom`, `Edens_demag`, `Edens_exch`, `Edens_mel`, `Edens_therm`, `Edens_total`, `EpsilonPrime`, `ExchCoupling`, `F_mel`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `LLtorque`, `Lambda`, `LastErr`, `MFM`, `Madd`, `MaxAngle`, `Msat`, `NEval`, `NoDemagSpins`, `PeakErr`, `Pol`, `STTorque`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `dt`, `ext_bubbledist`, `ext_bubblepos`, `ext_bubblespeed`, `ext_corepos`, `ext_dwpos`, `ext_dwspeed`, `ext_dwtilt`, `ext_dwxpos`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `ext_hopfindex_fivepointstencil`, `ext_hopfindex_solidangle`, `ext_hopfindex_solidanglefourier`, `ext_hopfindex_twopointstencil`, `ext_hopfindexdensity_fivepointstencil`, `ext_hopfindexdensity_solidangle`, `ext_hopfindexdensity_twopointstencil`, `ext_phi`, `ext_theta`, `ext_topologicalcharge`, `ext_topologicalchargedensity`, `ext_topologicalchargedensitylattice`, `ext_topologicalchargelattice`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins`, `geom`, `m`, `m_full`, `maxTorque`, `regions`, `spinAngle`, `torque` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_anis",
+                "B_custom",
+                "B_demag",
+                "B_eff",
+                "B_exch",
+                "B_ext",
+                "B_mel",
+                "B_therm",
+                "Crop",
+                "CropLayer",
+                "CropRegion",
+                "CropX",
+                "CropY",
+                "CropZ",
+                "Dbulk",
+                "Dind",
+                "DindCoupling",
+                "E_Zeeman",
+                "E_anis",
+                "E_custom",
+                "E_demag",
+                "E_exch",
+                "E_mel",
+                "E_therm",
+                "E_total",
+                "Edens_Zeeman",
+                "Edens_anis",
+                "Edens_custom",
+                "Edens_demag",
+                "Edens_exch",
+                "Edens_mel",
+                "Edens_therm",
+                "Edens_total",
+                "EpsilonPrime",
+                "ExchCoupling",
+                "F_mel",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "LLtorque",
+                "Lambda",
+                "LastErr",
+                "MFM",
+                "Madd",
+                "MaxAngle",
+                "Msat",
+                "NEval",
+                "NoDemagSpins",
+                "PeakErr",
+                "Pol",
+                "STTorque",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "dt",
+                "ext_bubbledist",
+                "ext_bubblepos",
+                "ext_bubblespeed",
+                "ext_corepos",
+                "ext_dwpos",
+                "ext_dwspeed",
+                "ext_dwtilt",
+                "ext_dwxpos",
+                "ext_emergentmagneticfield_fivepointstencil",
+                "ext_emergentmagneticfield_solidangle",
+                "ext_emergentmagneticfield_twopointstencil",
+                "ext_hopfindex_fivepointstencil",
+                "ext_hopfindex_solidangle",
+                "ext_hopfindex_solidanglefourier",
+                "ext_hopfindex_twopointstencil",
+                "ext_hopfindexdensity_fivepointstencil",
+                "ext_hopfindexdensity_solidangle",
+                "ext_hopfindexdensity_twopointstencil",
+                "ext_phi",
+                "ext_theta",
+                "ext_topologicalcharge",
+                "ext_topologicalchargedensity",
+                "ext_topologicalchargedensitylattice",
+                "ext_topologicalchargelattice",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "geom",
+                "m",
+                "m_full",
+                "maxTorque",
+                "regions",
+                "spinAngle",
+                "torque",
+                "xi"
+            ]
+        },
+        "Cross": {
+            "signature": "Cross(data.Vector)",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "Div": {
+            "signature": "Div(float64)",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "Dot": {
+            "signature": "Dot(data.Vector)",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "Len": {
+            "signature": "Len()",
+            "description": "A method of `Index2Coord`, `LoadFile`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "MAdd": {
+            "signature": "MAdd(float64, data.Vector)",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "Mul": {
+            "signature": "Mul(float64)",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "X": {
+            "signature": "X()",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "Y": {
+            "signature": "Y()",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "Z": {
+            "signature": "Z()",
+            "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+            "usedby": [
+                "Index2Coord",
+                "ShiftMagD",
+                "ShiftMagL",
+                "ShiftMagR",
+                "ShiftMagU",
+                "SumVector",
+                "Vector"
+            ]
+        },
+        "CPUAccess": {
+            "signature": "CPUAccess()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Comp": {
+            "signature": "Comp(int)",
+            "description": "A method of `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `F_mel`, `FixedLayer`, `J`, `LLtorque`, `LoadFile`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `STTorque`, `anisC1`, `anisC2`, `anisU`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `m`, `m_full` and `torque`.",
+            "usedby": [
+                "B_anis",
+                "B_custom",
+                "B_demag",
+                "B_eff",
+                "B_exch",
+                "B_ext",
+                "B_mel",
+                "F_mel",
+                "FixedLayer",
+                "J",
+                "LLtorque",
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask",
+                "STTorque",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "ext_emergentmagneticfield_fivepointstencil",
+                "ext_emergentmagneticfield_solidangle",
+                "ext_emergentmagneticfield_twopointstencil",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "m",
+                "m_full",
+                "torque"
+            ]
+        },
+        "DevPtr": {
+            "signature": "DevPtr(int)",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Disable": {
+            "signature": "Disable()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Free": {
+            "signature": "Free()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "GPUAccess": {
+            "signature": "GPUAccess()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Get": {
+            "signature": "Get(int, int, int, int)",
+            "description": "A method of `E_Zeeman`, `E_anis`, `E_custom`, `E_demag`, `E_exch`, `E_mel`, `E_therm`, `E_total`, `LastErr`, `LoadFile`, `MaxAngle`, `NEval`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `PeakErr`, `dt`, `ext_bubbledist`, `ext_bubblepos`, `ext_bubblespeed`, `ext_corepos`, `ext_dwpos`, `ext_dwspeed`, `ext_dwtilt`, `ext_dwxpos`, `ext_hopfindex_fivepointstencil`, `ext_hopfindex_solidangle`, `ext_hopfindex_solidanglefourier`, `ext_hopfindex_twopointstencil`, `ext_topologicalcharge`, `ext_topologicalchargelattice` and `maxTorque`.",
+            "usedby": [
+                "E_Zeeman",
+                "E_anis",
+                "E_custom",
+                "E_demag",
+                "E_exch",
+                "E_mel",
+                "E_therm",
+                "E_total",
+                "LastErr",
+                "LoadFile",
+                "MaxAngle",
+                "NEval",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask",
+                "PeakErr",
+                "dt",
+                "ext_bubbledist",
+                "ext_bubblepos",
+                "ext_bubblespeed",
+                "ext_corepos",
+                "ext_dwpos",
+                "ext_dwspeed",
+                "ext_dwtilt",
+                "ext_dwxpos",
+                "ext_hopfindex_fivepointstencil",
+                "ext_hopfindex_solidangle",
+                "ext_hopfindex_solidanglefourier",
+                "ext_hopfindex_twopointstencil",
+                "ext_topologicalcharge",
+                "ext_topologicalchargelattice",
+                "maxTorque"
+            ]
+        },
+        "Host": {
+            "signature": "Host()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "HostCopy": {
+            "signature": "HostCopy()",
+            "description": "A method of `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_mel`, `F_mel`, `LLtorque`, `LoadFile`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `STTorque`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `m_full` and `torque`.",
+            "usedby": [
+                "B_anis",
+                "B_custom",
+                "B_demag",
+                "B_eff",
+                "B_exch",
+                "B_mel",
+                "F_mel",
+                "LLtorque",
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask",
+                "STTorque",
+                "ext_emergentmagneticfield_fivepointstencil",
+                "ext_emergentmagneticfield_solidangle",
+                "ext_emergentmagneticfield_twopointstencil",
+                "m_full",
+                "torque"
+            ]
+        },
+        "Index": {
+            "signature": "Index(int, int, int)",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "IsNil": {
+            "signature": "IsNil()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "MemType": {
+            "signature": "MemType()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Scalars": {
+            "signature": "Scalars()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Set": {
+            "signature": "Set(int, int, int, int, float64)",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_ext`, `Dbulk`, `Dind`, `EpsilonPrime`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `LoadFile`, `Msat`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins`, `m` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_ext",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "LoadFile",
+                "Msat",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "m",
+                "xi"
+            ]
+        },
+        "SetScalar": {
+            "signature": "SetScalar(int, int, int, float64)",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "SetVector": {
+            "signature": "SetVector(int, int, int, data.Vector)",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Size": {
+            "signature": "Size()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Tensors": {
+            "signature": "Tensors()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "Vectors": {
+            "signature": "Vectors()",
+            "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+            "usedby": [
+                "LoadFile",
+                "NewScalarMask",
+                "NewSlice",
+                "NewVectorMask"
+            ]
+        },
+        "AddDate": {
+            "signature": "AddDate(int, int, int)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "After": {
+            "signature": "After(time.Time)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "AppendFormat": {
+            "signature": "AppendFormat([]uint8, string)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Before": {
+            "signature": "Before(time.Time)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Clock": {
+            "signature": "Clock()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Compare": {
+            "signature": "Compare(time.Time)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Date": {
+            "signature": "Date()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Day": {
+            "signature": "Day()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Equal": {
+            "signature": "Equal(time.Time)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Format": {
+            "signature": "Format(string)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "GoString": {
+            "signature": "GoString()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "GobEncode": {
+            "signature": "GobEncode()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Hour": {
+            "signature": "Hour()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "ISOWeek": {
+            "signature": "ISOWeek()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "In": {
+            "signature": "In(*time.Location)",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "IsDST": {
+            "signature": "IsDST()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "IsZero": {
+            "signature": "IsZero()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Local": {
+            "signature": "Local()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Location": {
+            "signature": "Location()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "MarshalBinary": {
+            "signature": "MarshalBinary()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "MarshalJSON": {
+            "signature": "MarshalJSON()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "MarshalText": {
+            "signature": "MarshalText()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Minute": {
+            "signature": "Minute()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Month": {
+            "signature": "Month()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Nanosecond": {
+            "signature": "Nanosecond()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Round": {
+            "signature": "Round(time.Duration)",
+            "description": "A method of `now` and `since`.",
+            "usedby": [
+                "now",
+                "since"
+            ]
+        },
+        "Second": {
+            "signature": "Second()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Truncate": {
+            "signature": "Truncate(time.Duration)",
+            "description": "A method of `now` and `since`.",
+            "usedby": [
+                "now",
+                "since"
+            ]
+        },
+        "UTC": {
+            "signature": "UTC()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Unix": {
+            "signature": "Unix()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "UnixMicro": {
+            "signature": "UnixMicro()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "UnixMilli": {
+            "signature": "UnixMilli()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "UnixNano": {
+            "signature": "UnixNano()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Weekday": {
+            "signature": "Weekday()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Year": {
+            "signature": "Year()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "YearDay": {
+            "signature": "YearDay()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Zone": {
+            "signature": "Zone()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "ZoneBounds": {
+            "signature": "ZoneBounds()",
+            "description": "A method of `now`.",
+            "usedby": [
+                "now"
+            ]
+        },
+        "Abs": {
+            "signature": "Abs()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "Hours": {
+            "signature": "Hours()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "Microseconds": {
+            "signature": "Microseconds()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "Milliseconds": {
+            "signature": "Milliseconds()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "Minutes": {
+            "signature": "Minutes()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "Nanoseconds": {
+            "signature": "Nanoseconds()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "Seconds": {
+            "signature": "Seconds()",
+            "description": "A method of `since`.",
+            "usedby": [
+                "since"
+            ]
+        },
+        "GetRegion": {
+            "signature": "GetRegion(int)",
+            "description": "A method of `Aex`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `FreeLayerThickness`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `frozenspins` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FreeLayerThickness",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "frozenspins",
+                "xi"
+            ]
+        },
+        "IsUniform": {
+            "signature": "IsUniform()",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_ext`, `Dbulk`, `Dind`, `EpsilonPrime`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_ext",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "xi"
+            ]
+        },
+        "MSlice": {
+            "signature": "MSlice()",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_ext`, `Dbulk`, `Dind`, `EpsilonPrime`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_ext",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "xi"
+            ]
+        },
+        "Region": {
+            "signature": "Region(int)",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `Dbulk`, `Dind`, `DindCoupling`, `Edens_Zeeman`, `Edens_anis`, `Edens_custom`, `Edens_demag`, `Edens_exch`, `Edens_mel`, `Edens_therm`, `Edens_total`, `EpsilonPrime`, `ExchCoupling`, `F_mel`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `LLtorque`, `Lambda`, `MFM`, `Msat`, `NoDemagSpins`, `Pol`, `STTorque`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `ext_hopfindexdensity_fivepointstencil`, `ext_hopfindexdensity_solidangle`, `ext_hopfindexdensity_twopointstencil`, `ext_phi`, `ext_theta`, `ext_topologicalchargedensity`, `ext_topologicalchargedensitylattice`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins`, `m`, `m_full`, `spinAngle`, `torque` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_anis",
+                "B_custom",
+                "B_demag",
+                "B_eff",
+                "B_exch",
+                "B_ext",
+                "B_mel",
+                "Dbulk",
+                "Dind",
+                "DindCoupling",
+                "Edens_Zeeman",
+                "Edens_anis",
+                "Edens_custom",
+                "Edens_demag",
+                "Edens_exch",
+                "Edens_mel",
+                "Edens_therm",
+                "Edens_total",
+                "EpsilonPrime",
+                "ExchCoupling",
+                "F_mel",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "LLtorque",
+                "Lambda",
+                "MFM",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "STTorque",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "ext_emergentmagneticfield_fivepointstencil",
+                "ext_emergentmagneticfield_solidangle",
+                "ext_emergentmagneticfield_twopointstencil",
+                "ext_hopfindexdensity_fivepointstencil",
+                "ext_hopfindexdensity_solidangle",
+                "ext_hopfindexdensity_twopointstencil",
+                "ext_phi",
+                "ext_theta",
+                "ext_topologicalchargedensity",
+                "ext_topologicalchargedensitylattice",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "m",
+                "m_full",
+                "spinAngle",
+                "torque",
+                "xi"
+            ]
+        },
+        "SetRegion": {
+            "signature": "SetRegion(int, ScalarFunction)",
+            "description": "A method of `Aex`, `B1`, `B2`, `B_ext`, `Dbulk`, `Dind`, `EpsilonPrime`, `FixedLayer`, `FreeLayerThickness`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `anisC1`, `anisC2`, `anisU`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `frozenspins`, `m` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "B_ext",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FixedLayer",
+                "FreeLayerThickness",
+                "J",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz",
+                "frozenspins",
+                "m",
+                "xi"
+            ]
+        },
+        "SetRegionFuncGo": {
+            "signature": "SetRegionFuncGo(int, func() float64)",
+            "description": "A method of `Aex`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `FreeLayerThickness`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `frozenspins` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FreeLayerThickness",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "frozenspins",
+                "xi"
+            ]
+        },
+        "SetRegionValueGo": {
+            "signature": "SetRegionValueGo(int, float64)",
+            "description": "A method of `Aex`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `FreeLayerThickness`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp`, `alpha`, `frozenspins` and `xi`.",
+            "usedby": [
+                "Aex",
+                "B1",
+                "B2",
+                "Dbulk",
+                "Dind",
+                "EpsilonPrime",
+                "FreeLayerThickness",
+                "Kc1",
+                "Kc2",
+                "Kc3",
+                "Ku1",
+                "Ku2",
+                "Lambda",
+                "Msat",
+                "NoDemagSpins",
+                "Pol",
+                "Temp",
+                "alpha",
+                "frozenspins",
+                "xi"
+            ]
+        },
+        "SetRegionFn": {
+            "signature": "SetRegionFn(int, func() [3]float64)",
+            "description": "A method of `B_ext`, `FixedLayer`, `J`, `anisC1`, `anisC2`, `anisU`, `exx`, `exy`, `exz`, `eyy`, `eyz` and `ezz`.",
+            "usedby": [
+                "B_ext",
+                "FixedLayer",
+                "J",
+                "anisC1",
+                "anisC2",
+                "anisU",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz"
+            ]
+        },
+        "AddGo": {
+            "signature": "AddGo(Slice, func() float64)",
+            "description": "A method of `B_ext`, `FixedLayer`, `J`, `exx`, `exy`, `exz`, `eyy`, `eyz` and `ezz`.",
+            "usedby": [
+                "B_ext",
+                "FixedLayer",
+                "J",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz"
+            ]
+        },
+        "AddTo": {
+            "signature": "AddTo(Slice)",
+            "description": "A method of `B_ext`, `B_therm`, `FixedLayer`, `J`, `exx`, `exy`, `exz`, `eyy`, `eyz` and `ezz`.",
+            "usedby": [
+                "B_ext",
+                "B_therm",
+                "FixedLayer",
+                "J",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz"
+            ]
+        },
+        "RemoveExtraTerms": {
+            "signature": "RemoveExtraTerms()",
+            "description": "A method of `B_ext`, `FixedLayer`, `J`, `exx`, `exy`, `exz`, `eyy`, `eyz` and `ezz`.",
+            "usedby": [
+                "B_ext",
+                "FixedLayer",
+                "J",
+                "exx",
+                "exy",
+                "exz",
+                "eyy",
+                "eyz",
+                "ezz"
+            ]
+        },
+        "GetCell": {
+            "signature": "GetCell(int, int, int)",
+            "description": "A method of `geom`, `m` and `regions`.",
+            "usedby": [
+                "geom",
+                "m",
+                "regions"
+            ]
+        },
+        "Gpu": {
+            "signature": "Gpu()",
+            "description": "A method of `geom` and `regions`.",
+            "usedby": [
+                "geom",
+                "regions"
+            ]
+        },
+        "Buffer": {
+            "signature": "Buffer()",
+            "description": "A method of `m`.",
+            "usedby": [
+                "m"
+            ]
+        },
+        "LoadFile": {
+            "signature": "LoadFile(string)",
+            "description": "A method of `m` and `regions`.",
+            "usedby": [
+                "m",
+                "regions"
+            ]
+        },
+        "Quantity": {
+            "signature": "Quantity()",
+            "description": "A method of `m`.",
+            "usedby": [
+                "m"
+            ]
+        },
+        "SetArray": {
+            "signature": "SetArray(Slice)",
+            "description": "A method of `m`.",
+            "usedby": [
+                "m"
+            ]
+        },
+        "SetCell": {
+            "signature": "SetCell(int, int, int, data.Vector)",
+            "description": "A method of `m` and `regions`.",
+            "usedby": [
+                "m",
+                "regions"
+            ]
+        },
+        "SetInShape": {
+            "signature": "SetInShape(Shape, Config)",
+            "description": "A method of `m`.",
+            "usedby": [
+                "m"
+            ]
+        },
+        "HostArray": {
+            "signature": "HostArray()",
+            "description": "A method of `regions`.",
+            "usedby": [
+                "regions"
+            ]
+        },
+        "HostList": {
+            "signature": "HostList()",
+            "description": "A method of `regions`.",
+            "usedby": [
+                "regions"
+            ]
+        }
+    }
+}
