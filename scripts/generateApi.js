@@ -99,7 +99,7 @@ https.get(URL, res => {
         for (let methobj of Object.values(output.methods)) {
             for (let methobjunique of methobj) {
                 if (methobjunique.description === undefined) {
-                    methobjunique.usedby.sort()
+                    methobjunique.usedby.sort((a, b) => a.localeCompare(b, 'en', {'sensitivity': 'base'}))
                     s = "A method of ";
                     s += codeListToStr(methobjunique.usedby);
                     s += "."
