@@ -92,22 +92,22 @@ function activate(context) {
                         for (const methodObjUnique of methodObj) {
                             const methodRecognized = methodObj.length == 1 || methodObjUnique.usedby.map(x => x.toLowerCase()).includes(receiverName.toLowerCase())
                             if (methodRecognized && (word.toLowerCase() === methodName.toLowerCase())) {
-                                return new vscode.Hover(
-                                    new vscode.MarkdownString(
-                                        `## \`${methodObjUnique.signature}\`\n\n${methodObjUnique.description}`
-                                    )
-                                );
+                                const md = new vscode.MarkdownString();
+                                md.appendCodeblock(methodObjUnique.signature, "go");
+                                md.appendMarkdown("---\n");
+                                md.appendMarkdown(methodObjUnique.description)
+                                return new vscode.Hover(md);
                             }
                         }
                     }
                 } else { // Handle functions and variables
                     for (const [name, obj] of [].concat(Object.entries(api.functions), Object.entries(api.variables))) {
                         if (word.toLowerCase() === name.toLowerCase()) {
-                            return new vscode.Hover(
-                                new vscode.MarkdownString(
-                                    `## \`${obj.signature}\`\n\n${obj.description}`
-                                )
-                            );
+                            const md = new vscode.MarkdownString();
+                            md.appendCodeblock(obj.signature, "go");
+                            md.appendMarkdown("---\n");
+                            md.appendMarkdown(obj.description);
+                            return new vscode.Hover(md);
                         }
                     }
                 }
