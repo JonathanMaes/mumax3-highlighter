@@ -55,7 +55,6 @@ https.get(URL, res => {
                 description += "\n\n### Methods\n"
                 for (let methodstr of methodstrings) {
                     methodstr = cleanSignature(methodstr);
-                    if (methodstr.toLowerCase() == "EvalTo()".toLowerCase()) {continue} // Strange case of EvalTo
                     methods.push(methodstr);
                 }
                 description += codeListToStr(methodstrings) + "."
@@ -76,25 +75,36 @@ https.get(URL, res => {
             for (const meth of funcobj.methods) {
                 const methname = meth.split("(")[0];
                 if (!Object.keys(output.methods).includes(methname)) {
-                    output.methods[methname] = {
+                    output.methods[methname] = [{
                         "signature": meth,
                         "description": undefined,
                         "usedby": [funcname]
-                    }
+                    }]
                 } else {
-                    output.methods[methname].usedby.push(funcname);
+                    if (!output.methods[methname].map(x => x.signature).includes(meth)) {
+                        output.methods[methname].push({
+                            "signature": meth,
+                            "description": undefined,
+                            "usedby": [funcname]
+                        })
+                    } else {
+                        output.methods[methname].find(x => (x.signature == meth)).usedby.push(funcname);
+                    }
+                    
                 }
             }
         }
 
         // Generate method descriptions
         for (let methobj of Object.values(output.methods)) {
-            if (methobj.description === undefined) {
-                methobj.usedby.sort()
-                s = "A method of ";
-                s += codeListToStr(methobj.usedby);
-                s += "."
-                methobj.description = s
+            for (let methobjunique of methobj) {
+                if (methobjunique.description === undefined) {
+                    methobjunique.usedby.sort()
+                    s = "A method of ";
+                    s += codeListToStr(methobjunique.usedby);
+                    s += "."
+                    methobjunique.description = s
+                }
             }
         }
 
