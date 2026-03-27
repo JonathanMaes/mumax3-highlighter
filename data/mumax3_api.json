@@ -438,7 +438,7 @@
             "methods": []
         },
         "Fprintln": {
-            "signature": "Fprintln(string, ...interface, {})",
+            "signature": "Fprintln(string, ...interface {})",
             "description": "Print to file",
             "methods": []
         },
@@ -850,7 +850,7 @@
             "methods": []
         },
         "Print": {
-            "signature": "Print(...interface, {})",
+            "signature": "Print(...interface {})",
             "description": "Print to standard output",
             "methods": []
         },
@@ -1052,12 +1052,12 @@
             "methods": []
         },
         "sprint": {
-            "signature": "sprint(...interface, {}) string",
+            "signature": "sprint(...interface {}) string",
             "description": "Print all arguments to string with automatic formatting",
             "methods": []
         },
         "sprintf": {
-            "signature": "sprintf(string, ...interface, {}) string",
+            "signature": "sprintf(string, ...interface {}) string",
             "description": "Print to string with C-style formatting.",
             "methods": []
         },
@@ -1143,7 +1143,7 @@
             "methods": []
         },
         "TablePrint": {
-            "signature": "TablePrint(...interface, {})",
+            "signature": "TablePrint(...interface {})",
             "description": "Print anyting in the data table",
             "methods": []
         },

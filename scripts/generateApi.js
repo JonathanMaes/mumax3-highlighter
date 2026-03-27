@@ -9,7 +9,7 @@ const URL = "https://mumax.github.io/api.html";
 function cleanSignature(signature) { // "Add( Quantity Quantity ) Quantity" --> "Add(Quantity, Quantity) Quantity"
     signature = signature.replace("( ", "(").replace(" )", ")")
     signature = signature.replaceAll(" ", ", ") // Add commas in between arguments
-    signature = signature.replaceAll(",,", ",").replace("),", ")"); // However, some spaces were actually meant to be spaces, so remove that comma again
+    signature = signature.replaceAll(",,", ",").replace("),", ")").replace(", {}", " {}"); // However, some spaces were actually meant to be spaces, so remove that comma again
     return signature
 }
 
