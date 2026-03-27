@@ -90,7 +90,7 @@ function activate(context) {
                     const receiverName = methodReceiverMatch[1] // (e.g. "Aex" in Aex.EvalTo)
                     for (const [methodName, methodObj] of Object.entries(api.methods)) {
                         for (const methodObjUnique of methodObj) {
-                            const methodRecognized = methodObjUnique.usedby.includes(receiverName) || methodObj.length == 1
+                            const methodRecognized = methodObj.length == 1 || methodObjUnique.usedby.map(x => x.toLowerCase()).includes(receiverName.toLowerCase())
                             if (methodRecognized && (word.toLowerCase() === methodName.toLowerCase())) {
                                 return new vscode.Hover(
                                     new vscode.MarkdownString(
