@@ -1,6 +1,6 @@
 # MuMax3 highlighter
 
-Provides syntax highlighting and basic autocompletion for files with the `.mx3` extension.
+Provides syntax highlighting and basic autocompletion for files with the `.mx3` extension, used by the [mumax³](https://mumax.github.io/) micromagnetic simulator.
 
 ## Features
 
