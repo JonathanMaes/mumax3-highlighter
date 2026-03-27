@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.2.1 (2026-03-27)
+
+- Fixed some bugs originating from multiple methods having the same name but different signatures.
+- Nicer looking hover boxes.
+- Less verbose method descriptions.
+
 ## v0.2.0 (2026-03-26)
 
 - Autocomplete and hover descriptions for functions, variables and methods. The information provided is based on the API on the live mumax³ website at the time this extension was compiled.
