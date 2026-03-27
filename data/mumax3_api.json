@@ -2822,7 +2822,7 @@
         "EvalTo": [
             {
                 "signature": "EvalTo()",
-                "description": "A method of `Add`, `Const`, `ConstVector`, `Cross`, `Div`, `Dot`, `Masked`, `Mul`, `MulMV`, `Normalized`, `RunningAverage` and `Shifted`.",
+                "description": "",
                 "usedby": [
                     "Add",
                     "Const",
@@ -2840,7 +2840,7 @@
             },
             {
                 "signature": "EvalTo(Slice)",
-                "description": "A method of `Aex`, `alpha`, `anisC1`, `anisC2`, `anisU`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `B_therm`, `B1`, `B2`, `Crop`, `CropLayer`, `CropRegion`, `CropX`, `CropY`, `CropZ`, `Dbulk`, `Dind`, `DindCoupling`, `dt`, `E_anis`, `E_custom`, `E_demag`, `E_exch`, `E_mel`, `E_therm`, `E_total`, `E_Zeeman`, `Edens_anis`, `Edens_custom`, `Edens_demag`, `Edens_exch`, `Edens_mel`, `Edens_therm`, `Edens_total`, `Edens_Zeeman`, `EpsilonPrime`, `ExchCoupling`, `ext_bubbledist`, `ext_bubblepos`, `ext_bubblespeed`, `ext_corepos`, `ext_dwpos`, `ext_dwspeed`, `ext_dwtilt`, `ext_dwxpos`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `ext_hopfindex_fivepointstencil`, `ext_hopfindex_solidangle`, `ext_hopfindex_solidanglefourier`, `ext_hopfindex_twopointstencil`, `ext_hopfindexdensity_fivepointstencil`, `ext_hopfindexdensity_solidangle`, `ext_hopfindexdensity_twopointstencil`, `ext_phi`, `ext_theta`, `ext_topologicalcharge`, `ext_topologicalchargedensity`, `ext_topologicalchargedensitylattice`, `ext_topologicalchargelattice`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `F_mel`, `FixedLayer`, `FreeLayerThickness`, `frozenspins`, `geom`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `LastErr`, `LLtorque`, `m`, `m_full`, `Madd`, `MaxAngle`, `maxTorque`, `MFM`, `Msat`, `NEval`, `NoDemagSpins`, `PeakErr`, `Pol`, `regions`, `spinAngle`, `STTorque`, `Temp`, `torque` and `xi`.",
+                "description": "Evaluates this object into a slice, as can be created with `NewScalarMask`, `NewVectorMask` or `LoadFile`.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -2952,7 +2952,7 @@
         "Add": [
             {
                 "signature": "Add(float64, Config)",
-                "description": "A method of `Antivortex`, `BlochSkyrmion`, `Conical`, `Helical`, `HopfionCompactSupport`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `TwoDomain`, `Uniform`, `Vortex` and `VortexWall`.",
+                "description": "",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -2970,7 +2970,7 @@
             },
             {
                 "signature": "Add(Shape)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -2995,7 +2995,7 @@
             },
             {
                 "signature": "Add(data.Vector)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3008,14 +3008,14 @@
             },
             {
                 "signature": "Add(time.Duration)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
             },
             {
                 "signature": "Add(Slice, ScalarFunction)",
-                "description": "A method of `B_ext`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "B_ext",
                     "exx",
@@ -3032,7 +3032,7 @@
         "RotZ": [
             {
                 "signature": "RotZ(float64)",
-                "description": "A method of `Antivortex`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `Square`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vortex`, `VortexWall`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -3071,7 +3071,7 @@
         "Scale": [
             {
                 "signature": "Scale(float64, float64, float64)",
-                "description": "A method of `Antivortex`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `Square`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vortex`, `VortexWall`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -3110,7 +3110,7 @@
         "Transl": [
             {
                 "signature": "Transl(float64, float64, float64)",
-                "description": "A method of `Antivortex`, `BlochSkyrmion`, `Cell`, `Circle`, `Cone`, `Conical`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `Helical`, `HopfionCompactSupport`, `ImageShape`, `Layer`, `Layers`, `NeelSkyrmion`, `RandomMag`, `RandomMagSeed`, `Rect`, `Square`, `Superball`, `Triangle`, `TwoDomain`, `Uniform`, `Universe`, `Vortex`, `VortexWall`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -3149,7 +3149,7 @@
         "Intersect": [
             {
                 "signature": "Intersect(Shape)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3176,7 +3176,7 @@
         "Inverse": [
             {
                 "signature": "Inverse()",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3203,7 +3203,7 @@
         "Repeat": [
             {
                 "signature": "Repeat(float64, float64, float64)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3230,7 +3230,7 @@
         "RotX": [
             {
                 "signature": "RotX(float64)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3257,7 +3257,7 @@
         "RotY": [
             {
                 "signature": "RotY(float64)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3284,7 +3284,7 @@
         "Sub": [
             {
                 "signature": "Sub(Shape)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3309,7 +3309,7 @@
             },
             {
                 "signature": "Sub(data.Vector)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3322,7 +3322,7 @@
             },
             {
                 "signature": "Sub(time.Time)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -3331,7 +3331,7 @@
         "Xor": [
             {
                 "signature": "Xor(Shape)",
-                "description": "A method of `Cell`, `Circle`, `Cone`, `Cuboid`, `Cylinder`, `Ellipse`, `Ellipsoid`, `GrainRoughness`, `ImageShape`, `Layer`, `Layers`, `Rect`, `Square`, `Superball`, `Triangle`, `Universe`, `XRange`, `YRange` and `ZRange`.",
+                "description": "",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3358,7 +3358,7 @@
         "Average": [
             {
                 "signature": "Average()",
-                "description": "A method of `Aex`, `alpha`, `anisC1`, `anisC2`, `anisU`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `B1`, `B2`, `Crop`, `CropLayer`, `CropRegion`, `CropX`, `CropY`, `CropZ`, `Dbulk`, `Dind`, `DindCoupling`, `dt`, `E_anis`, `E_custom`, `E_demag`, `E_exch`, `E_mel`, `E_therm`, `E_total`, `E_Zeeman`, `Edens_anis`, `Edens_custom`, `Edens_demag`, `Edens_exch`, `Edens_mel`, `Edens_therm`, `Edens_total`, `Edens_Zeeman`, `EpsilonPrime`, `ExchCoupling`, `ext_bubbledist`, `ext_bubblepos`, `ext_bubblespeed`, `ext_corepos`, `ext_dwpos`, `ext_dwspeed`, `ext_dwtilt`, `ext_dwxpos`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `ext_hopfindex_fivepointstencil`, `ext_hopfindex_solidangle`, `ext_hopfindex_solidanglefourier`, `ext_hopfindex_twopointstencil`, `ext_hopfindexdensity_fivepointstencil`, `ext_hopfindexdensity_solidangle`, `ext_hopfindexdensity_twopointstencil`, `ext_phi`, `ext_theta`, `ext_topologicalcharge`, `ext_topologicalchargedensity`, `ext_topologicalchargedensitylattice`, `ext_topologicalchargelattice`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `F_mel`, `FixedLayer`, `FreeLayerThickness`, `frozenspins`, `geom`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `LastErr`, `LLtorque`, `m`, `m_full`, `MaxAngle`, `maxTorque`, `MFM`, `Msat`, `NEval`, `NoDemagSpins`, `PeakErr`, `Pol`, `regions`, `spinAngle`, `STTorque`, `Temp`, `torque` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -3468,7 +3468,7 @@
         "Cross": [
             {
                 "signature": "Cross(data.Vector)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3483,7 +3483,7 @@
         "Div": [
             {
                 "signature": "Div(float64)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3498,7 +3498,7 @@
         "Dot": [
             {
                 "signature": "Dot(data.Vector)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3513,7 +3513,7 @@
         "Len": [
             {
                 "signature": "Len()",
-                "description": "A method of `Index2Coord`, `LoadFile`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "LoadFile",
@@ -3532,7 +3532,7 @@
         "MAdd": [
             {
                 "signature": "MAdd(float64, data.Vector)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3547,7 +3547,7 @@
         "Mul": [
             {
                 "signature": "Mul(float64)",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3562,7 +3562,7 @@
         "X": [
             {
                 "signature": "X()",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3577,7 +3577,7 @@
         "Y": [
             {
                 "signature": "Y()",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3592,7 +3592,7 @@
         "Z": [
             {
                 "signature": "Z()",
-                "description": "A method of `Index2Coord`, `ShiftMagD`, `ShiftMagL`, `ShiftMagR`, `ShiftMagU`, `SumVector` and `Vector`.",
+                "description": "",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3607,7 +3607,7 @@
         "CPUAccess": [
             {
                 "signature": "CPUAccess()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3619,7 +3619,7 @@
         "Comp": [
             {
                 "signature": "Comp(int)",
-                "description": "A method of `anisC1`, `anisC2`, `anisU`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `F_mel`, `FixedLayer`, `J`, `LLtorque`, `LoadFile`, `m`, `m_full`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `STTorque` and `torque`.",
+                "description": "",
                 "usedby": [
                     "anisC1",
                     "anisC2",
@@ -3658,7 +3658,7 @@
         "DevPtr": [
             {
                 "signature": "DevPtr(int)",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3670,7 +3670,7 @@
         "Disable": [
             {
                 "signature": "Disable()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3682,7 +3682,7 @@
         "Free": [
             {
                 "signature": "Free()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3694,7 +3694,7 @@
         "GPUAccess": [
             {
                 "signature": "GPUAccess()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3706,7 +3706,7 @@
         "Get": [
             {
                 "signature": "Get(int, int, int, int)",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3716,7 +3716,7 @@
             },
             {
                 "signature": "Get()",
-                "description": "A method of `dt`, `E_anis`, `E_custom`, `E_demag`, `E_exch`, `E_mel`, `E_therm`, `E_total`, `E_Zeeman`, `ext_bubbledist`, `ext_bubblepos`, `ext_bubblespeed`, `ext_corepos`, `ext_dwpos`, `ext_dwspeed`, `ext_dwtilt`, `ext_dwxpos`, `ext_hopfindex_fivepointstencil`, `ext_hopfindex_solidangle`, `ext_hopfindex_solidanglefourier`, `ext_hopfindex_twopointstencil`, `ext_topologicalcharge`, `ext_topologicalchargelattice`, `LastErr`, `MaxAngle`, `maxTorque`, `NEval` and `PeakErr`.",
+                "description": "",
                 "usedby": [
                     "dt",
                     "E_anis",
@@ -3752,7 +3752,7 @@
         "Host": [
             {
                 "signature": "Host()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3764,7 +3764,7 @@
         "HostCopy": [
             {
                 "signature": "HostCopy()",
-                "description": "A method of `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_mel`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `F_mel`, `LLtorque`, `LoadFile`, `m_full`, `NewScalarMask`, `NewSlice`, `NewVectorMask`, `STTorque` and `torque`.",
+                "description": "",
                 "usedby": [
                     "B_anis",
                     "B_custom",
@@ -3790,7 +3790,7 @@
         "Index": [
             {
                 "signature": "Index(int, int, int)",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3802,7 +3802,7 @@
         "IsNil": [
             {
                 "signature": "IsNil()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3814,7 +3814,7 @@
         "MemType": [
             {
                 "signature": "MemType()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3826,7 +3826,7 @@
         "Scalars": [
             {
                 "signature": "Scalars()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3838,7 +3838,7 @@
         "Set": [
             {
                 "signature": "Set(int, int, int, int, float64)",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3848,7 +3848,7 @@
             },
             {
                 "signature": "Set(float64)",
-                "description": "A method of `Aex`, `alpha`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FreeLayerThickness`, `frozenspins`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -3880,7 +3880,7 @@
             },
             {
                 "signature": "Set(data.Vector)",
-                "description": "A method of `B_ext`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "B_ext",
                     "FixedLayer",
@@ -3889,7 +3889,7 @@
             },
             {
                 "signature": "Set(Config)",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
@@ -3898,7 +3898,7 @@
         "SetScalar": [
             {
                 "signature": "SetScalar(int, int, int, float64)",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3910,7 +3910,7 @@
         "SetVector": [
             {
                 "signature": "SetVector(int, int, int, data.Vector)",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3922,7 +3922,7 @@
         "Size": [
             {
                 "signature": "Size()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3934,7 +3934,7 @@
         "Tensors": [
             {
                 "signature": "Tensors()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3946,7 +3946,7 @@
         "Vectors": [
             {
                 "signature": "Vectors()",
-                "description": "A method of `LoadFile`, `NewScalarMask`, `NewSlice` and `NewVectorMask`.",
+                "description": "",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3958,7 +3958,7 @@
         "AddDate": [
             {
                 "signature": "AddDate(int, int, int)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -3967,7 +3967,7 @@
         "After": [
             {
                 "signature": "After(time.Time)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -3976,7 +3976,7 @@
         "AppendFormat": [
             {
                 "signature": "AppendFormat([]uint8, string)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -3985,7 +3985,7 @@
         "Before": [
             {
                 "signature": "Before(time.Time)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -3994,7 +3994,7 @@
         "Clock": [
             {
                 "signature": "Clock()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4003,7 +4003,7 @@
         "Compare": [
             {
                 "signature": "Compare(time.Time)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4012,7 +4012,7 @@
         "Date": [
             {
                 "signature": "Date()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4021,7 +4021,7 @@
         "Day": [
             {
                 "signature": "Day()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4030,7 +4030,7 @@
         "Equal": [
             {
                 "signature": "Equal(time.Time)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4039,7 +4039,7 @@
         "Format": [
             {
                 "signature": "Format(string)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4048,7 +4048,7 @@
         "GoString": [
             {
                 "signature": "GoString()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4057,7 +4057,7 @@
         "GobEncode": [
             {
                 "signature": "GobEncode()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4066,7 +4066,7 @@
         "Hour": [
             {
                 "signature": "Hour()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4075,7 +4075,7 @@
         "ISOWeek": [
             {
                 "signature": "ISOWeek()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4084,7 +4084,7 @@
         "In": [
             {
                 "signature": "In(*time.Location)",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4093,7 +4093,7 @@
         "IsDST": [
             {
                 "signature": "IsDST()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4102,7 +4102,7 @@
         "IsZero": [
             {
                 "signature": "IsZero()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4111,7 +4111,7 @@
         "Local": [
             {
                 "signature": "Local()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4120,7 +4120,7 @@
         "Location": [
             {
                 "signature": "Location()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4129,7 +4129,7 @@
         "MarshalBinary": [
             {
                 "signature": "MarshalBinary()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4138,7 +4138,7 @@
         "MarshalJSON": [
             {
                 "signature": "MarshalJSON()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4147,7 +4147,7 @@
         "MarshalText": [
             {
                 "signature": "MarshalText()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4156,7 +4156,7 @@
         "Minute": [
             {
                 "signature": "Minute()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4165,7 +4165,7 @@
         "Month": [
             {
                 "signature": "Month()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4174,7 +4174,7 @@
         "Nanosecond": [
             {
                 "signature": "Nanosecond()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4183,7 +4183,7 @@
         "Round": [
             {
                 "signature": "Round(time.Duration)",
-                "description": "A method of `now` and `since`.",
+                "description": "",
                 "usedby": [
                     "now",
                     "since"
@@ -4193,7 +4193,7 @@
         "Second": [
             {
                 "signature": "Second()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4202,7 +4202,7 @@
         "Truncate": [
             {
                 "signature": "Truncate(time.Duration)",
-                "description": "A method of `now` and `since`.",
+                "description": "",
                 "usedby": [
                     "now",
                     "since"
@@ -4212,7 +4212,7 @@
         "UTC": [
             {
                 "signature": "UTC()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4221,7 +4221,7 @@
         "Unix": [
             {
                 "signature": "Unix()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4230,7 +4230,7 @@
         "UnixMicro": [
             {
                 "signature": "UnixMicro()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4239,7 +4239,7 @@
         "UnixMilli": [
             {
                 "signature": "UnixMilli()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4248,7 +4248,7 @@
         "UnixNano": [
             {
                 "signature": "UnixNano()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4257,7 +4257,7 @@
         "Weekday": [
             {
                 "signature": "Weekday()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4266,7 +4266,7 @@
         "Year": [
             {
                 "signature": "Year()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4275,7 +4275,7 @@
         "YearDay": [
             {
                 "signature": "YearDay()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4284,7 +4284,7 @@
         "Zone": [
             {
                 "signature": "Zone()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4293,7 +4293,7 @@
         "ZoneBounds": [
             {
                 "signature": "ZoneBounds()",
-                "description": "A method of `now`.",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
@@ -4302,7 +4302,7 @@
         "Abs": [
             {
                 "signature": "Abs()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4311,7 +4311,7 @@
         "Hours": [
             {
                 "signature": "Hours()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4320,7 +4320,7 @@
         "Microseconds": [
             {
                 "signature": "Microseconds()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4329,7 +4329,7 @@
         "Milliseconds": [
             {
                 "signature": "Milliseconds()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4338,7 +4338,7 @@
         "Minutes": [
             {
                 "signature": "Minutes()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4347,7 +4347,7 @@
         "Nanoseconds": [
             {
                 "signature": "Nanoseconds()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4356,7 +4356,7 @@
         "Seconds": [
             {
                 "signature": "Seconds()",
-                "description": "A method of `since`.",
+                "description": "",
                 "usedby": [
                     "since"
                 ]
@@ -4365,7 +4365,7 @@
         "GetRegion": [
             {
                 "signature": "GetRegion(int)",
-                "description": "A method of `Aex`, `alpha`, `anisC1`, `anisC2`, `anisU`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `FreeLayerThickness`, `frozenspins`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4396,7 +4396,7 @@
         "IsUniform": [
             {
                 "signature": "IsUniform()",
-                "description": "A method of `Aex`, `alpha`, `anisC1`, `anisC2`, `anisU`, `B_ext`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer`, `FreeLayerThickness`, `frozenspins`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4436,7 +4436,7 @@
         "MSlice": [
             {
                 "signature": "MSlice()",
-                "description": "A method of `Aex`, `alpha`, `anisC1`, `anisC2`, `anisU`, `B_ext`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer`, `FreeLayerThickness`, `frozenspins`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4476,7 +4476,7 @@
         "Region": [
             {
                 "signature": "Region(int)",
-                "description": "A method of `Aex`, `alpha`, `anisC1`, `anisC2`, `anisU`, `B_anis`, `B_custom`, `B_demag`, `B_eff`, `B_exch`, `B_ext`, `B_mel`, `B1`, `B2`, `Dbulk`, `Dind`, `DindCoupling`, `Edens_anis`, `Edens_custom`, `Edens_demag`, `Edens_exch`, `Edens_mel`, `Edens_therm`, `Edens_total`, `Edens_Zeeman`, `EpsilonPrime`, `ExchCoupling`, `ext_emergentmagneticfield_fivepointstencil`, `ext_emergentmagneticfield_solidangle`, `ext_emergentmagneticfield_twopointstencil`, `ext_hopfindexdensity_fivepointstencil`, `ext_hopfindexdensity_solidangle`, `ext_hopfindexdensity_twopointstencil`, `ext_phi`, `ext_theta`, `ext_topologicalchargedensity`, `ext_topologicalchargedensitylattice`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `F_mel`, `FixedLayer`, `FreeLayerThickness`, `frozenspins`, `J`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `LLtorque`, `m`, `m_full`, `MFM`, `Msat`, `NoDemagSpins`, `Pol`, `spinAngle`, `STTorque`, `Temp`, `torque` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4550,7 +4550,7 @@
         "SetRegion": [
             {
                 "signature": "SetRegion(int, ScalarFunction)",
-                "description": "A method of `Aex`, `alpha`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FreeLayerThickness`, `frozenspins`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4582,7 +4582,7 @@
             },
             {
                 "signature": "SetRegion(int, VectorFunction)",
-                "description": "A method of `anisC1`, `anisC2`, `anisU`, `B_ext`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "anisC1",
                     "anisC2",
@@ -4594,7 +4594,7 @@
             },
             {
                 "signature": "SetRegion(int, Config)",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
@@ -4603,7 +4603,7 @@
         "SetRegionFuncGo": [
             {
                 "signature": "SetRegionFuncGo(int, func() float64)",
-                "description": "A method of `Aex`, `alpha`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `FreeLayerThickness`, `frozenspins`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4631,7 +4631,7 @@
         "SetRegionValueGo": [
             {
                 "signature": "SetRegionValueGo(int, float64)",
-                "description": "A method of `Aex`, `alpha`, `B1`, `B2`, `Dbulk`, `Dind`, `EpsilonPrime`, `FreeLayerThickness`, `frozenspins`, `Kc1`, `Kc2`, `Kc3`, `Ku1`, `Ku2`, `Lambda`, `Msat`, `NoDemagSpins`, `Pol`, `Temp` and `xi`.",
+                "description": "",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4659,7 +4659,7 @@
         "SetRegionFn": [
             {
                 "signature": "SetRegionFn(int, func() [3]float64)",
-                "description": "A method of `anisC1`, `anisC2`, `anisU`, `B_ext`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "anisC1",
                     "anisC2",
@@ -4679,7 +4679,7 @@
         "AddGo": [
             {
                 "signature": "AddGo(Slice, func() float64)",
-                "description": "A method of `B_ext`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "B_ext",
                     "exx",
@@ -4696,7 +4696,7 @@
         "AddTo": [
             {
                 "signature": "AddTo(Slice)",
-                "description": "A method of `B_ext`, `B_therm`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "B_ext",
                     "B_therm",
@@ -4714,7 +4714,7 @@
         "RemoveExtraTerms": [
             {
                 "signature": "RemoveExtraTerms()",
-                "description": "A method of `B_ext`, `exx`, `exy`, `exz`, `eyy`, `eyz`, `ezz`, `FixedLayer` and `J`.",
+                "description": "",
                 "usedby": [
                     "B_ext",
                     "exx",
@@ -4731,7 +4731,7 @@
         "GetCell": [
             {
                 "signature": "GetCell(int, int, int)",
-                "description": "A method of `geom`, `m` and `regions`.",
+                "description": "",
                 "usedby": [
                     "geom",
                     "m",
@@ -4742,7 +4742,7 @@
         "Gpu": [
             {
                 "signature": "Gpu()",
-                "description": "A method of `geom` and `regions`.",
+                "description": "",
                 "usedby": [
                     "geom",
                     "regions"
@@ -4752,7 +4752,7 @@
         "Buffer": [
             {
                 "signature": "Buffer()",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
@@ -4761,7 +4761,7 @@
         "LoadFile": [
             {
                 "signature": "LoadFile(string)",
-                "description": "A method of `m` and `regions`.",
+                "description": "",
                 "usedby": [
                     "m",
                     "regions"
@@ -4771,7 +4771,7 @@
         "Quantity": [
             {
                 "signature": "Quantity()",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
@@ -4780,7 +4780,7 @@
         "SetArray": [
             {
                 "signature": "SetArray(Slice)",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
@@ -4789,14 +4789,14 @@
         "SetCell": [
             {
                 "signature": "SetCell(int, int, int, data.Vector)",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
             },
             {
                 "signature": "SetCell(int, int, int, int)",
-                "description": "A method of `regions`.",
+                "description": "",
                 "usedby": [
                     "regions"
                 ]
@@ -4805,7 +4805,7 @@
         "SetInShape": [
             {
                 "signature": "SetInShape(Shape, Config)",
-                "description": "A method of `m`.",
+                "description": "",
                 "usedby": [
                     "m"
                 ]
@@ -4814,7 +4814,7 @@
         "HostArray": [
             {
                 "signature": "HostArray()",
-                "description": "A method of `regions`.",
+                "description": "",
                 "usedby": [
                     "regions"
                 ]
@@ -4823,7 +4823,7 @@
         "HostList": [
             {
                 "signature": "HostList()",
-                "description": "A method of `regions`.",
+                "description": "",
                 "usedby": [
                     "regions"
                 ]

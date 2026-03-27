@@ -5,6 +5,7 @@ const https = require('https');
 const cheerio = require('cheerio');
 
 const URL = "https://mumax.github.io/api.html";
+const customDescriptions = require('../data/custom_descriptions.json');
 
 function cleanSignature(signature) { // "Add( Quantity Quantity ) Quantity" --> "Add(Quantity, Quantity) Quantity"
     signature = signature.replace("( ", "(").replace(" )", ")")
@@ -100,10 +101,8 @@ https.get(URL, res => {
             for (let methobjunique of methobj) {
                 if (methobjunique.description === undefined) {
                     methobjunique.usedby.sort((a, b) => a.localeCompare(b, 'en', {'sensitivity': 'base'}))
-                    s = "A method of ";
-                    s += codeListToStr(methobjunique.usedby);
-                    s += "."
-                    methobjunique.description = s
+                    desc = customDescriptions.methods[methobjunique.signature];
+                    methobjunique.description = desc ? desc : ""
                 }
             }
         }

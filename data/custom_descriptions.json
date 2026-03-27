@@ -1,0 +1,8 @@
+{
+    "functions": {},
+    "variables": {},
+    "methods": {
+        "EvalTo()": "",
+        "EvalTo(Slice)": "Evaluates this object into a slice, as can be created with `NewScalarMask`, `NewVectorMask` or `LoadFile`."
+    }
+}
