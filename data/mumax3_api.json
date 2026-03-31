@@ -2822,7 +2822,7 @@
         "EvalTo": [
             {
                 "signature": "EvalTo()",
-                "description": "",
+                "description": "Evaluates this quantity and returns a new slice containing the result.",
                 "usedby": [
                     "Add",
                     "Const",
@@ -2840,7 +2840,7 @@
             },
             {
                 "signature": "EvalTo(Slice)",
-                "description": "Evaluates this object into a slice, as can be created with `NewScalarMask`, `NewVectorMask` or `LoadFile`.",
+                "description": "Evaluates this quantity into the provided slice object.\nA slice can, for instance, be created with `NewScalarMask`, `NewVectorMask` or `LoadFile`.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -2952,7 +2952,7 @@
         "Add": [
             {
                 "signature": "Add(float64, Config)",
-                "description": "",
+                "description": "Adds a scaled configuration to the current configuration.",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -2970,7 +2970,7 @@
             },
             {
                 "signature": "Add(Shape)",
-                "description": "",
+                "description": "Add this shape to the original shape.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -2995,7 +2995,7 @@
             },
             {
                 "signature": "Add(data.Vector)",
-                "description": "",
+                "description": "Addition with another vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3008,14 +3008,14 @@
             },
             {
                 "signature": "Add(time.Duration)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Add",
                 "usedby": [
                     "now"
                 ]
             },
             {
                 "signature": "Add(Slice, ScalarFunction)",
-                "description": "",
+                "description": "Add an extra mask*multiplier term to the excitation.",
                 "usedby": [
                     "B_ext",
                     "exx",
@@ -3032,7 +3032,7 @@
         "RotZ": [
             {
                 "signature": "RotZ(float64)",
-                "description": "",
+                "description": "Rotate the shape about the Z-axis by a given angle in radians.",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -3071,7 +3071,7 @@
         "Scale": [
             {
                 "signature": "Scale(float64, float64, float64)",
-                "description": "",
+                "description": "Scales the magnetization or configuration by the provided factors.",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -3110,7 +3110,7 @@
         "Transl": [
             {
                 "signature": "Transl(float64, float64, float64)",
-                "description": "",
+                "description": "Translates a vector configuration in x, y, and z directions.",
                 "usedby": [
                     "Antivortex",
                     "BlochSkyrmion",
@@ -3149,7 +3149,7 @@
         "Intersect": [
             {
                 "signature": "Intersect(Shape)",
-                "description": "",
+                "description": "Intersection between this shape and the original shape.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3176,7 +3176,7 @@
         "Inverse": [
             {
                 "signature": "Inverse()",
-                "description": "",
+                "description": "Inverse of the original shape.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3203,7 +3203,7 @@
         "Repeat": [
             {
                 "signature": "Repeat(float64, float64, float64)",
-                "description": "",
+                "description": "Repeat the shape every (dx, dy, dz) in space.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3230,7 +3230,7 @@
         "RotX": [
             {
                 "signature": "RotX(float64)",
-                "description": "",
+                "description": "Rotate the shape about the X-axis by a given angle in radians.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3257,7 +3257,7 @@
         "RotY": [
             {
                 "signature": "RotY(float64)",
-                "description": "",
+                "description": "Rotate the shape about the Y-axis by a given angle in radians.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3284,7 +3284,7 @@
         "Sub": [
             {
                 "signature": "Sub(Shape)",
-                "description": "",
+                "description": "Subtract this shape from the original shape.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3309,7 +3309,7 @@
             },
             {
                 "signature": "Sub(data.Vector)",
-                "description": "",
+                "description": "Subtraction with another vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3322,7 +3322,7 @@
             },
             {
                 "signature": "Sub(time.Time)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Sub",
                 "usedby": [
                     "now"
                 ]
@@ -3331,7 +3331,7 @@
         "Xor": [
             {
                 "signature": "Xor(Shape)",
-                "description": "",
+                "description": "Exclusive OR with the original shape.",
                 "usedby": [
                     "Cell",
                     "Circle",
@@ -3358,7 +3358,7 @@
         "Average": [
             {
                 "signature": "Average()",
-                "description": "",
+                "description": "Returns the spatial average of this quantity across the entire mesh.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -3468,7 +3468,7 @@
         "Cross": [
             {
                 "signature": "Cross(data.Vector)",
-                "description": "",
+                "description": "Cross product with another vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3483,7 +3483,7 @@
         "Div": [
             {
                 "signature": "Div(float64)",
-                "description": "",
+                "description": "Divide the vector by a given amount.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3498,7 +3498,7 @@
         "Dot": [
             {
                 "signature": "Dot(data.Vector)",
-                "description": "",
+                "description": "Dot product with another vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3513,7 +3513,7 @@
         "Len": [
             {
                 "signature": "Len()",
-                "description": "",
+                "description": "If called on a\n- Slice: returns the number of elements per component\n- Vector: returns its norm.",
                 "usedby": [
                     "Index2Coord",
                     "LoadFile",
@@ -3532,7 +3532,7 @@
         "MAdd": [
             {
                 "signature": "MAdd(float64, data.Vector)",
-                "description": "",
+                "description": "Multiply by float64 and add a Vector to the result.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3547,7 +3547,7 @@
         "Mul": [
             {
                 "signature": "Mul(float64)",
-                "description": "",
+                "description": "Multiply this vector by a scalar value.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3562,7 +3562,7 @@
         "X": [
             {
                 "signature": "X()",
-                "description": "",
+                "description": "Get the X-component of this vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3577,7 +3577,7 @@
         "Y": [
             {
                 "signature": "Y()",
-                "description": "",
+                "description": "Get the Y-component of this vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3592,7 +3592,7 @@
         "Z": [
             {
                 "signature": "Z()",
-                "description": "",
+                "description": "Get the Z-component of this vector.",
                 "usedby": [
                     "Index2Coord",
                     "ShiftMagD",
@@ -3607,7 +3607,7 @@
         "CPUAccess": [
             {
                 "signature": "CPUAccess()",
-                "description": "",
+                "description": "Returns whether the Slice is accessible by the CPU.\n `true` means it is stored in host memory.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3619,7 +3619,7 @@
         "Comp": [
             {
                 "signature": "Comp(int)",
-                "description": "",
+                "description": "Accesses a component of a vector quantity.",
                 "usedby": [
                     "anisC1",
                     "anisC2",
@@ -3658,7 +3658,7 @@
         "DevPtr": [
             {
                 "signature": "DevPtr(int)",
-                "description": "",
+                "description": "Returns a CUDA device pointer to a component. Slice must have GPUAccess. It is safe to call on a nil slice, returns NULL.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3670,7 +3670,7 @@
         "Disable": [
             {
                 "signature": "Disable()",
-                "description": "",
+                "description": "INTERNAL. Overwrite struct fields with zeros to avoid accidental use after Free.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3682,7 +3682,7 @@
         "Free": [
             {
                 "signature": "Free()",
-                "description": "",
+                "description": "Frees the GPU memory and disables the slice.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3694,7 +3694,7 @@
         "GPUAccess": [
             {
                 "signature": "GPUAccess()",
-                "description": "",
+                "description": "Returns whether the Slice is accessible by the GPU.\n `true` means it is either stored on GPU or in unified host memory.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3706,7 +3706,7 @@
         "Get": [
             {
                 "signature": "Get(int, int, int, int)",
-                "description": "",
+                "description": "Get the value at (comp, ix, iy, iz) of this slice.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3716,7 +3716,7 @@
             },
             {
                 "signature": "Get()",
-                "description": "",
+                "description": "Returns the average value, either as `float64` or `data.Vector`.",
                 "usedby": [
                     "dt",
                     "E_anis",
@@ -3752,7 +3752,7 @@
         "Host": [
             {
                 "signature": "Host()",
-                "description": "",
+                "description": "Returns the slice as type `[][]float32` indexed by component and cell number. Requires `CPUAccess() == true`.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3764,7 +3764,7 @@
         "HostCopy": [
             {
                 "signature": "HostCopy()",
-                "description": "",
+                "description": "Returns a copy of the Slice, allocated on CPU.",
                 "usedby": [
                     "B_anis",
                     "B_custom",
@@ -3790,7 +3790,7 @@
         "Index": [
             {
                 "signature": "Index(int, int, int)",
-                "description": "",
+                "description": "Returns the flat index of (ix, iy, iz).",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3802,7 +3802,7 @@
         "IsNil": [
             {
                 "signature": "IsNil()",
-                "description": "",
+                "description": "Returns `true` if either this slice or its pointer are `nil`.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3814,7 +3814,7 @@
         "MemType": [
             {
                 "signature": "MemType()",
-                "description": "",
+                "description": "Returns 1 (2) if this slice resides on the CPU (GPU).",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3826,7 +3826,7 @@
         "Scalars": [
             {
                 "signature": "Scalars()",
-                "description": "",
+                "description": "Returns the data as 3D array (type `[][][]float32`), indexed by cell position. Data should be scalar (1 component) and have `CPUAccess() == true`.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3838,7 +3838,7 @@
         "Set": [
             {
                 "signature": "Set(int, int, int, int, float64)",
-                "description": "",
+                "description": "Set the value at (comp, ix, iy, iz) of this slice to a given scalar value.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3848,7 +3848,7 @@
             },
             {
                 "signature": "Set(float64)",
-                "description": "",
+                "description": "Sets this quantity to a uniform scalar value in all regions.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -3880,7 +3880,7 @@
             },
             {
                 "signature": "Set(data.Vector)",
-                "description": "",
+                "description": "Set this excitation to a constant vector.",
                 "usedby": [
                     "B_ext",
                     "FixedLayer",
@@ -3889,7 +3889,7 @@
             },
             {
                 "signature": "Set(Config)",
-                "description": "",
+                "description": "Set the magnetization to the given configuration.",
                 "usedby": [
                     "m"
                 ]
@@ -3898,7 +3898,7 @@
         "SetScalar": [
             {
                 "signature": "SetScalar(int, int, int, float64)",
-                "description": "",
+                "description": "Set the value at index (ix, iy, iz) of a scalar slice.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3910,7 +3910,7 @@
         "SetVector": [
             {
                 "signature": "SetVector(int, int, int, data.Vector)",
-                "description": "",
+                "description": "Set the value at index (ix, iy, iz) of a vector slice.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3922,7 +3922,7 @@
         "Size": [
             {
                 "signature": "Size()",
-                "description": "",
+                "description": "Returns the size of this slice as a `[3]int`.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3934,7 +3934,7 @@
         "Tensors": [
             {
                 "signature": "Tensors()",
-                "description": "",
+                "description": "Returns the data as 4D array (type `[][][][]float32`), indexed by component and cell position. Requires `CPUAccess() == true`.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3946,7 +3946,7 @@
         "Vectors": [
             {
                 "signature": "Vectors()",
-                "description": "",
+                "description": "Returns the data as 4D array (type `[3][][][]float32`), indexed by component and cell position. Data should have 3 components and have `CPUAccess() == true`.",
                 "usedby": [
                     "LoadFile",
                     "NewScalarMask",
@@ -3958,7 +3958,7 @@
         "AddDate": [
             {
                 "signature": "AddDate(int, int, int)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.AddDate",
                 "usedby": [
                     "now"
                 ]
@@ -3967,7 +3967,7 @@
         "After": [
             {
                 "signature": "After(time.Time)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.After",
                 "usedby": [
                     "now"
                 ]
@@ -3976,7 +3976,7 @@
         "AppendFormat": [
             {
                 "signature": "AppendFormat([]uint8, string)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.AppendFormat",
                 "usedby": [
                     "now"
                 ]
@@ -3985,7 +3985,7 @@
         "Before": [
             {
                 "signature": "Before(time.Time)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Before",
                 "usedby": [
                     "now"
                 ]
@@ -3994,7 +3994,7 @@
         "Clock": [
             {
                 "signature": "Clock()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Clock",
                 "usedby": [
                     "now"
                 ]
@@ -4003,7 +4003,7 @@
         "Compare": [
             {
                 "signature": "Compare(time.Time)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Compare",
                 "usedby": [
                     "now"
                 ]
@@ -4012,7 +4012,7 @@
         "Date": [
             {
                 "signature": "Date()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Date",
                 "usedby": [
                     "now"
                 ]
@@ -4021,7 +4021,7 @@
         "Day": [
             {
                 "signature": "Day()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Day",
                 "usedby": [
                     "now"
                 ]
@@ -4030,7 +4030,7 @@
         "Equal": [
             {
                 "signature": "Equal(time.Time)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Equal",
                 "usedby": [
                     "now"
                 ]
@@ -4039,7 +4039,7 @@
         "Format": [
             {
                 "signature": "Format(string)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Format",
                 "usedby": [
                     "now"
                 ]
@@ -4048,7 +4048,7 @@
         "GoString": [
             {
                 "signature": "GoString()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.GoString",
                 "usedby": [
                     "now"
                 ]
@@ -4057,7 +4057,7 @@
         "GobEncode": [
             {
                 "signature": "GobEncode()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.GobEncode",
                 "usedby": [
                     "now"
                 ]
@@ -4066,7 +4066,7 @@
         "Hour": [
             {
                 "signature": "Hour()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Hour",
                 "usedby": [
                     "now"
                 ]
@@ -4075,7 +4075,7 @@
         "ISOWeek": [
             {
                 "signature": "ISOWeek()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.ISOWeek",
                 "usedby": [
                     "now"
                 ]
@@ -4084,7 +4084,7 @@
         "In": [
             {
                 "signature": "In(*time.Location)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.In",
                 "usedby": [
                     "now"
                 ]
@@ -4093,7 +4093,7 @@
         "IsDST": [
             {
                 "signature": "IsDST()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.IsDST",
                 "usedby": [
                     "now"
                 ]
@@ -4102,7 +4102,7 @@
         "IsZero": [
             {
                 "signature": "IsZero()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.IsZero",
                 "usedby": [
                     "now"
                 ]
@@ -4111,7 +4111,7 @@
         "Local": [
             {
                 "signature": "Local()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Local",
                 "usedby": [
                     "now"
                 ]
@@ -4120,7 +4120,7 @@
         "Location": [
             {
                 "signature": "Location()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Location",
                 "usedby": [
                     "now"
                 ]
@@ -4129,7 +4129,7 @@
         "MarshalBinary": [
             {
                 "signature": "MarshalBinary()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.MarshalBinary",
                 "usedby": [
                     "now"
                 ]
@@ -4138,7 +4138,7 @@
         "MarshalJSON": [
             {
                 "signature": "MarshalJSON()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.MarshalJSON",
                 "usedby": [
                     "now"
                 ]
@@ -4147,7 +4147,7 @@
         "MarshalText": [
             {
                 "signature": "MarshalText()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.MarshalText",
                 "usedby": [
                     "now"
                 ]
@@ -4156,7 +4156,7 @@
         "Minute": [
             {
                 "signature": "Minute()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Minute",
                 "usedby": [
                     "now"
                 ]
@@ -4165,7 +4165,7 @@
         "Month": [
             {
                 "signature": "Month()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Month",
                 "usedby": [
                     "now"
                 ]
@@ -4174,7 +4174,7 @@
         "Nanosecond": [
             {
                 "signature": "Nanosecond()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Nanosecond",
                 "usedby": [
                     "now"
                 ]
@@ -4183,7 +4183,7 @@
         "Round": [
             {
                 "signature": "Round(time.Duration)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Round",
                 "usedby": [
                     "now",
                     "since"
@@ -4193,7 +4193,7 @@
         "Second": [
             {
                 "signature": "Second()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Second",
                 "usedby": [
                     "now"
                 ]
@@ -4202,7 +4202,7 @@
         "Truncate": [
             {
                 "signature": "Truncate(time.Duration)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Truncate",
                 "usedby": [
                     "now",
                     "since"
@@ -4212,7 +4212,7 @@
         "UTC": [
             {
                 "signature": "UTC()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.UTC",
                 "usedby": [
                     "now"
                 ]
@@ -4221,7 +4221,7 @@
         "Unix": [
             {
                 "signature": "Unix()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Unix",
                 "usedby": [
                     "now"
                 ]
@@ -4230,7 +4230,7 @@
         "UnixMicro": [
             {
                 "signature": "UnixMicro()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.UnixMicro",
                 "usedby": [
                     "now"
                 ]
@@ -4239,7 +4239,7 @@
         "UnixMilli": [
             {
                 "signature": "UnixMilli()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.UnixMilli",
                 "usedby": [
                     "now"
                 ]
@@ -4248,7 +4248,7 @@
         "UnixNano": [
             {
                 "signature": "UnixNano()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.UnixNano",
                 "usedby": [
                     "now"
                 ]
@@ -4257,7 +4257,7 @@
         "Weekday": [
             {
                 "signature": "Weekday()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Weekday",
                 "usedby": [
                     "now"
                 ]
@@ -4266,7 +4266,7 @@
         "Year": [
             {
                 "signature": "Year()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Year",
                 "usedby": [
                     "now"
                 ]
@@ -4275,7 +4275,7 @@
         "YearDay": [
             {
                 "signature": "YearDay()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.YearDay",
                 "usedby": [
                     "now"
                 ]
@@ -4284,7 +4284,7 @@
         "Zone": [
             {
                 "signature": "Zone()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.Zone",
                 "usedby": [
                     "now"
                 ]
@@ -4293,7 +4293,7 @@
         "ZoneBounds": [
             {
                 "signature": "ZoneBounds()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.ZoneBounds",
                 "usedby": [
                     "now"
                 ]
@@ -4302,7 +4302,7 @@
         "Abs": [
             {
                 "signature": "Abs()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Abs",
                 "usedby": [
                     "since"
                 ]
@@ -4311,7 +4311,7 @@
         "Hours": [
             {
                 "signature": "Hours()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Hours",
                 "usedby": [
                     "since"
                 ]
@@ -4320,7 +4320,7 @@
         "Microseconds": [
             {
                 "signature": "Microseconds()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Microseconds",
                 "usedby": [
                     "since"
                 ]
@@ -4329,7 +4329,7 @@
         "Milliseconds": [
             {
                 "signature": "Milliseconds()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Milliseconds",
                 "usedby": [
                     "since"
                 ]
@@ -4338,7 +4338,7 @@
         "Minutes": [
             {
                 "signature": "Minutes()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Minutes",
                 "usedby": [
                     "since"
                 ]
@@ -4347,7 +4347,7 @@
         "Nanoseconds": [
             {
                 "signature": "Nanoseconds()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Nanoseconds",
                 "usedby": [
                     "since"
                 ]
@@ -4356,7 +4356,7 @@
         "Seconds": [
             {
                 "signature": "Seconds()",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Duration.Seconds",
                 "usedby": [
                     "since"
                 ]
@@ -4365,7 +4365,7 @@
         "GetRegion": [
             {
                 "signature": "GetRegion(int)",
-                "description": "",
+                "description": "Returns the value of this quantity within the specified region.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4396,7 +4396,7 @@
         "IsUniform": [
             {
                 "signature": "IsUniform()",
-                "description": "",
+                "description": "Returns true if the field is uniform across all cells.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4436,7 +4436,7 @@
         "MSlice": [
             {
                 "signature": "MSlice()",
-                "description": "",
+                "description": "Get the underlying `cuda.MSlice` of this quantity.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4476,7 +4476,7 @@
         "Region": [
             {
                 "signature": "Region(int)",
-                "description": "",
+                "description": "Access the value of this quantity in the given region.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4550,7 +4550,7 @@
         "SetRegion": [
             {
                 "signature": "SetRegion(int, ScalarFunction)",
-                "description": "",
+                "description": "Set the value of this quantity in the given region to a scalar function.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4582,7 +4582,7 @@
             },
             {
                 "signature": "SetRegion(int, VectorFunction)",
-                "description": "",
+                "description": "Set the value of this quantity in the given region to a vector function.",
                 "usedby": [
                     "anisC1",
                     "anisC2",
@@ -4594,7 +4594,7 @@
             },
             {
                 "signature": "SetRegion(int, Config)",
-                "description": "",
+                "description": "Set the magnetization to the given configuration inside the specified region.",
                 "usedby": [
                     "m"
                 ]
@@ -4603,7 +4603,7 @@
         "SetRegionFuncGo": [
             {
                 "signature": "SetRegionFuncGo(int, func() float64)",
-                "description": "",
+                "description": "Set the value of this quantity in the given region to a scalar function. Should only be used in a Go script.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4631,7 +4631,7 @@
         "SetRegionValueGo": [
             {
                 "signature": "SetRegionValueGo(int, float64)",
-                "description": "",
+                "description": "Set the value of this quantity in the given region to a fixed scalar value. Should only be used in a Go script.",
                 "usedby": [
                     "Aex",
                     "alpha",
@@ -4659,7 +4659,7 @@
         "SetRegionFn": [
             {
                 "signature": "SetRegionFn(int, func() [3]float64)",
-                "description": "",
+                "description": "Set the value of this excitation in a given region. Should only be used in a Go script.",
                 "usedby": [
                     "anisC1",
                     "anisC2",
@@ -4679,7 +4679,7 @@
         "AddGo": [
             {
                 "signature": "AddGo(Slice, func() float64)",
-                "description": "",
+                "description": "An `Add(mask, f)` equivalent for Go use.",
                 "usedby": [
                     "B_ext",
                     "exx",
@@ -4696,7 +4696,7 @@
         "AddTo": [
             {
                 "signature": "AddTo(Slice)",
-                "description": "",
+                "description": "Add the values of this field to the provided slice.",
                 "usedby": [
                     "B_ext",
                     "B_therm",
@@ -4714,7 +4714,7 @@
         "RemoveExtraTerms": [
             {
                 "signature": "RemoveExtraTerms()",
-                "description": "",
+                "description": "After resizing the mesh, the extra terms don't fit the grid anymore and there is no reasonable way to resize them. So remove them and have the user re-add them.",
                 "usedby": [
                     "B_ext",
                     "exx",
@@ -4731,7 +4731,7 @@
         "GetCell": [
             {
                 "signature": "GetCell(int, int, int)",
-                "description": "",
+                "description": "Get the value at index (ix, iy, iz).",
                 "usedby": [
                     "geom",
                     "m",
@@ -4742,7 +4742,7 @@
         "Gpu": [
             {
                 "signature": "Gpu()",
-                "description": "",
+                "description": "Return a slice that lives on the GPU.",
                 "usedby": [
                     "geom",
                     "regions"
@@ -4752,7 +4752,7 @@
         "Buffer": [
             {
                 "signature": "Buffer()",
-                "description": "",
+                "description": "Return a slice that lives on the GPU.",
                 "usedby": [
                     "m"
                 ]
@@ -4761,7 +4761,7 @@
         "LoadFile": [
             {
                 "signature": "LoadFile(string)",
-                "description": "",
+                "description": "Load from a previously saved file.",
                 "usedby": [
                     "m",
                     "regions"
@@ -4771,7 +4771,7 @@
         "Quantity": [
             {
                 "signature": "Quantity()",
-                "description": "",
+                "description": "Return the average magnetization as type `[]float64`.",
                 "usedby": [
                     "m"
                 ]
@@ -4780,7 +4780,7 @@
         "SetArray": [
             {
                 "signature": "SetArray(Slice)",
-                "description": "",
+                "description": "Set the magnetization based on the provided slice.",
                 "usedby": [
                     "m"
                 ]
@@ -4789,14 +4789,14 @@
         "SetCell": [
             {
                 "signature": "SetCell(int, int, int, data.Vector)",
-                "description": "",
+                "description": "Set the magnetization at index (ix, iy, iz) to a given vector.",
                 "usedby": [
                     "m"
                 ]
             },
             {
                 "signature": "SetCell(int, int, int, int)",
-                "description": "",
+                "description": "Set the region at index (ix, iy, iz) to a particular value (last argument).",
                 "usedby": [
                     "regions"
                 ]
@@ -4805,7 +4805,7 @@
         "SetInShape": [
             {
                 "signature": "SetInShape(Shape, Config)",
-                "description": "",
+                "description": "Set the magnetization to a given configuration, but only inside the provided shape.",
                 "usedby": [
                     "m"
                 ]
@@ -4814,7 +4814,7 @@
         "HostArray": [
             {
                 "signature": "HostArray()",
-                "description": "",
+                "description": "Returns the regions throughout the mesh as type `[][][]byte`.",
                 "usedby": [
                     "regions"
                 ]
@@ -4823,7 +4823,7 @@
         "HostList": [
             {
                 "signature": "HostList()",
-                "description": "",
+                "description": "Returns the regions throughout the flattened mesh as type `[]byte`.",
                 "usedby": [
                     "regions"
                 ]
