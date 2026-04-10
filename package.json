@@ -43,7 +43,11 @@
 				"aliases": [
 					"MuMax3",
 					"mx3"
-				]
+				],
+				"icon": {
+					"light": "data/icon_offset_noshadow.png",
+					"dark": "data/icon_offset_noshadow.png"
+				}
 			}
 		],
 		"grammars": [
