@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.2
+
+- Custom descriptions for methods (on hover or autocomplete)
+- Show mumax³ icon in front of .mx3 files
+
 ## v0.2.1 (2026-03-27)
 
 - Fixed some bugs originating from multiple methods having the same name but different signatures.
