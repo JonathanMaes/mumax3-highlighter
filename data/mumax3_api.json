@@ -114,6 +114,32 @@
                 "Xor(Shape)"
             ]
         },
+        "CellIndices": {
+            "signature": "CellIndices() Slice",
+            "description": "4D slice containing the index of each cell as (ix, iy, iz).\n\n### Methods\n`CPUAccess()`, `Comp(int)`, `DevPtr(int)`, `Disable()`, `Free()`, `GPUAccess()`, `Get(int, int, int, int)`, `Host()`, `HostCopy()`, `Index(int, int, int)`, `IsNil()`, `Len()`, `MemType()`, `Scalars()`, `Set(int, int, int, int, float64)`, `SetScalar(int, int, int, float64)`, `SetVector(int, int, int, data.Vector)`, `Size()`, `Tensors()` and `Vectors()`.",
+            "methods": [
+                "CPUAccess()",
+                "Comp(int)",
+                "DevPtr(int)",
+                "Disable()",
+                "Free()",
+                "GPUAccess()",
+                "Get(int, int, int, int)",
+                "Host()",
+                "HostCopy()",
+                "Index(int, int, int)",
+                "IsNil()",
+                "Len()",
+                "MemType()",
+                "Scalars()",
+                "Set(int, int, int, int, float64)",
+                "SetScalar(int, int, int, float64)",
+                "SetVector(int, int, int, data.Vector)",
+                "Size()",
+                "Tensors()",
+                "Vectors()"
+            ]
+        },
         "Circle": {
             "signature": "Circle(float64) Shape",
             "description": "2D Circle with diameter in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
@@ -138,7 +164,7 @@
         },
         "Cone": {
             "signature": "Cone(float64, float64) Shape",
-            "description": "3D Cone with diameter and height in meter. The base is at z=0. If the height is positive, the tip points in the +z direction.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "3D Cone with diameter and height in meter. The base is at z=0.If the height is positive, the tip points in the +z direction.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
@@ -259,6 +285,23 @@
                 "Xor(Shape)"
             ]
         },
+        "CurrentMag": {
+            "signature": "CurrentMag() Config",
+            "description": "Returns the current magnetization as a Config. E.g. CurrentMag().Add(0.1, RandomMagSeed(123)) will return a Config with the current magnetization plus some noise.\n\n### Methods\n`Add(float64, Config)`, `RotZ(float64)`, `Scale(float64, float64, float64)` and `Transl(float64, float64, float64)`.",
+            "methods": [
+                "Add(float64, Config)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Transl(float64, float64, float64)"
+            ]
+        },
+        "CustomQuantity": {
+            "signature": "CustomQuantity(Slice) Quantity",
+            "description": "Creates an arbitrary custom Quantity from a user provided (scalar or vector) slice. The slice should match the simulation grid size, and can be created with NewScalarMask or NewVectorMask, or loaded in via Loadfile. Variations in slice values are not restricted to the 256 region limit.\n\n### Methods\n`EvalTo()`.",
+            "methods": [
+                "EvalTo()"
+            ]
+        },
         "Cylinder": {
             "signature": "Cylinder(float64, float64) Shape",
             "description": "3D Cylinder with diameter and height in meter\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
@@ -364,6 +407,11 @@
             "description": "Used for automated tests: checks if a value is close enough to the expected value",
             "methods": []
         },
+        "ExpectB": {
+            "signature": "ExpectB(string, bool, bool)",
+            "description": "Used for automated tests: checks if two booleans are equal",
+            "methods": []
+        },
         "ExpectV": {
             "signature": "ExpectV(string, data.Vector, data.Vector, float64)",
             "description": "Used for automated tests: checks if a vector is close enough to the expected value",
@@ -372,6 +420,11 @@
         "expm1": {
             "signature": "expm1(float64) float64",
             "description": "Expm1 returns e**x - 1, the base-e exponential of x minus 1. It is more     accurate than Exp(x) - 1 when x is near zero.",
+            "methods": []
+        },
+        "ext_AllRegionShapes": {
+            "signature": "ext_AllRegionShapes() func(int), Shape",
+            "description": "Returns a function that gives the shape of each region. Does not automatically update if the region is redefined or moved with Shift. Call as: allregions := ext_AllRegionShapes(); shape := allregions(i); on seperate lines. Note: double parentheses as ext_AllRegionShapes()(i) are not supported in mx3 scripts and must be split across two lines.",
             "methods": []
         },
         "ext_centerBubble": {
@@ -397,6 +450,28 @@
         "ext_EnableUnsafe": {
             "signature": "ext_EnableUnsafe()",
             "description": "Deprecated. Only here to ensure maximal backwards compatibility with mumax3.9c.",
+            "methods": []
+        },
+        "ext_GeomEdge": {
+            "signature": "ext_GeomEdge(string) Shape",
+            "description": "Returns an edge (+x, -x, +y, -y, +z, -z) of the geometry as a Shape. The Shape may not update automatically after changes to the mesh or geometry; rerun the function to refresh.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "ext_grainboundaries": {
+            "signature": "ext_grainboundaries(int, int, int, float64, int)",
+            "description": "(startregion, numgrains, offset, boundarythickness, zeroflag). Given existing regions, reassigns grain boundaries of boundarythickness to new region values, starting at offset. Zeroflag: 1 = region0 is normal, 0 = region0 acts as edge but no boundary itself, -1 = ignore region0 entirely. grainboundary_edgeX/Y/Z control whether simulatiion box edges are treated as grainboundaries.",
             "methods": []
         },
         "ext_InitGeomFromOVF": {
@@ -577,7 +652,7 @@
         },
         "Layer": {
             "signature": "Layer(int) Shape",
-            "description": "Single layer (along z), by integer index starting from 0\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "Single layer (along z), by integer index starting from 0. Note: based on the current cell size, so may no longer be valid if cell size is changed.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
@@ -594,7 +669,7 @@
         },
         "Layers": {
             "signature": "Layers(int, int) Shape",
-            "description": "Part of space between cell layer1 (inclusive) and layer2 (exclusive), in integer indices\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "Part of space between cell layer1 (inclusive) and layer2 (exclusive), in integer indices. Note: based on the current cell size, so may no longer be valid if cell size is changed.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
@@ -613,6 +688,40 @@
             "signature": "ldexp(float64, int) float64",
             "description": "Ldexp is the inverse of Frexp. It returns frac × 2**exp.",
             "methods": []
+        },
+        "Line": {
+            "signature": "Line(float64, float64, float64, float64, float64, float64, float64, string) Shape",
+            "description": "3D line segment between (x1, y1, z1) and (x2, y2, z2), with given diameter, in meter.Last element specifies the line cap, which can be 'infinite', 'round' or 'flat'.Using zero diameter creates a minimally connected geometry, unless it is later scaled/rotated.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
+        },
+        "Line2D": {
+            "signature": "Line2D(float64, float64, float64, float64, float64, string) Shape",
+            "description": "2D equivalent of Line(), resulting in a uniform fill along the z-axis\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
+            ]
         },
         "LoadFile": {
             "signature": "LoadFile(string) Slice",
@@ -690,8 +799,8 @@
             "methods": []
         },
         "Minimize": {
-            "signature": "Minimize()",
-            "description": "Use steepest conjugate gradient method to minimize the total energy",
+            "signature": "Minimize() bool",
+            "description": "Use steepest conjugate gradient method to minimize the total energy. Returns true if convergence is reached, or false if the wall-clock time limit is exceeded. The wall-clock time limit is disabled by default.",
             "methods": []
         },
         "mod": {
@@ -815,12 +924,14 @@
         },
         "now": {
             "signature": "now() time.Time",
-            "description": "Returns the current time\n\n### Methods\n`Add(time.Duration)`, `AddDate(int, int, int)`, `After(time.Time)`, `AppendFormat([]uint8, string)`, `Before(time.Time)`, `Clock()`, `Compare(time.Time)`, `Date()`, `Day()`, `Equal(time.Time)`, `Format(string)`, `GoString()`, `GobEncode()`, `Hour()`, `ISOWeek()`, `In(*time.Location)`, `IsDST()`, `IsZero()`, `Local()`, `Location()`, `MarshalBinary()`, `MarshalJSON()`, `MarshalText()`, `Minute()`, `Month()`, `Nanosecond()`, `Round(time.Duration)`, `Second()`, `Sub(time.Time)`, `Truncate(time.Duration)`, `UTC()`, `Unix()`, `UnixMicro()`, `UnixMilli()`, `UnixNano()`, `Weekday()`, `Year()`, `YearDay()`, `Zone()` and `ZoneBounds()`.",
+            "description": "Returns the current time\n\n### Methods\n`Add(time.Duration)`, `AddDate(int, int, int)`, `After(time.Time)`, `AppendBinary([]uint8)`, `AppendFormat([]uint8, string)`, `AppendText([]uint8)`, `Before(time.Time)`, `Clock()`, `Compare(time.Time)`, `Date()`, `Day()`, `Equal(time.Time)`, `Format(string)`, `GoString()`, `GobEncode()`, `Hour()`, `ISOWeek()`, `In(*time.Location)`, `IsDST()`, `IsZero()`, `Local()`, `Location()`, `MarshalBinary()`, `MarshalJSON()`, `MarshalText()`, `Minute()`, `Month()`, `Nanosecond()`, `Round(time.Duration)`, `Second()`, `Sub(time.Time)`, `Truncate(time.Duration)`, `UTC()`, `Unix()`, `UnixMicro()`, `UnixMilli()`, `UnixNano()`, `Weekday()`, `Year()`, `YearDay()`, `Zone()` and `ZoneBounds()`.",
             "methods": [
                 "Add(time.Duration)",
                 "AddDate(int, int, int)",
                 "After(time.Time)",
+                "AppendBinary([]uint8)",
                 "AppendFormat([]uint8, string)",
+                "AppendText([]uint8)",
                 "Before(time.Time)",
                 "Clock()",
                 "Compare(time.Time)",
@@ -942,8 +1053,8 @@
             "methods": []
         },
         "Relax": {
-            "signature": "Relax()",
-            "description": "Try to minimize the total energy",
+            "signature": "Relax() bool",
+            "description": "Try to minimize the total energy. Returns true if convergence is reached, or false if the wall-clock time limit is exceeded. The wall-clock time limit is disabled by default.",
             "methods": []
         },
         "remainder": {
@@ -1136,7 +1247,7 @@
         },
         "Superball": {
             "signature": "Superball(float64, float64) Shape",
-            "description": "3D Superball with diameter in meter and shape parameter p. Interpolates between a cube (p=+∞), sphere (p=1), octahedron (p=0.5) and empty space (p≤0).\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "3D Superball with diameter in meter and shape parameter p.Interpolates between a cube (p=+∞), sphere (p=1), octahedron (p=0.5) and empty space (p≤0).\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
@@ -1285,6 +1396,23 @@
                 "RotZ(float64)",
                 "Scale(float64, float64, float64)",
                 "Transl(float64, float64, float64)"
+            ]
+        },
+        "VoxelShape": {
+            "signature": "VoxelShape(Slice, float64, float64, float64) Shape",
+            "description": "Use slice (ScalarMask containing 0s and 1s) of rectangular cells (with size defined by last 3 arguments) as a 3D object\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "methods": [
+                "Add(Shape)",
+                "Intersect(Shape)",
+                "Inverse()",
+                "Repeat(float64, float64, float64)",
+                "RotX(float64)",
+                "RotY(float64)",
+                "RotZ(float64)",
+                "Scale(float64, float64, float64)",
+                "Sub(Shape)",
+                "Transl(float64, float64, float64)",
+                "Xor(Shape)"
             ]
         },
         "XRange": {
@@ -1941,6 +2069,21 @@
             "description": "Enables centering along the Y-axis during ext_centerBubble (default=true)",
             "methods": []
         },
+        "ext_grainboundary_edgeX": {
+            "signature": "ext_grainboundary_edgeX",
+            "description": "Treat X edges of simulation box as boundaries. Ignored if PBC in X direction enabled (default= true)",
+            "methods": []
+        },
+        "ext_grainboundary_edgeY": {
+            "signature": "ext_grainboundary_edgeY",
+            "description": "Treat Y edges of simulation box as boundaries. Ignored if PBC in Y direction enabled (default= true)",
+            "methods": []
+        },
+        "ext_grainboundary_edgeZ": {
+            "signature": "ext_grainboundary_edgeZ",
+            "description": "Treat Z edges of simulation box as boundaries. Ignored if PBC in Z direction enabled (default= false)",
+            "methods": []
+        },
         "ext_grainCutShape": {
             "signature": "ext_grainCutShape",
             "description": "Whether to add the complete (3D) voronoi grain, only if its centre lies within the shape (default=false)",
@@ -2521,6 +2664,11 @@
             "description": "Stopping max dM for Minimize",
             "methods": []
         },
+        "MinimizeWallClockTime": {
+            "signature": "MinimizeWallClockTime",
+            "description": "Wall-clock time limit (seconds) for Minimize that will interrupt the minimization if exceeded. Set to -1 (default) to disable. An interrupted minimization does not guarantee a correct solution.",
+            "methods": []
+        },
         "Msat": {
             "signature": "Msat",
             "description": "Saturation magnetization (A/m)\n\n### Methods\n`Average()`, `EvalTo(Slice)`, `GetRegion(int)`, `IsUniform()`, `MSlice()`, `Region(int)`, `Set(float64)`, `SetRegion(int, ScalarFunction)`, `SetRegionFuncGo(int, func() float64)` and `SetRegionValueGo(int, float64)`.",
@@ -2566,6 +2714,11 @@
                 "SetRegionFuncGo(int, func() float64)",
                 "SetRegionValueGo(int, float64)"
             ]
+        },
+        "NREGION": {
+            "signature": "NREGION",
+            "description": "Maximum number of regions (256)",
+            "methods": []
         },
         "OpenBC": {
             "signature": "OpenBC",
@@ -2644,6 +2797,11 @@
         "RelaxTorqueThreshold": {
             "signature": "RelaxTorqueThreshold",
             "description": "MaxTorque threshold for relax(). If set to -1 (default), relax() will stop when the average torque is steady or increasing.",
+            "methods": []
+        },
+        "RelaxWallClockTime": {
+            "signature": "RelaxWallClockTime",
+            "description": "Wall-clock time limit (seconds) for Relax that will interrupt the relaxation if exceeded. Set to -1 (default) to disable.",
             "methods": []
         },
         "ShiftGeom": {
@@ -2828,6 +2986,7 @@
                     "Const",
                     "ConstVector",
                     "Cross",
+                    "CustomQuantity",
                     "Div",
                     "Dot",
                     "Masked",
@@ -2957,6 +3116,7 @@
                     "Antivortex",
                     "BlochSkyrmion",
                     "Conical",
+                    "CurrentMag",
                     "Helical",
                     "HopfionCompactSupport",
                     "NeelSkyrmion",
@@ -2979,15 +3139,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3041,15 +3205,19 @@
                     "Cone",
                     "Conical",
                     "Cuboid",
+                    "CurrentMag",
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "Helical",
                     "HopfionCompactSupport",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "NeelSkyrmion",
                     "RandomMag",
                     "RandomMagSeed",
@@ -3062,6 +3230,7 @@
                     "Universe",
                     "Vortex",
                     "VortexWall",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3080,15 +3249,19 @@
                     "Cone",
                     "Conical",
                     "Cuboid",
+                    "CurrentMag",
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "Helical",
                     "HopfionCompactSupport",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "NeelSkyrmion",
                     "RandomMag",
                     "RandomMagSeed",
@@ -3101,6 +3274,7 @@
                     "Universe",
                     "Vortex",
                     "VortexWall",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3119,15 +3293,19 @@
                     "Cone",
                     "Conical",
                     "Cuboid",
+                    "CurrentMag",
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "Helical",
                     "HopfionCompactSupport",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "NeelSkyrmion",
                     "RandomMag",
                     "RandomMagSeed",
@@ -3140,6 +3318,7 @@
                     "Universe",
                     "Vortex",
                     "VortexWall",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3158,15 +3337,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3185,15 +3368,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3212,15 +3399,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3239,15 +3430,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3266,15 +3461,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3293,15 +3492,19 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
@@ -3340,18 +3543,412 @@
                     "Cylinder",
                     "Ellipse",
                     "Ellipsoid",
+                    "ext_GeomEdge",
                     "GrainRoughness",
                     "ImageShape",
                     "Layer",
                     "Layers",
+                    "Line",
+                    "Line2D",
                     "Rect",
                     "Square",
                     "Superball",
                     "Triangle",
                     "Universe",
+                    "VoxelShape",
                     "XRange",
                     "YRange",
                     "ZRange"
+                ]
+            }
+        ],
+        "CPUAccess": [
+            {
+                "signature": "CPUAccess()",
+                "description": "Returns whether the Slice is accessible by the CPU.\n `true` means it is stored in host memory.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Comp": [
+            {
+                "signature": "Comp(int)",
+                "description": "Accesses a component of a vector quantity.",
+                "usedby": [
+                    "anisC1",
+                    "anisC2",
+                    "anisU",
+                    "B_anis",
+                    "B_custom",
+                    "B_demag",
+                    "B_eff",
+                    "B_exch",
+                    "B_ext",
+                    "B_mel",
+                    "CellIndices",
+                    "ext_emergentmagneticfield_fivepointstencil",
+                    "ext_emergentmagneticfield_solidangle",
+                    "ext_emergentmagneticfield_twopointstencil",
+                    "exx",
+                    "exy",
+                    "exz",
+                    "eyy",
+                    "eyz",
+                    "ezz",
+                    "F_mel",
+                    "FixedLayer",
+                    "J",
+                    "LLtorque",
+                    "LoadFile",
+                    "m",
+                    "m_full",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask",
+                    "STTorque",
+                    "torque"
+                ]
+            }
+        ],
+        "DevPtr": [
+            {
+                "signature": "DevPtr(int)",
+                "description": "Returns a CUDA device pointer to a component. Slice must have GPUAccess. It is safe to call on a nil slice, returns NULL.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Disable": [
+            {
+                "signature": "Disable()",
+                "description": "INTERNAL. Overwrite struct fields with zeros to avoid accidental use after Free.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Free": [
+            {
+                "signature": "Free()",
+                "description": "Frees the GPU memory and disables the slice.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "GPUAccess": [
+            {
+                "signature": "GPUAccess()",
+                "description": "Returns whether the Slice is accessible by the GPU.\n `true` means it is either stored on GPU or in unified host memory.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Get": [
+            {
+                "signature": "Get(int, int, int, int)",
+                "description": "Get the value at (comp, ix, iy, iz) of this slice.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            },
+            {
+                "signature": "Get()",
+                "description": "Returns the average value, either as `float64` or `data.Vector`.",
+                "usedby": [
+                    "dt",
+                    "E_anis",
+                    "E_custom",
+                    "E_demag",
+                    "E_exch",
+                    "E_mel",
+                    "E_therm",
+                    "E_total",
+                    "E_Zeeman",
+                    "ext_bubbledist",
+                    "ext_bubblepos",
+                    "ext_bubblespeed",
+                    "ext_corepos",
+                    "ext_dwpos",
+                    "ext_dwspeed",
+                    "ext_dwtilt",
+                    "ext_dwxpos",
+                    "ext_hopfindex_fivepointstencil",
+                    "ext_hopfindex_solidangle",
+                    "ext_hopfindex_solidanglefourier",
+                    "ext_hopfindex_twopointstencil",
+                    "ext_topologicalcharge",
+                    "ext_topologicalchargelattice",
+                    "LastErr",
+                    "MaxAngle",
+                    "maxTorque",
+                    "NEval",
+                    "PeakErr"
+                ]
+            }
+        ],
+        "Host": [
+            {
+                "signature": "Host()",
+                "description": "Returns the slice as type `[][]float32` indexed by component and cell number. Requires `CPUAccess() == true`.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "HostCopy": [
+            {
+                "signature": "HostCopy()",
+                "description": "Returns a copy of the Slice, allocated on CPU.",
+                "usedby": [
+                    "B_anis",
+                    "B_custom",
+                    "B_demag",
+                    "B_eff",
+                    "B_exch",
+                    "B_mel",
+                    "CellIndices",
+                    "ext_emergentmagneticfield_fivepointstencil",
+                    "ext_emergentmagneticfield_solidangle",
+                    "ext_emergentmagneticfield_twopointstencil",
+                    "F_mel",
+                    "LLtorque",
+                    "LoadFile",
+                    "m_full",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask",
+                    "STTorque",
+                    "torque"
+                ]
+            }
+        ],
+        "Index": [
+            {
+                "signature": "Index(int, int, int)",
+                "description": "Returns the flat index of (ix, iy, iz).",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "IsNil": [
+            {
+                "signature": "IsNil()",
+                "description": "Returns `true` if either this slice or its pointer are `nil`.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Len": [
+            {
+                "signature": "Len()",
+                "description": "If called on a\n- Slice: returns the number of elements per component\n- Vector: returns its norm.",
+                "usedby": [
+                    "CellIndices",
+                    "Index2Coord",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask",
+                    "ShiftMagD",
+                    "ShiftMagL",
+                    "ShiftMagR",
+                    "ShiftMagU",
+                    "SumVector",
+                    "Vector"
+                ]
+            }
+        ],
+        "MemType": [
+            {
+                "signature": "MemType()",
+                "description": "Returns 1 (2) if this slice resides on the CPU (GPU).",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Scalars": [
+            {
+                "signature": "Scalars()",
+                "description": "Returns the data as 3D array (type `[][][]float32`), indexed by cell position. Data should be scalar (1 component) and have `CPUAccess() == true`.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Set": [
+            {
+                "signature": "Set(int, int, int, int, float64)",
+                "description": "Set the value at (comp, ix, iy, iz) of this slice to a given scalar value.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            },
+            {
+                "signature": "Set(float64)",
+                "description": "Sets this quantity to a uniform scalar value in all regions.",
+                "usedby": [
+                    "Aex",
+                    "alpha",
+                    "B1",
+                    "B2",
+                    "Dbulk",
+                    "Dind",
+                    "EpsilonPrime",
+                    "exx",
+                    "exy",
+                    "exz",
+                    "eyy",
+                    "eyz",
+                    "ezz",
+                    "FreeLayerThickness",
+                    "frozenspins",
+                    "Kc1",
+                    "Kc2",
+                    "Kc3",
+                    "Ku1",
+                    "Ku2",
+                    "Lambda",
+                    "Msat",
+                    "NoDemagSpins",
+                    "Pol",
+                    "Temp",
+                    "xi"
+                ]
+            },
+            {
+                "signature": "Set(data.Vector)",
+                "description": "Set this excitation to a constant vector.",
+                "usedby": [
+                    "B_ext",
+                    "FixedLayer",
+                    "J"
+                ]
+            },
+            {
+                "signature": "Set(Config)",
+                "description": "Set the magnetization to the given configuration.",
+                "usedby": [
+                    "m"
+                ]
+            }
+        ],
+        "SetScalar": [
+            {
+                "signature": "SetScalar(int, int, int, float64)",
+                "description": "Set the value at index (ix, iy, iz) of a scalar slice.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "SetVector": [
+            {
+                "signature": "SetVector(int, int, int, data.Vector)",
+                "description": "Set the value at index (ix, iy, iz) of a vector slice.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Size": [
+            {
+                "signature": "Size()",
+                "description": "Returns the size of this slice as a `[3]int`.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Tensors": [
+            {
+                "signature": "Tensors()",
+                "description": "Returns the data as 4D array (type `[][][][]float32`), indexed by component and cell position. Requires `CPUAccess() == true`.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
+                ]
+            }
+        ],
+        "Vectors": [
+            {
+                "signature": "Vectors()",
+                "description": "Returns the data as 4D array (type `[3][][][]float32`), indexed by component and cell position. Data should have 3 components and have `CPUAccess() == true`.",
+                "usedby": [
+                    "CellIndices",
+                    "LoadFile",
+                    "NewScalarMask",
+                    "NewSlice",
+                    "NewVectorMask"
                 ]
             }
         ],
@@ -3510,25 +4107,6 @@
                 ]
             }
         ],
-        "Len": [
-            {
-                "signature": "Len()",
-                "description": "If called on a\n- Slice: returns the number of elements per component\n- Vector: returns its norm.",
-                "usedby": [
-                    "Index2Coord",
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask",
-                    "ShiftMagD",
-                    "ShiftMagL",
-                    "ShiftMagR",
-                    "ShiftMagU",
-                    "SumVector",
-                    "Vector"
-                ]
-            }
-        ],
         "MAdd": [
             {
                 "signature": "MAdd(float64, data.Vector)",
@@ -3604,357 +4182,6 @@
                 ]
             }
         ],
-        "CPUAccess": [
-            {
-                "signature": "CPUAccess()",
-                "description": "Returns whether the Slice is accessible by the CPU.\n `true` means it is stored in host memory.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Comp": [
-            {
-                "signature": "Comp(int)",
-                "description": "Accesses a component of a vector quantity.",
-                "usedby": [
-                    "anisC1",
-                    "anisC2",
-                    "anisU",
-                    "B_anis",
-                    "B_custom",
-                    "B_demag",
-                    "B_eff",
-                    "B_exch",
-                    "B_ext",
-                    "B_mel",
-                    "ext_emergentmagneticfield_fivepointstencil",
-                    "ext_emergentmagneticfield_solidangle",
-                    "ext_emergentmagneticfield_twopointstencil",
-                    "exx",
-                    "exy",
-                    "exz",
-                    "eyy",
-                    "eyz",
-                    "ezz",
-                    "F_mel",
-                    "FixedLayer",
-                    "J",
-                    "LLtorque",
-                    "LoadFile",
-                    "m",
-                    "m_full",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask",
-                    "STTorque",
-                    "torque"
-                ]
-            }
-        ],
-        "DevPtr": [
-            {
-                "signature": "DevPtr(int)",
-                "description": "Returns a CUDA device pointer to a component. Slice must have GPUAccess. It is safe to call on a nil slice, returns NULL.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Disable": [
-            {
-                "signature": "Disable()",
-                "description": "INTERNAL. Overwrite struct fields with zeros to avoid accidental use after Free.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Free": [
-            {
-                "signature": "Free()",
-                "description": "Frees the GPU memory and disables the slice.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "GPUAccess": [
-            {
-                "signature": "GPUAccess()",
-                "description": "Returns whether the Slice is accessible by the GPU.\n `true` means it is either stored on GPU or in unified host memory.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Get": [
-            {
-                "signature": "Get(int, int, int, int)",
-                "description": "Get the value at (comp, ix, iy, iz) of this slice.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            },
-            {
-                "signature": "Get()",
-                "description": "Returns the average value, either as `float64` or `data.Vector`.",
-                "usedby": [
-                    "dt",
-                    "E_anis",
-                    "E_custom",
-                    "E_demag",
-                    "E_exch",
-                    "E_mel",
-                    "E_therm",
-                    "E_total",
-                    "E_Zeeman",
-                    "ext_bubbledist",
-                    "ext_bubblepos",
-                    "ext_bubblespeed",
-                    "ext_corepos",
-                    "ext_dwpos",
-                    "ext_dwspeed",
-                    "ext_dwtilt",
-                    "ext_dwxpos",
-                    "ext_hopfindex_fivepointstencil",
-                    "ext_hopfindex_solidangle",
-                    "ext_hopfindex_solidanglefourier",
-                    "ext_hopfindex_twopointstencil",
-                    "ext_topologicalcharge",
-                    "ext_topologicalchargelattice",
-                    "LastErr",
-                    "MaxAngle",
-                    "maxTorque",
-                    "NEval",
-                    "PeakErr"
-                ]
-            }
-        ],
-        "Host": [
-            {
-                "signature": "Host()",
-                "description": "Returns the slice as type `[][]float32` indexed by component and cell number. Requires `CPUAccess() == true`.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "HostCopy": [
-            {
-                "signature": "HostCopy()",
-                "description": "Returns a copy of the Slice, allocated on CPU.",
-                "usedby": [
-                    "B_anis",
-                    "B_custom",
-                    "B_demag",
-                    "B_eff",
-                    "B_exch",
-                    "B_mel",
-                    "ext_emergentmagneticfield_fivepointstencil",
-                    "ext_emergentmagneticfield_solidangle",
-                    "ext_emergentmagneticfield_twopointstencil",
-                    "F_mel",
-                    "LLtorque",
-                    "LoadFile",
-                    "m_full",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask",
-                    "STTorque",
-                    "torque"
-                ]
-            }
-        ],
-        "Index": [
-            {
-                "signature": "Index(int, int, int)",
-                "description": "Returns the flat index of (ix, iy, iz).",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "IsNil": [
-            {
-                "signature": "IsNil()",
-                "description": "Returns `true` if either this slice or its pointer are `nil`.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "MemType": [
-            {
-                "signature": "MemType()",
-                "description": "Returns 1 (2) if this slice resides on the CPU (GPU).",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Scalars": [
-            {
-                "signature": "Scalars()",
-                "description": "Returns the data as 3D array (type `[][][]float32`), indexed by cell position. Data should be scalar (1 component) and have `CPUAccess() == true`.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Set": [
-            {
-                "signature": "Set(int, int, int, int, float64)",
-                "description": "Set the value at (comp, ix, iy, iz) of this slice to a given scalar value.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            },
-            {
-                "signature": "Set(float64)",
-                "description": "Sets this quantity to a uniform scalar value in all regions.",
-                "usedby": [
-                    "Aex",
-                    "alpha",
-                    "B1",
-                    "B2",
-                    "Dbulk",
-                    "Dind",
-                    "EpsilonPrime",
-                    "exx",
-                    "exy",
-                    "exz",
-                    "eyy",
-                    "eyz",
-                    "ezz",
-                    "FreeLayerThickness",
-                    "frozenspins",
-                    "Kc1",
-                    "Kc2",
-                    "Kc3",
-                    "Ku1",
-                    "Ku2",
-                    "Lambda",
-                    "Msat",
-                    "NoDemagSpins",
-                    "Pol",
-                    "Temp",
-                    "xi"
-                ]
-            },
-            {
-                "signature": "Set(data.Vector)",
-                "description": "Set this excitation to a constant vector.",
-                "usedby": [
-                    "B_ext",
-                    "FixedLayer",
-                    "J"
-                ]
-            },
-            {
-                "signature": "Set(Config)",
-                "description": "Set the magnetization to the given configuration.",
-                "usedby": [
-                    "m"
-                ]
-            }
-        ],
-        "SetScalar": [
-            {
-                "signature": "SetScalar(int, int, int, float64)",
-                "description": "Set the value at index (ix, iy, iz) of a scalar slice.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "SetVector": [
-            {
-                "signature": "SetVector(int, int, int, data.Vector)",
-                "description": "Set the value at index (ix, iy, iz) of a vector slice.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Size": [
-            {
-                "signature": "Size()",
-                "description": "Returns the size of this slice as a `[3]int`.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Tensors": [
-            {
-                "signature": "Tensors()",
-                "description": "Returns the data as 4D array (type `[][][][]float32`), indexed by component and cell position. Requires `CPUAccess() == true`.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
-        "Vectors": [
-            {
-                "signature": "Vectors()",
-                "description": "Returns the data as 4D array (type `[3][][][]float32`), indexed by component and cell position. Data should have 3 components and have `CPUAccess() == true`.",
-                "usedby": [
-                    "LoadFile",
-                    "NewScalarMask",
-                    "NewSlice",
-                    "NewVectorMask"
-                ]
-            }
-        ],
         "AddDate": [
             {
                 "signature": "AddDate(int, int, int)",
@@ -3973,10 +4200,28 @@
                 ]
             }
         ],
+        "AppendBinary": [
+            {
+                "signature": "AppendBinary([]uint8)",
+                "description": "",
+                "usedby": [
+                    "now"
+                ]
+            }
+        ],
         "AppendFormat": [
             {
                 "signature": "AppendFormat([]uint8, string)",
                 "description": "See https://pkg.go.dev/time#Time.AppendFormat",
+                "usedby": [
+                    "now"
+                ]
+            }
+        ],
+        "AppendText": [
+            {
+                "signature": "AppendText([]uint8)",
+                "description": "",
                 "usedby": [
                     "now"
                 ]
