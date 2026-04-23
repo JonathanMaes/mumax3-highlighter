@@ -4203,7 +4203,7 @@
         "AppendBinary": [
             {
                 "signature": "AppendBinary([]uint8)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.AppendFormat",
                 "usedby": [
                     "now"
                 ]
@@ -4221,7 +4221,7 @@
         "AppendText": [
             {
                 "signature": "AppendText([]uint8)",
-                "description": "",
+                "description": "See https://pkg.go.dev/time#Time.AppendText",
                 "usedby": [
                     "now"
                 ]
