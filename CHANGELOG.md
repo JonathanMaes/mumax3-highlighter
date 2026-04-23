@@ -1,9 +1,14 @@
 # Changelog
 
-## v0.2.2
+## v0.2.3 (2026-03-23)
+
+- Include new functions/variables from mumax3.12
+
+## v0.2.2 (2026-03-10)
 
 - Custom descriptions for methods (on hover or autocomplete)
 - Show mumax³ icon in front of .mx3 files
+- Publish on OVSX
 
 ## v0.2.1 (2026-03-27)
 
