@@ -80,6 +80,7 @@
 		"installedTimestamp": 1707389915246
 	},
 	"dependencies": {
-		"cheerio": "^1.2.0"
+		"cheerio": "^1.2.0",
+		"ovsx": "^0.10.10"
 	}
 }
