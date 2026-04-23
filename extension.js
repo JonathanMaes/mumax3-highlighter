@@ -34,7 +34,8 @@ function activate(context) {
                 let items = [];
 
                 const wordRange = document.getWordRangeAtPosition(position);
-                const beforeStr = document.lineAt(position.line).text.substring(0, wordRange ? wordRange.start.character : position.character);
+                const startLine = Math.max(0, position.line - 20); // look back up to 20 lines, more becomes a bit ridiculous
+                const beforeStr = document.getText(new vscode.Range(new vscode.Position(startLine, 0), wordRange ? wordRange.start : position));
                 const methodReceiverMatch = beforeStr.match(/([A-Za-z_][A-Za-z0-9_]*)(?:\([^()]*\))?\.$/);
 
                 if (!!methodReceiverMatch) { // Handle methods only
@@ -83,7 +84,8 @@ function activate(context) {
                 const word = document.getText(wordRange);
 
                 // Detect if we are hovering over a method or not
-                const beforeWord = document.lineAt(position.line).text.substring(0, wordRange.start.character);
+                const startLine = Math.max(0, position.line - 20); // look back up to 20 lines, more becomes a bit ridiculous
+                const beforeWord = document.getText(new vscode.Range(new vscode.Position(startLine, 0), wordRange.start));
                 const methodReceiverMatch = beforeWord.match(/([A-Za-z_][A-Za-z0-9_]*)(?:\([^()]*\))?\.$/);
 
                 if (!!methodReceiverMatch) { // Handle methods only
