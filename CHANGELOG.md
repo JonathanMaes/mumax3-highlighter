@@ -1,6 +1,10 @@
 # Changelog
 
-## v0.2.3 (2026-03-23)
+## v0.2.4 (2026-04-27)
+
+- Support autocomplete/hover after function arguments split over multiple lines
+
+## v0.2.3 (2026-04-23)
 
 - Include new functions/variables from mumax3.12
 
