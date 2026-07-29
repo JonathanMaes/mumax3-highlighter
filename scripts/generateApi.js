@@ -43,7 +43,9 @@ https.get(URL, res => {
         $('#api-full').children('.api-entry').each((i, entry) => {
             const name = $(entry).find('.api-identifier').text().trim();
             let signature = $(entry).find('p').find('span').text().trim();
-            let description = $(entry).children('.api-docstring').text().trim();
+            let ds = $(entry).children('.api-docstring')
+            ds.find('br').replaceWith('  \n') // The two spaces are needed to avoid extra vertical whitespace
+            let description = ds.text().trim(); 
 
             // TODO: add return value to description if anything is returned
 

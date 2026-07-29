@@ -164,7 +164,7 @@
         },
         "Cone": {
             "signature": "Cone(float64, float64) Shape",
-            "description": "3D Cone with diameter and height in meter. The base is at z=0.If the height is positive, the tip points in the +z direction.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "3D Cone with diameter and height in meter. The base is at z=0.  \nIf the height is positive, the tip points in the +z direction.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
@@ -691,7 +691,7 @@
         },
         "Line": {
             "signature": "Line(float64, float64, float64, float64, float64, float64, float64, string) Shape",
-            "description": "3D line segment between (x1, y1, z1) and (x2, y2, z2), with given diameter, in meter.Last element specifies the line cap, which can be 'infinite', 'round' or 'flat'.Using zero diameter creates a minimally connected geometry, unless it is later scaled/rotated.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "3D line segment between (x1, y1, z1) and (x2, y2, z2), with given diameter, in meter.  \nLast element specifies the line cap, which can be 'infinite', 'round' or 'flat'.  \nUsing zero diameter creates a minimally connected geometry, unless it is later scaled/rotated.\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
@@ -1079,7 +1079,7 @@
         },
         "RunningAverage": {
             "signature": "RunningAverage(Quantity) Quantity",
-            "description": "Records the time-average of a quantity from the moment this function is called.Note: this may impact performance since the Quantity will be evaluated after every step.\n\n### Methods\n`EvalTo()`.",
+            "description": "Records the time-average of a quantity from the moment this function is called.  \nNote: this may impact performance since the Quantity will be evaluated after every step.\n\n### Methods\n`EvalTo()`.",
             "methods": [
                 "EvalTo()"
             ]
@@ -1126,7 +1126,7 @@
         },
         "SetSolver": {
             "signature": "SetSolver(int)",
-            "description": "Set solver type.1: Euler2: Heun3: Bogacki-Shampine4: Runge-Kutta (RK4)5: Dormand-Prince6: Fehlberg-1: Backward Euler",
+            "description": "Set solver type.  \n1: Euler  \n2: Heun  \n3: Bogacki-Shampine  \n4: Runge-Kutta (RK4)  \n5: Dormand-Prince  \n6: Fehlberg  \n-1: Backward Euler",
             "methods": []
         },
         "Shift": {
@@ -1247,7 +1247,7 @@
         },
         "Superball": {
             "signature": "Superball(float64, float64) Shape",
-            "description": "3D Superball with diameter in meter and shape parameter p.Interpolates between a cube (p=+∞), sphere (p=1), octahedron (p=0.5) and empty space (p≤0).\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
+            "description": "3D Superball with diameter in meter and shape parameter p.  \nInterpolates between a cube (p=+∞), sphere (p=1), octahedron (p=0.5) and empty space (p≤0).\n\n### Methods\n`Add(Shape)`, `Intersect(Shape)`, `Inverse()`, `Repeat(float64, float64, float64)`, `RotX(float64)`, `RotY(float64)`, `RotZ(float64)`, `Scale(float64, float64, float64)`, `Sub(Shape)`, `Transl(float64, float64, float64)` and `Xor(Shape)`.",
             "methods": [
                 "Add(Shape)",
                 "Intersect(Shape)",
