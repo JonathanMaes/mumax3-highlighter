@@ -73,6 +73,77 @@ function activate(context) {
         '.'
     ));
 
+    // --- SIGNATURE HELP PROVIDER ---
+    context.subscriptions.push(
+        vscode.languages.registerSignatureHelpProvider(
+            { language: 'mumax3' },
+            {
+                provideSignatureHelp(document, position) {
+                    const startLine = Math.max(0, position.line - 20); // look back up to 20 lines, more becomes a bit ridiculous
+                    const beforeCursor = document.getText(new vscode.Range(new vscode.Position(startLine, 0), position));
+
+                    // Find the active '(' by walking backwards
+                    let depth = 0;
+                    let commaCount = 0;
+                    let parenPos = -1;
+                    for (let i = beforeCursor.length - 1; i >= 0; i--) {
+                        switch (beforeCursor[i]) {
+                            case ')':
+                                depth++
+                            case '(':
+                                if (depth === 0) {
+                                    parenPos = i;
+                                    break;
+                                }
+                                depth--
+                            case ',':
+                                if (depth === 0) {commaCount++;}
+                        }
+                    }
+                    if (parenPos === -1) {return null}
+
+                    // Extract function name immediately preceding '('
+                    const match = beforeCursor.substring(0, parenPos).match(/([A-Za-z_][A-Za-z0-9_]*)\s*$/);
+                    if (!match) {return null}
+                    const funcEntry = Object.entries(api.functions).find(([name]) => name.toLowerCase() === match[1].toLowerCase());
+                    if (!funcEntry) {return null}
+                    const func = funcEntry[1]
+
+                    // Create SignatureInformation and populate it with ParameterInformation objects
+                    const sig = new vscode.SignatureInformation(
+                        func.signature,
+                        new vscode.MarkdownString(func.description)
+                    );
+
+                    const matchparams = func.signature.match(/\((.*?)\)/);
+                    let isVariadic = false;
+                    let Nparams = 0;
+                    if (matchparams) {
+                        const params = matchparams[1].split(',').map(p => p.trim()).filter(Boolean);
+
+                        let start = func.signature.indexOf('(') + 1;
+                        sig.parameters = params.map(param => {
+                            const end = start + param.length;
+                            const p = new vscode.ParameterInformation([start, end]);
+                            start = end + 2; // skip ", "
+                            return p;
+                        });
+
+                        Nparams = params.length
+                        isVariadic = Nparams > 0 && params[Nparams - 1].startsWith('...');
+                    }
+
+                    // Create the signature help box
+                    const help = new vscode.SignatureHelp();
+                    help.signatures = [sig];
+                    help.activeSignature = 0;
+                    help.activeParameter = isVariadic ? Math.min(commaCount, Nparams - 1) : commaCount;
+                    return help;
+                }
+            },
+            '(', ','
+        )
+    );
 
     // --- HOVER PROVIDER ---
     context.subscriptions.push(vscode.languages.registerHoverProvider(
