@@ -86,18 +86,24 @@ function activate(context) {
                     let depth = 0;
                     let commaCount = 0;
                     let parenPos = -1;
+                    parenLoop:
                     for (let i = beforeCursor.length - 1; i >= 0; i--) {
                         switch (beforeCursor[i]) {
                             case ')':
-                                depth++
+                                depth++;
+                                break;
                             case '(':
                                 if (depth === 0) {
                                     parenPos = i;
-                                    break;
+                                    break parenLoop;
                                 }
-                                depth--
+                                depth--;
+                                break;
                             case ',':
-                                if (depth === 0) {commaCount++;}
+                                if (depth === 0) {
+                                    commaCount++;
+                                }
+                                break;
                         }
                     }
                     if (parenPos === -1) {return null}
