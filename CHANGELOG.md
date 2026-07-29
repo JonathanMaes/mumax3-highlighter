@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.2.5 (2026-07-29)
+
+- Show function signature help box when writing function arguments
+- Render line breaks in documentation correctly
+
 ## v0.2.4 (2026-04-27)
 
 - Support autocomplete/hover after function arguments split over multiple lines
