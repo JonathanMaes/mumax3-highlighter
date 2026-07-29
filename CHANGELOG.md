@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.6 (2026-07-29)
+
+- Bugfix in signature help
+
 ## v0.2.5 (2026-07-29)
 
 - Show function signature help box when writing function arguments

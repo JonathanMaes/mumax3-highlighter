@@ -3,7 +3,7 @@
 	"displayName": "MuMax3 highlighter",
 	"description": "Highlights MuMax3 input files",
 	"publisher": "JonathanMaes",
-	"version": "0.2.5",
+	"version": "0.2.6",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
